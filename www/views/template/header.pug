@@ -1,0 +1,28 @@
+
+div.site-container
+  div.site-pusher
+    header.header
+     div.header__content
+      h1.hidden="CSI Angleur - Accueil"
+      nav.header__menu
+        a.header__burger#header__burger(href="#", title="Voir le menu")
+          span.hidden="Menu"
+        h2.header__logo
+          a(href="index.html").header__logolink
+            img.header__img(src="images/logo.svg",width="121",height="72")
+            span.hidden=" CSI - Navigation"
+        div.menu__content
+          ul.menu__list
+            li.menu__element
+              a.menu__link.menu__link--down(href="notremaison.html", title="En savoir plus sur la maison médicale")="Notre maison"
+            li.menu__element
+              a.menu__link.menu__link--down(href="fonctionnement.html" title="Découvrir comment nous fonctionnons")="Fonctionnement"
+            li.menu__element
+              a.menu__link.menu__link--down(href="services.html" title="En savoir plus sur le service de garde")="Service de garde"
+            li.menu__element
+              a.menu__link(href="activite.html" title="Découvrez les activités que nous proposons")="Activités"
+            li.menu__element
+              a.menu__link(href="contact.html" title="Contacter nous et visionner nos horaires")="Contact"
+    div.site-content
+      div.site-container
+    div.site-cache#site-cache
