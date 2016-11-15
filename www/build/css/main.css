@@ -23,6 +23,20 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'museo';
+  src: url("../fonts/museo/Museo300-Regular-webfont.eot");
+  src: url("../fonts/museo/Museo300-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museo/Museo300-Regular-webfont.woff2") format("woff2"), url("../fonts/museo/Museo300-Regular-webfont.woff") format("woff"), url("../fonts/museo/Museo300-Regular-webfont.ttf") format("truetype"), url("../fonts/museo/Museo300-Regular-webfont.svg#museo300") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'glyphs';
+  src: url("../fonts/glyphs/icomoon.eot?74mhfu");
+  src: url("../fonts/glyphs/icomoon.eot?74mhfu#iefix") format("embedded-opentype"), url("../fonts/glyphs/icomoon.ttf?74mhfu") format("truetype"), url("../fonts/glyphs/icomoon.woff?74mhfu") format("woff"), url("../fonts/glyphs/icomoon.svg?74mhfu#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 .hidden {
   border: 0;
   clip: rect(0 0 0 0);
