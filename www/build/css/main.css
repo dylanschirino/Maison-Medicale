@@ -103,9 +103,205 @@ a {
   color: inherit; }
 
 body {
-  font-size: 62.5%;
-  background: url("../images/grid.png") repeat-y center; }
+  font-size: 62.5%; }
+
+p {
+  color: #436577; }
 
 .maincontainer {
   width: 87.3%;
   margin: auto; }
+
+/* CSI Angleur
+ *
+ * /sass/object/header.scss - Header objects
+ *
+ * coded by Dylan Schirino
+ * started at 15/11/2016
+ */
+.none {
+  position: absolute;
+  display: none; }
+
+.header__content {
+  max-width: 88.7%;
+  margin: auto;
+  height: 10em; }
+  .header__content::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.header__logo {
+  display: block;
+  margin-left: 5.6em;
+  float: left; }
+
+.menu__content {
+  display: inline-block;
+  margin-left: 9.2em; }
+
+.menu__element {
+  display: inline-block;
+  margin-top: 2em;
+  vertical-align: top; }
+
+.menu__sublist {
+  margin-top: 2em;
+  width: 10em;
+  position: absolute;
+  height: 5.9375em;
+  opacity: 0;
+  transition: .2s ease-in; }
+  .menu__sublist::after {
+    bottom: 100%;
+    left: 25%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+
+.menu__sublink {
+  display: block; }
+
+.menu__element--down:hover .menu__sublist {
+  opacity: 1; }
+
+@media only screen and (max-width: 1215px) {
+  .menu__content {
+    margin-left: 1em; } }
+
+@media only screen and (max-width: 1169px) {
+  .menu__element {
+    font-size: 0.8em; } }
+
+@media only screen and (max-width: 1027px) {
+  .none {
+    display: block;
+    position: static; }
+  .header {
+    position: static; }
+    .header__search {
+      float: right;
+      margin-top: 3em; }
+    .header__burger {
+      position: relative;
+      display: block;
+      float: left;
+      width: 50px;
+      height: 66px; }
+      .header__burger::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1rem;
+        height: 0;
+        top: 30px;
+        left: 0px;
+        box-shadow: 0 10px 0 1px black, 0 16px 0 1px black, 0 22px 0 1px black; }
+  .site-pusher {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.3s cubic-bezier(0.42, 0.52, 0.87, 0.55); }
+  .menu__list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    transform: translateX(-250px);
+    -webkit-transition: transform 1s ease-in; }
+  .menu__element {
+    display: block; }
+  .menu__link {
+    display: block;
+    height: 40px;
+    line-height: 40px; }
+  .site-content {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 0; }
+  .with--sidebar {
+    overflow: hidden;
+    height: 100%; }
+    .with--sidebar .site-pusher {
+      transform: translateX(250px); }
+    .with--sidebar .site-cache {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6); } }
+
+@media screen and (max-width: 478px) {
+  .header__logolink {
+    display: block;
+    margin-top: 0.6em; } }
+
+@media screen and (max-width: 366px) {
+  .header__logolink {
+    font-size: 0.55em;
+    margin-top: 1.5em; } }
+
+/* CSI Angleur
+ *
+ * /sass/components/header.scss - Header components
+ *
+ * coded by Dylan Schirino
+ * started at 15/11/2016
+ */
+.header {
+  background-color: #EFFFFB; }
+  .header__img {
+    padding: 1.4em 0; }
+
+.menu__list {
+  font: 1.6em/2.3 "open_sansregular", "Helvetica", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #436577; }
+
+.menu__element {
+  padding-right: 2.1875em; }
+
+.menu__sublist {
+  background-color: white;
+  border: 3px solid #51D2CC;
+  border-radius: 5px; }
+  .menu__sublist::after {
+    border-color: rgba(81, 210, 204, 0);
+    border-bottom-color: #51D2CC;
+    border-width: 17px;
+    margin-left: -17px; }
+
+.menu__subelement + .menu__subelement {
+  border-top: 3px solid #51D2CC; }
+
+.menu__sublink {
+  text-align: center;
+  padding-top: 0.375em;
+  transition: .2s ease-in; }
+  .menu__sublink:hover {
+    font-family: "open_sansbold"; }
+
+@media only screen and (max-width: 1027px) {
+  .menu__list {
+    background-color: #EFFFFB; }
+  .menu__element {
+    padding-left: 2em;
+    border-bottom: 1px solid white;
+    transition: .2s ease-in-out; }
+    .menu__element:hover {
+      background-color: #333333;
+      color: white;
+      cursor: pointer; }
+  .menu__link:hover:after {
+    height: 0;
+    background: none;
+    width: 0; } }

@@ -1,0 +1,71 @@
+/* CSI Angleur
+ *
+ * /sass/components/header.scss - Header components
+ *
+ * coded by Dylan Schirino
+ * started at 15/11/2016
+ */
+
+.header{
+  background-color: $headerBckg;
+  &__img{
+    padding: 1.4em 0;
+  }
+}
+.menu{
+  &__list{
+    font:1.6em/2.3 $opensans;
+    text-transform: uppercase;
+    color: $texteColor;
+  }
+  &__element{
+    padding-right: 2.1875em;
+  }
+  &__sublist{
+    background-color: $white;
+    border: 3px solid $BlueGreen;
+    border-radius: 5px;
+    &::after{
+      border-color: rgba(81, 210, 204, 0);
+	    border-bottom-color: $BlueGreen;
+	    border-width: 17px;
+	    margin-left: -17px;
+    }
+  }
+  &__subelement + &__subelement{
+    border-top: 3px solid $BlueGreen;
+  }
+  &__sublink{
+    text-align: center;
+    padding-top: 0.375em;
+    transition: .2s ease-in;
+    &:hover{
+      font-family: $opensansBold;
+    }
+  }
+}
+
+@media only screen and (max-width: 1027px) {
+    .menu{
+      &__list{
+        background-color: $headerBckg;
+      }
+      &__element{
+        padding-left: 2em;
+        border-bottom: 1px solid white;
+        transition: .2s ease-in-out;
+        &:hover{
+          background-color: #333333;
+          color: white;
+          cursor: pointer;
+        }
+      }
+      &__link{
+        &:hover:after{
+          height: 0;
+          background: none;
+          width: 0;
+        }
+      }
+    }
+}
