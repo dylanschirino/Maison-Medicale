@@ -1,5 +1,4 @@
 # Maison Médicale
-#MaisonMedicale
 
 ## Qu’est-ce que c’est ?
 Centre de santé intégré.
