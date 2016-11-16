@@ -197,7 +197,7 @@ p {
         content: '';
         position: absolute;
         display: block;
-        width: 1rem;
+        width: 2em;
         height: 0;
         top: 30px;
         left: 0px;
@@ -368,7 +368,7 @@ p {
     border: none; }
   .menu__element {
     padding-left: 2em;
-    border-bottom: 1px solid #54EBCE;
+    border-bottom: 1px solid #436577;
     transition: .2s ease-in-out; }
     .menu__element:hover {
       cursor: pointer; }
