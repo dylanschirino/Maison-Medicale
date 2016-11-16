@@ -43,6 +43,7 @@
    position: absolute;
    height: 5.9375em;
    opacity: 0;
+   visibility: hidden;
    transition: .2s ease-in;
    &::after{
      bottom: 100%;
@@ -61,6 +62,7 @@
 }
 .menu__element--down:hover .menu__sublist{
   opacity: 1;
+  visibility: visible;
 }
 
 @media only screen and (max-width:1215px) {

@@ -1,0 +1,44 @@
+/* CsiAngleur
+ *
+ * /sass/object/searchbox.scss - Searchbox Objects
+ *
+ * coded by Dylan Schirino
+ * started at 16/11/2016
+ */
+.menu{
+  &__search{
+    position: absolute;
+    right:20px;
+    width: 15.625em;
+    padding: 1em 0;
+    display: none;
+    &--open{
+      display: block;
+    }
+    &::after{
+      bottom: 100%;
+      left: 30%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+  }
+}
+.no-js .menu__search{
+  display: block;
+}
+
+.search{
+  &__box{
+    height: 2.1875em;
+    margin-left: 1.25em;
+  }
+  &__submit{
+    height: 2.5em;
+    position: relative;
+    top: -1px;
+  }
+}

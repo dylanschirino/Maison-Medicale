@@ -39,6 +39,13 @@ div.site-container
               a.menu__link(href="activite.html" title="Découvrez les activités que nous proposons")="Activités"
             li.menu__element
               a.menu__link(href="contact.html" title="Contacter nous et visionner nos horaires")="Contact"
+            li.menu__element.menu__element--search
+              a.menu__link.menu__link--search(href="#" title="Voir la barre de recherche")
+                span.hidden="Search"
+              div.menu__search
+                form.header__search(method="get" action="/")
+                  input.search__box(type="search" placeholder="Recherche" name="search")
+                  input.search__submit(type="submit" value="OK")
     div.site-content
       div.site-container
     div.site-cache#site-cache
