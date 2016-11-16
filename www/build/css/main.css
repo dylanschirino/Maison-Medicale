@@ -320,6 +320,15 @@ p {
   .header__img {
     padding: 1.4em 0; }
 
+.active::before {
+  content: "";
+  display: block;
+  background: #64E0D1;
+  width: 4em;
+  height: 5px;
+  position: absolute;
+  top: 0; }
+
 .menu__list {
   font: 1.6em/2.3 "open_sansregular", "Helvetica", Arial, sans-serif;
   text-transform: uppercase;
@@ -330,7 +339,11 @@ p {
   padding-bottom: 2em; }
 
 .menu__link {
-  display: block; }
+  display: block;
+  transition: .2s ease; }
+  .menu__link:hover {
+    font-family: "open_sansbold";
+    color: #64E0D1; }
   .menu__link--down::after {
     content: "\e903";
     font: 1em/1 "glyphs";

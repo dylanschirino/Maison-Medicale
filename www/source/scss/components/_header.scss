@@ -12,6 +12,17 @@
     padding: 1.4em 0;
   }
 }
+.active{
+  &::before{
+    content: "";
+    display: block;
+    background: $active;
+    width: 4em;
+    height: 5px;
+    position: absolute;
+    top: 0;
+  }
+}
 .menu{
   &__list{
     font:1.6em/2.3 $opensans;
@@ -24,6 +35,11 @@
   }
   &__link{
     display: block;
+    transition: .2s ease;
+    &:hover{
+      font-family: $opensansBold;
+      color: $active;
+    }
     &--down{
       &::after{
         content: "\e903";
