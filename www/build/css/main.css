@@ -209,6 +209,10 @@ p {
     transition: transform .2s ease-in; }
   .no-js .menu__list {
     transform: translateX(0px); }
+  .no-js .menu__sublist {
+    height: auto;
+    opacity: 1;
+    visibility: visible; }
   .menu__list {
     position: absolute;
     top: 0;
@@ -344,7 +348,8 @@ p {
 
 @media only screen and (max-width: 1093px) {
   .menu__list {
-    background-color: #EFFFFB; }
+    background-color: #EFFFFB;
+    height: 60em; }
   .menu__sublist {
     background: none;
     border: none; }

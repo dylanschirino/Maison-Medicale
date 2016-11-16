@@ -1,8 +1,8 @@
 ( function (){
   "use strict";
 
+  // Variable
 
-  // Quand le javascript est désactiver
   var body = document.getElementsByTagName("body")[0],
   searchLink = document.querySelector( ".menu__link--search" ),
   searchBox = document.querySelector( ".menu__search" ),
@@ -10,10 +10,12 @@
   sitecache = document.querySelector("#site-cache"),
   OpenInMenu = document.querySelectorAll(".menu__element--down"),
   subLink = document.querySelectorAll(".menu__sublist");
-  console.log(subLink);
 
+  // Quand le javascript est désactiver
   body.classList.remove("no-js");
 
+  // Menu dropdown responsive
+    window.onresize = function(){
     if ( window.innerWidth > 1097) {
       OpenInMenu.forEach(function(element) {
         element.addEventListener("click",function(e){
@@ -22,7 +24,10 @@
         });
       });
     }
+  }
 
+
+  // Barre de recherche activé au click
   window.addEventListener("load",function(){
 
     // Affichage de la barre de recherche
