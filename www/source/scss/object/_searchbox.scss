@@ -32,6 +32,7 @@
     }
   }
 }
+
 .no-js .menu__search{
   display: block;
 }
@@ -46,4 +47,26 @@
     position: relative;
     top: -1px;
   }
+}
+
+@media screen and (max-width:1093px) {
+
+  .menu{
+    &__element:last-child{
+      margin-top: 0.5em;
+    }
+    &__search{
+      display: block;
+      position: static;
+      &::after{
+        border: none;
+      }
+    }
+  }
+  .search{
+    &__box{
+      margin-left: 0;
+    }
+  }
+
 }

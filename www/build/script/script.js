@@ -15,8 +15,7 @@
   body.classList.remove("no-js");
 
   // Menu dropdown responsive
-    window.onresize = function(){
-    if ( window.innerWidth > 1097) {
+    if ( window.innerWidth < 1097) {
       OpenInMenu.forEach(function(element) {
         element.addEventListener("click",function(e){
           e.preventDefault();
@@ -24,7 +23,6 @@
         });
       });
     }
-  }
 
 
   // Barre de recherche activé au click

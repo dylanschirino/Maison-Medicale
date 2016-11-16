@@ -297,6 +297,17 @@ p {
   position: relative;
   top: -1px; }
 
+@media screen and (max-width: 1093px) {
+  .menu__element:last-child {
+    margin-top: 0.5em; }
+  .menu__search {
+    display: block;
+    position: static; }
+    .menu__search::after {
+      border: none; }
+  .search__box {
+    margin-left: 0; } }
+
 /* CSI Angleur
  *
  * /sass/components/header.scss - Header components
@@ -414,3 +425,18 @@ p {
     background-color: #436577;
     color: #51D2CC;
     cursor: pointer; }
+
+@media screen and (max-width: 1093px) {
+  .menu__link--search {
+    display: none; }
+    .menu__link--search::before {
+      padding-bottom: 0; }
+  .menu__search {
+    background: none;
+    border: none;
+    padding: 0;
+    padding-top: 1.5em; }
+  .search__box {
+    border-color: #436577;
+    background-color: white;
+    color: #436577; } }

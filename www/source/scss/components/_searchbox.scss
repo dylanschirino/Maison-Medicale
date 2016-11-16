@@ -57,3 +57,31 @@
     }
   }
 }
+
+@media screen and (max-width:1093px) {
+
+  .menu{
+    &__link{
+      &--search{
+        display: none;
+        &::before{
+            padding-bottom: 0;
+        }
+      }
+    }
+    &__search{
+      background: none;
+      border: none;
+      padding: 0;
+      padding-top:1.5em ;
+    }
+  }
+  .search{
+    &__box{
+      border-color: $texteColor;
+      background-color: white;
+      color: $texteColor;
+    }
+  }
+
+}
