@@ -185,8 +185,16 @@ p {
     visibility: hidden; }
   .header {
     position: static; }
+    .header::after {
+      content: "";
+      display: block;
+      clear: both; }
     .header__logo {
       float: right; }
+    .header__menu::after {
+      content: "";
+      display: block;
+      clear: both; }
     .header__burger {
       position: relative;
       display: block;
@@ -237,13 +245,6 @@ p {
     opacity: 1;
     visibility: visible;
     transition: .2s ease-in; }
-  .site-content {
-    position: absolute;
-    top: 90px;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    padding-top: 0; }
   .with--sidebar {
     overflow: hidden;
     height: 100%; }
@@ -388,6 +389,10 @@ p {
   .menu__sublink {
     text-align: left;
     font-family: "open_sansbold"; }
+    .menu__sublink::after {
+      content: "";
+      display: block;
+      clear: both; }
   .menu__link--down::after {
     float: right;
     padding-top: 0.8em; } }

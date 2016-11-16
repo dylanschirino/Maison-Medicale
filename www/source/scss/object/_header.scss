@@ -85,8 +85,20 @@
   }
   .header{
     position: static;
+    &::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
     &__logo{
       float: right;
+    }
+    &__menu{
+      &::after{
+        content: "";
+        display: block;
+        clear: both;
+      }
     }
     &__burger{
       position: relative;
@@ -151,14 +163,6 @@
       visibility: visible;
       transition: .2s ease-in;
     }
-  .site-content{
-    position: absolute;
-    top:90px;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    padding-top: 0;
-  }
   .with--sidebar{
     overflow: hidden;
     height: 100%;

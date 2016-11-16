@@ -97,6 +97,11 @@
       &__sublink{
         text-align: left;
         font-family: $opensansBold;
+        &::after{
+          content: "";
+          display: block;
+          clear: both;
+        }
       }
       &__link{
         &--down{
