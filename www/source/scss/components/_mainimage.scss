@@ -26,13 +26,47 @@
    &__title{
      font: 2.4em/1.2083333333em $museo;
      color: $greenLight;
-     text-align: center;
      border-top: 1px solid $greenLight;
      border-bottom: 1px solid $greenLight;
      padding: 0.4166666667em 0;
    }
+   &__label{
+     text-transform: uppercase;
+     padding-right:0.7142857143em;
+     &::before{
+       font: 1.6em $glyphs;
+       vertical-align: middle;
+       padding-right: 0.4em;
+     }
+     &--adress::before{
+       content: "\e910";
+     }
+     &--tel::before{
+       content: "\e90a";
+       font-size: 1.3em;
+     }
+     &--fax::before{
+       content: "\e905";
+     }
+     &--email::before{
+       content: "\e904";
+       font-size: 1.3em;
+     }
+   }
    &__link{
      font: 1.4em/1.3571428571em $opensans;
+     color: $greenLight;
+   }
+ }
+
+ .table{
+   &__day{
+     font: 1.4em/1.2142857143em $museo;
+     text-transform: uppercase;
+     color: $greenLight;
+   }
+   &__info{
+     font:1.4em/1.3571428571em $opensans;
      color: $green;
    }
  }
