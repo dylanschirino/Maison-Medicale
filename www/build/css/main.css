@@ -100,7 +100,8 @@ table {
  */
 a {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  display: block; }
 
 body {
   font-size: 62.5%; }
@@ -272,6 +273,7 @@ p {
 .menu__search {
   position: absolute;
   right: -25px;
+  bottom: -30px;
   width: 15.625em;
   padding: 1em 0;
   display: none; }
@@ -318,9 +320,24 @@ p {
  * started at 17/11/2016
  */
 .headContent {
-  min-height: 45em; }
+  min-height: 45em;
+  position: relative; }
   .headContent__slogan {
     width: 14.125em; }
+  .headContent__cards {
+    width: 42.7em;
+    height: 54.4em;
+    margin: 0 8em 0 0;
+    position: absolute;
+    right: -6px;
+    top: 100px; }
+  .headContent__cardsContact {
+    width: 66%;
+    margin: auto; }
+
+.cards__title {
+  display: inline-block;
+  margin: 1.25em 0 0.8333333333em 0; }
 
 /* CSI Angleur
  *
@@ -367,7 +384,8 @@ p {
 .menu__sublist {
   background-color: white;
   border: 3px solid #51D2CC;
-  border-radius: 5px; }
+  border-radius: 5px;
+  z-index: 1; }
   .menu__sublist::after {
     border-color: rgba(81, 210, 204, 0);
     border-bottom-color: #51D2CC;
@@ -428,7 +446,8 @@ p {
 .menu__search {
   background-color: white;
   border: 3px solid #51D2CC;
-  border-radius: 5px; }
+  border-radius: 5px;
+  z-index: 10; }
   .menu__search::after {
     border-color: rgba(81, 210, 204, 0);
     border-bottom-color: #51D2CC;
@@ -488,3 +507,18 @@ p {
     padding: 2.8125em 0 0 3.75em; }
   .headContent__bold {
     font-weight: bolder; }
+  .headContent__cards {
+    background-color: white;
+    box-shadow: 0 0 10px #333333; }
+
+.cards__title {
+  font: 2.4em/1.208em "museo";
+  color: #45B2AE;
+  text-align: center;
+  border-top: 1px solid #45B2AE;
+  border-bottom: 1px solid #45B2AE;
+  padding: 0.4166666667em 0; }
+
+.cards__link {
+  font: 1.4em/1.357em "open_sansregular", "Helvetica", Arial, sans-serif;
+  color: #046C66; }

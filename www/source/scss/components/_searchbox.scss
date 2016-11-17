@@ -22,6 +22,7 @@
     background-color: $white;
     border: 3px solid $BlueGreen;
     border-radius: 5px;
+    z-index: 10;
     &::after{
       border-color: rgba(81, 210, 204, 0);
       border-bottom-color: $BlueGreen;

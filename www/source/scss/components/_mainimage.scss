@@ -16,4 +16,23 @@
    &__bold{
      font-weight: bolder;
    }
+   &__cards{
+     background-color: $white;
+     box-shadow: 0 0 10px #333333;
+   }
+ }
+
+ .cards{
+   &__title{
+     font: 2.4em/1.2083333333em $museo;
+     color: $greenLight;
+     text-align: center;
+     border-top: 1px solid $greenLight;
+     border-bottom: 1px solid $greenLight;
+     padding: 0.4166666667em 0;
+   }
+   &__link{
+     font: 1.4em/1.3571428571em $opensans;
+     color: $green;
+   }
  }

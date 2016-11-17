@@ -8,7 +8,27 @@
 
  .headContent{
    min-height: 45em;
+   position: relative;
    &__slogan{
      width: 14.125em;
+   }
+   &__cards{
+      width: 42.7em;
+      height: 54.4em;
+      margin: 0 8em 0 0;
+      position: absolute;
+      right: -6px;
+      top:100px;
+   }
+   &__cardsContact{
+     width: 66%;
+     margin: auto;
+   }
+ }
+
+ .cards{
+   &__title{
+     display: inline-block;
+     margin: 1.25em 0 0.8333333333em 0;
    }
  }
