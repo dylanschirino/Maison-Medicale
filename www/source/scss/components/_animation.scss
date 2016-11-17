@@ -1,0 +1,27 @@
+/* CsiAngleur
+ *
+ * /sass/components/Animation.scss - Animation stylesheet
+ *
+ * coded by Dylan Schirino
+ * started at 17/11/2016
+ */
+
+// Stetoscope animation of the circle
+
+.cercle{
+    transform-origin: center;
+    animation: 5s infinite cercle;
+}
+
+@keyframes cercle {
+ 0% {
+   transform: scale(1);
+ }
+ 50% {
+   transform: scale(1.2);
+   fill:$green;
+ }
+ 100% {
+   transform: scale(1);
+ }
+}
