@@ -7,12 +7,10 @@
  */
 
 // Stetoscope animation of the circle
-
 .cercle{
-    transform-origin: center;
+    transform-origin: 18px 10px;//center
     animation: 5s infinite cercle;
 }
-
 @keyframes cercle {
  0% {
    transform: scale(1);
@@ -24,4 +22,17 @@
  100% {
    transform: scale(1);
  }
+}
+
+// Medic animation of the 2nd medic
+.medic-2{
+  transform-origin: 70px 35px ;//top
+  animation: 6s medic-top;
+  -webkit-animation-iteration-count: 10;
+  animation-iteration-count: 10;
+}
+@keyframes medic-top {
+ 0% {transform: rotate(0deg);}
+ 50% {transform: rotate(90deg);}
+ 100% {transform: rotate(0deg);}
 }

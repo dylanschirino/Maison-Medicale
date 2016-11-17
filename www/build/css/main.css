@@ -399,6 +399,23 @@ p {
  * coded by Dylan Schirino
  * started at 17/11/2016
  */
+.howitworks::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.howitworks__text {
+  width: 79%;
+  margin: auto; }
+
+.howitworks__svg--medic {
+  float: right; }
+
+@media screen and (max-width: 796px) {
+  .howitworks__text {
+    width: 100%;
+    margin: auto; } }
+
 /* CsiAngleur
  *
  * /sass/components/Animation.scss - Animation stylesheet
@@ -407,7 +424,7 @@ p {
  * started at 17/11/2016
  */
 .cercle {
-  transform-origin: center;
+  transform-origin: 18px 10px;
   animation: 5s infinite cercle; }
 
 @keyframes cercle {
@@ -418,6 +435,20 @@ p {
     fill: #046C66; }
   100% {
     transform: scale(1); } }
+
+.medic-2 {
+  transform-origin: 70px 35px;
+  animation: 6s medic-top;
+  -webkit-animation-iteration-count: 10;
+  animation-iteration-count: 10; }
+
+@keyframes medic-top {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(90deg); }
+  100% {
+    transform: rotate(0deg); } }
 
 /* CSI Angleur
  *
@@ -661,3 +692,12 @@ p {
   background-color: #54EBCE; }
   .howitworks__svg {
     padding: 5.5em 0; }
+  .howitworks__title {
+    font: 3.2em/1.188em "museo";
+    text-align: center;
+    text-transform: uppercase;
+    color: #436577; }
+  .howitworks__text {
+    font-size: 1.8em;
+    line-height: 1.9444444444em;
+    padding-top: 1.6666666667em; }

@@ -11,4 +11,15 @@
    &__svg{
      padding: 5.5em 0;
    }
+   &__title{
+     font: 3.2em/1.1875em $museo;
+     text-align: center;
+     text-transform: uppercase;
+     color: $texteColor
+   }
+   &__text{
+     font-size:1.8em;
+     line-height:1.9444444444em;
+     padding-top: 1.6666666667em;
+   }
  }

@@ -5,3 +5,29 @@
  * coded by Dylan Schirino
  * started at 17/11/2016
  */
+
+ .howitworks{
+   &::after{
+     content: "";
+     display: block;
+     clear: both;
+   }
+   &__text{
+     width: 79%;
+     margin: auto;
+   }
+   &__svg{
+     &--medic{
+       float: right;
+     }
+   }
+ }
+
+ @media screen and(max-width:796px) {
+   .howitworks{
+     &__text{
+       width: 100%;
+       margin: auto;
+     }
+   }
+ }
