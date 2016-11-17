@@ -18,9 +18,18 @@
    }
    &__cards{
      background-color: $white;
-     box-shadow: 0 0 10px #333333;
+     box-shadow: 0 0 10px rgba(51,51,51,0.5);
    }
  }
+
+ @media screen and (max-width:1058px) {
+   .headContent{
+     &__slogan{
+       padding-left: 1.5em;
+     }
+   }
+ }
+
 
  .cards{
    &__title{
@@ -56,6 +65,34 @@
    &__link{
      font: 1.4em/1.3571428571em $opensans;
      color: $greenLight;
+   }
+ }
+
+ @media screen and (max-width:981px) {
+   .headContent{
+     background: none;
+     background-color: #3CE8C7;
+     padding-bottom: 4em;
+     &__slogan{
+       padding: 3em 0;
+       text-align: center;
+     }
+   }
+ }
+
+ @media screen and (max-width:537px) {
+   .headContent{
+     &__slogan{
+       font-size: 2.4em;
+     }
+     &__cards{
+       box-shadow: none;
+     }
+   }
+   .cards{
+     &__title{
+       font-size: 1.8em;
+     }
    }
  }
 

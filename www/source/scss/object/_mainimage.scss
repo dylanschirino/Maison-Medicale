@@ -22,6 +22,7 @@
    }
  }
 
+
  .cards{
    &__title{
      display: inline-block;
@@ -38,6 +39,63 @@
      margin-bottom: 1.4285714286em;
    }
  }
+
+
+ @media screen and (max-width:981px) {
+    .headContent{
+      &__slogan{
+        width: 90%;
+        margin: auto;
+      }
+      &__cards{
+        position: static;
+        width:90%;
+        margin:auto;
+        padding: 1em 0;
+      }
+    }
+    .cards{
+      &__title{
+        display: block;
+        text-align: center;
+        &--horaire{
+          margin: 1.25em 2.9166666667em 0.8333333333em 2.9166666667em;
+        }
+      }
+      &__list{
+        width: 50%;
+        margin: auto;
+        display: block;
+      }
+    }
+ }
+
+ @media screen and (max-width:799px) {
+   .headContent{
+     &__cards{
+       height: auto;
+     }
+   }
+   .cards{
+     &__list{
+       width: 80%;
+       margin: auto;
+     }
+   }
+ }
+
+ @media screen and (max-width:450px) {
+   .cards{
+     &__title{
+       margin: 1.25em 1em;
+     }
+     &__list{
+       width: 90%;
+       margin: auto;
+     }
+   }
+ }
+
 
 .table{
   &__element{
