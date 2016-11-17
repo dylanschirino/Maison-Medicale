@@ -11,19 +11,19 @@
   display: none;
 }
 .header{
+  &::after{
+    content: "";
+    clear: both;
+    display: block;
+  }
   &__content{
     max-width: 88.7%;
     margin: auto;
     height:10em;
-    &::after{
-      content: "";
-      display: block;
-      clear: both;
-    }
   }
   &__logo{
     display:block;
-    margin-left: 5.6em;
+    margin-left: 5em;
     float: left;
   }
 }

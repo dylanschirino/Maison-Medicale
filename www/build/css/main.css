@@ -123,18 +123,19 @@ p {
   position: absolute;
   display: none; }
 
+.header::after {
+  content: "";
+  clear: both;
+  display: block; }
+
 .header__content {
   max-width: 88.7%;
   margin: auto;
   height: 10em; }
-  .header__content::after {
-    content: "";
-    display: block;
-    clear: both; }
 
 .header__logo {
   display: block;
-  margin-left: 5.6em;
+  margin-left: 5em;
   float: left; }
 
 .menu__content {
@@ -309,6 +310,18 @@ p {
   .search__box {
     margin-left: 0; } }
 
+/* CsiAngleur
+ *
+ * /sass/object/mainimage.scss - Mainimage Object
+ *
+ * coded by Dylan Schirino
+ * started at 17/11/2016
+ */
+.headContent {
+  min-height: 45em; }
+  .headContent__slogan {
+    width: 14.125em; }
+
 /* CSI Angleur
  *
  * /sass/components/header.scss - Header components
@@ -458,3 +471,20 @@ p {
     border-color: #436577;
     background-color: white;
     color: #436577; } }
+
+/* CsiAngleur
+ *
+ * /sass/components/mainimage.scss - Mainimage Components
+ *
+ * coded by Dylan Schirino
+ * started at 17/11/2016
+ */
+.headContent {
+  background: url("../images/mainimage.jpg") no-repeat center center;
+  background-size: cover; }
+  .headContent__slogan {
+    font: 3.2em/1.406em "museo";
+    color: white;
+    padding: 2.8125em 0 0 3.75em; }
+  .headContent__bold {
+    font-weight: bolder; }
