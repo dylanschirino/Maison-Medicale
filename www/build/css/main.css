@@ -379,6 +379,14 @@ p {
     width: 90%;
     margin: auto; } }
 
+@media screen and (max-width: 352px) {
+  .headContent__cards {
+    width: 100%;
+    margin: auto; }
+  .cards__list {
+    width: 90%;
+    margin: auto; } }
+
 .table__element {
   margin-bottom: 1.3em;
   display: flex;

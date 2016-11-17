@@ -96,6 +96,21 @@
    }
  }
 
+ @media screen and (max-width:352px) {
+   .headContent{
+     &__cards{
+       width: 100%;
+       margin: auto;
+     }
+   }
+   .cards{
+      &__list{
+        width: 90%;
+        margin: auto;
+      }
+   }
+ }
+
 
 .table{
   &__element{
