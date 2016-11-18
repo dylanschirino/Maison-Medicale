@@ -87,6 +87,7 @@
    &__submit{
      &--footer{
        background-color: $footerColor;
+       border: 1px solid $white;
        &:hover{
          border-color: $footerColor;
          color: $footerColor;

@@ -1072,7 +1072,8 @@ p {
   width: 56.4%; }
 
 .newsletter__submit--footer {
-  background-color: #8898AA; }
+  background-color: #8898AA;
+  border: 1px solid white; }
   .newsletter__submit--footer:hover {
     border-color: #8898AA;
     color: #8898AA; }
