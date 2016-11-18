@@ -1,0 +1,64 @@
+/* CSI Angleur
+ *
+ * /sass/components/discover.scss - Discover components
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+
+ .discover{
+   margin-top: -12.4em;
+   &__header{
+     background-color: $BlueGreen;
+     padding-bottom: 4em;
+   }
+   &__title{
+     font: 3.2em/1.4em $museo;
+     color: $white;
+     text-transform: uppercase;
+     padding: 4.625em 0 2.0625em 0;
+   }
+   &__element{
+     font: 2.4em/1.2083333333em $museo;
+     text-transform: uppercase;
+     color: $white;
+     text-align: center;
+   }
+   &__link{
+     &::before{
+       display: block;
+       font: 2.5em/1.5em $glyphs;
+       text-align: center;
+     }
+     &--generale::before{
+       content: "\e902";
+     }
+     &--psy::before{
+       content: "\e90c";
+     }
+     &--kine::before{
+       content: "\e90d";
+     }
+     &--cardio::before{
+       content: "\e900";
+     }
+     &--dentiste::before{
+       content: "\e911";
+     }
+   }
+ }
+ .actif{
+    &::after{
+      border-color: rgba(81, 210, 204, 0);
+      border-top-color: $BlueGreen;
+      border-width: 25px;
+    }
+  }
+
+ @media screen and(max-width:773px) {
+   .discover{
+     &__element{
+       font-size: 1.8em;
+     }
+   }
+ }

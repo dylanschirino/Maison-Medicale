@@ -1,0 +1,83 @@
+/* CSI Angleur
+ *
+ * /sass/object/discover.scss - Discover object
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+
+ .discover{
+   &__header{
+     margin-top: 5em;
+   }
+   &__container{
+     width: 84%;
+     margin: auto;
+   }
+   &__title{
+     margin-left: 0.6em;
+   }
+   &__menu{
+     display: flex;
+     justify-content: space-between;
+   }
+   &__content{
+     opacity: 0;
+     visibility: hidden;
+     height: 0;
+     transition: .2s ease-in;
+   }
+ }
+ .activated{
+   opacity: 1;
+   visibility: visible;
+   height: auto;
+ }
+
+ .actif{
+     position: relative;
+     &::after{
+       top: 100%;
+       left: 35%;
+       margin-top: 1.67em;
+       border: solid transparent;
+       content: " ";
+       height: 0;
+       width: 0;
+       position: absolute;
+       pointer-events: none;
+     }
+ }
+
+ @media screen and(max-width:861px) {
+   .discover{
+     &__container{
+       width: 95%;
+       margin: auto;
+     }
+   }
+ }
+
+@media screen and(max-width:574px) {
+  .discover{
+    &__container{
+      width: 80%;
+      margin: auto;
+      &::after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+    &__title{
+      text-align: center;
+      margin: 0;
+    }
+    &__menu{
+      display: block;
+    }
+    &__element{
+      padding-bottom: 1em;
+    }
+  }
+}

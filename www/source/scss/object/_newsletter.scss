@@ -7,6 +7,7 @@
  */
  .newsletter{
    margin-top: -9em;
+   position: relative;
    &__form{
      width: 80%;
      margin: auto;
@@ -18,6 +19,9 @@
    &__submit{
      width: 8.3333333333em;
      margin-left: 1em;
+   }
+   &__container{
+        z-index: 111;
    }
  }
 

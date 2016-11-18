@@ -426,7 +426,8 @@ p {
  * started at 18/11/2016
  */
 .newsletter {
-  margin-top: -9em; }
+  margin-top: -9em;
+  position: relative; }
   .newsletter__form {
     width: 80%;
     margin: auto; }
@@ -436,6 +437,8 @@ p {
   .newsletter__submit {
     width: 8.3333333333em;
     margin-left: 1em; }
+  .newsletter__container {
+    z-index: 111; }
 
 @media screen and (max-width: 1187px) {
   .newsletter__form {
@@ -457,6 +460,72 @@ p {
     margin-left: 0;
     display: block;
     margin: 1em auto 0 auto; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/discover.scss - Discover object
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+.discover__header {
+  margin-top: 5em; }
+
+.discover__container {
+  width: 84%;
+  margin: auto; }
+
+.discover__title {
+  margin-left: 0.6em; }
+
+.discover__menu {
+  display: flex;
+  justify-content: space-between; }
+
+.discover__content {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: .2s ease-in; }
+
+.activated {
+  opacity: 1;
+  visibility: visible;
+  height: auto; }
+
+.actif {
+  position: relative; }
+  .actif::after {
+    top: 100%;
+    left: 35%;
+    margin-top: 1.67em;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+
+@media screen and (max-width: 861px) {
+  .discover__container {
+    width: 95%;
+    margin: auto; } }
+
+@media screen and (max-width: 574px) {
+  .discover__container {
+    width: 80%;
+    margin: auto; }
+    .discover__container::after {
+      content: "";
+      display: block;
+      clear: both; }
+  .discover__title {
+    text-align: center;
+    margin: 0; }
+  .discover__menu {
+    display: block; }
+  .discover__element {
+    padding-bottom: 1em; } }
 
 /* CsiAngleur
  *
@@ -787,4 +856,50 @@ p {
 
 @media screen and (max-width: 880px) {
   .newsletter__title {
+    font-size: 1.8em; } }
+
+/* CSI Angleur
+ *
+ * /sass/components/discover.scss - Discover components
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+.discover {
+  margin-top: -12.4em; }
+  .discover__header {
+    background-color: #51D2CC;
+    padding-bottom: 4em; }
+  .discover__title {
+    font: 3.2em/1.4em "museo";
+    color: white;
+    text-transform: uppercase;
+    padding: 4.625em 0 2.0625em 0; }
+  .discover__element {
+    font: 2.4em/1.208em "museo";
+    text-transform: uppercase;
+    color: white;
+    text-align: center; }
+  .discover__link::before {
+    display: block;
+    font: 2.5em/1.5em "glyphs";
+    text-align: center; }
+  .discover__link--generale::before {
+    content: "\e902"; }
+  .discover__link--psy::before {
+    content: "\e90c"; }
+  .discover__link--kine::before {
+    content: "\e90d"; }
+  .discover__link--cardio::before {
+    content: "\e900"; }
+  .discover__link--dentiste::before {
+    content: "\e911"; }
+
+.actif::after {
+  border-color: rgba(81, 210, 204, 0);
+  border-top-color: #51D2CC;
+  border-width: 25px; }
+
+@media screen and (max-width: 773px) {
+  .discover__element {
     font-size: 1.8em; } }
