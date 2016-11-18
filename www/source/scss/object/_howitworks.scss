@@ -7,11 +7,6 @@
  */
 
  .howitworks{
-   &::after{
-     content: "";
-     display: block;
-     clear: both;
-   }
    &__text{
      width: 79%;
      margin: auto;

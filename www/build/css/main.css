@@ -104,15 +104,21 @@ a {
   display: block; }
 
 body {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  background: url("../images/grid.png") repeat-y center;
+  opacity: 0.7; }
 
 p {
   color: #436577;
   font-family: "open_sansregular", "Helvetica", Arial, sans-serif; }
 
-.maincontainer {
+.centerContainer {
   width: 81%;
   margin: auto; }
+  .centerContainer::after {
+    content: "";
+    display: block;
+    clear: both; }
 
 /* CSI Angleur
 *
@@ -399,11 +405,6 @@ p {
  * coded by Dylan Schirino
  * started at 17/11/2016
  */
-.howitworks::after {
-  content: "";
-  display: block;
-  clear: both; }
-
 .howitworks__text {
   width: 79%;
   margin: auto; }
@@ -689,7 +690,8 @@ p {
  * started at 17/11/2016
  */
 .howitworks {
-  background-color: #54EBCE; }
+  background-color: #54EBCE;
+  padding-bottom: 11em; }
   .howitworks__svg {
     padding: 5.5em 0; }
   .howitworks__title {
