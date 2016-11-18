@@ -12,6 +12,10 @@
      background-color: $BlueGreen;
      padding-bottom: 4em;
    }
+   &__services{
+     background-color: $headerBckg;
+     padding-top: 8em;
+   }
    &__title{
      font: 3.2em/1.4em $museo;
      color: $white;
@@ -45,6 +49,38 @@
      &--dentiste::before{
        content: "\e911";
      }
+   }
+
+   &__content{
+     background-color: $white;
+     border: 1px solid $inputBorder;
+     padding:5em 0;
+   }
+   &__question{
+     font: 2.4em/1.375em $opensans;
+     color: $greenLight;
+     padding-bottom: 1.25em;
+     &::after{
+       content: "";
+       display: block;
+       clear: both;
+     }
+     &::before{
+       content: "\e90b";
+       display: inline-block;
+       font: 2em $glyphs;
+       vertical-align: top;
+       float: left;
+       margin-right: 1.25em;
+     }
+   }
+   &__answer{
+     font: 1.6em/1.6875em $opensans;
+   }
+ }
+ .answer{
+   &__text{
+     padding-bottom: 1.5em;
    }
  }
  .actif{

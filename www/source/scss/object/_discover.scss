@@ -22,16 +22,22 @@
      justify-content: space-between;
    }
    &__content{
-     opacity: 0;
-     visibility: hidden;
-     height: 0;
+     display: none;
      transition: .2s ease-in;
+     width: 80.7%;
+     margin: auto;
+   }
+   &__question{
+     width: 80.7%;
+     margin: auto;
+   }
+   &__answer{
+     width: 58%;
+     margin: auto;
    }
  }
  .activated{
-   opacity: 1;
-   visibility: visible;
-   height: auto;
+    display: block;
  }
 
  .actif{
