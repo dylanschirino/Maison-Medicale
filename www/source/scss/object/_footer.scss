@@ -1,0 +1,64 @@
+/* CsiAngleur
+ *
+ * /sass/object/footer.scss - Footer Object
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+ .footer{
+   &__container{
+     width: 80%;
+     margin: auto;
+     display: flex;
+     justify-content: space-between;
+   }
+ }
+
+ .table{
+   &__element{
+     &--footer{
+       display: flex;
+       justify-content: space-between;
+     }
+   }
+ }
+
+
+@media screen and (max-width:795px) {
+  .footer{
+    &__container{
+      display: block;
+      width: 70%;
+      margin: auto;
+    }
+    &__title{
+      text-align: center;
+    }
+  }
+  .cards{
+    &__element{
+      &--footer{
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .table{
+    &__element{
+      &--footer{
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .linkSection{
+    &__link{
+      text-align: center;
+    &::before{
+      content: "";
+      width: 0;
+      background: none;
+    }
+    }
+  }
+}

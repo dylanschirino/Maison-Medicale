@@ -1,0 +1,65 @@
+footer.footer
+  section.footer__container
+    h2.hidden Information complémentaire
+    section.footer__information
+      h3.footer__title Information
+      ul.cars__list--footer
+        li.cards__element--footer
+          a.cards__link--footer(href="googlemaps", title="Voir l'adresse sur google maps")
+            span.cards__label.cards__label--adress="Adresse : "
+            span.cards__info="48, Rue du vaudrée 4031 Angleur"
+        li.cards__element--footer
+          a.cards__link--footer(href="tel:0494344737", title="Téléphoner à la maison médicale")
+            span.cards__label.cards__label--tel="Téléphone : "
+            span.cards__info="04 94 34 47 37"
+        li.cards__element--footer
+          a.cards__link--footer(href="fax:043434737", title="Nous envoyer un fax!")
+            span.cards__label.cards__label--fax="Fax : "
+            span.cards__info="04 94 34 47 37"
+        li.cards__element--footer
+          a.cards__link--footer(href="mailto:contact@csiangleur.be", title="Nous envoyer un email")
+            span.cards__label.cards__label--email="Email : "
+            span.cards__info="contact@csiangleur.be"
+    section.footer__horaire
+      h3.footer__title.footer__title--center Horaires
+      ul.cars__list--footer
+        li.table__element--footer
+          span.table__day--footer="Lun "
+          span.table__info--footer="8.00 - 20.00 sauf férié 9.00 - 19h"
+        li.table__element--footer
+          span.table__day--footer="Mar "
+          span.table__info--footer="8.00 - 20.00 sauf férié 9.00 - 19h"
+        li.table__element--footer
+          span.table__day--footer="Mer "
+          span.table__info--footer="8.00 - 20.00 sauf férié 9.00 - 19h"
+        li.table__element--footer
+          span.table__day--footer="Jeu "
+          span.table__info--footer="8.00 - 20.00 sauf férié 9.00 - 19h"
+        li.table__element--footer
+          span.table__day--footer="Ven "
+          span.table__info--footer="8.00 - 20.00 sauf férié 9.00 - 19h"
+        li.table__element--footer
+          span.table__day--footer="Sam "
+          span.table__info--footer="8.00 - 20.00 sauf férié 9.00 - 19h"
+        li.table__element--footer
+          span.table__day--footer="Dim "
+          span.table__info--footer="8.00 - 20.00 sauf férié 9.00 - 19h"
+    section.footer__linkSection
+      h3.footer__title Liens Utiles
+      ul.linkSection__list
+        li.linkSection__element
+          a.linkSection__link(href="http://inami.be", title="Vers le site de l'inami") Inami
+        li.linkSection__element
+          a.linkSection__link(href="http://maisonmedicale.org", title="Vers le site officiel des maison médicales") Maisonmédicale
+        li.linkSection__element
+          a.linkSection__link(href="http://glamo.be", title="Vers la page de l'inami") Glamo
+        li.linkSection__element
+          a.linkSection__link(href="http://chu.be", title="Vers le site du CHU") Chu
+  div.footer__newsletter
+    div.newsletter__form
+      h3.newsletter__title.newsletter__title--footer Je m'inscris à la newsletter
+      form
+        input.newsletter__input.newsletter__input--footer(type="mail",name="newsletter",value="" id="newsletter" placeholder="Votre adresse email")
+        input.newsletter__submit.newsletter__submit--footer( type="submit", value="S'inscrire")
+  div.designby
+    a.designby__ds(href="http://schirino.be", title="Aller vers le site internet du créateur de ce site") Designed by DS

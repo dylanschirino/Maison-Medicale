@@ -1,0 +1,138 @@
+/* CsiAngleur
+ *
+ * /sass/components/footer.scss - Footer  Components
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+ .footer{
+   background-color: $footerBckg;
+   &__title{
+     font: 1.8em/1.22em $museo;
+     text-transform: uppercase;
+     color: $footerColor;
+     padding: 1.9444em 0 1.6111em 0;
+     &--center{
+       text-align: center;
+     }
+   }
+ }
+ // Information
+ .cards{
+   &__link{
+     &--footer{
+       color: $footerColor;
+       font: 1.2em/1.416667em $opensans;
+       padding-bottom: 1.666em;
+       transition: .2s ease-in;
+       &:hover{
+         transform: scale(1.05);
+       }
+     }
+   }
+ }
+ // Horaires
+ .table{
+   &__element{
+     &--footer{
+       color: $footerColor;
+       font: 1.2em/1.416667em $opensans;
+       padding-bottom: 1em;
+     }
+   }
+   &__day{
+     &--footer{
+       text-transform: uppercase;
+       padding-right: 1em;
+     }
+   }
+ }
+  // Liens Utiles
+ .linkSection{
+   &__link{
+    font: 1.2em/1.6em $opensans;
+    text-transform: uppercase;
+    color: $footerColor;
+    padding-bottom: 0.8em;
+    &:hover{
+      text-decoration: underline;
+    }
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: $footerColor;
+      margin-right: 1.5em;
+    }
+   }
+ }
+
+ // Newsletter
+ .newsletter{
+   &__title{
+     &--footer{
+       color: $footerColor;
+       font-size: 1.4em;
+       text-transform: uppercase;
+       text-align: left;
+       padding-top: 4em;
+     }
+   }
+   &__input{
+     &--footer{
+       width: 56.4%;
+     }
+   }
+   &__submit{
+     &--footer{
+       background-color: $footerColor;
+       &:hover{
+         border-color: $footerColor;
+         color: $footerColor;
+       }
+     }
+   }
+ }
+
+ .designby{
+   background-color: $footerColor;
+   &__ds{
+     color: $white;
+     font: 1.4em/1.6em $museo;
+     text-transform: uppercase;
+     text-align: center;
+     padding: 1.2em 0;
+     &:hover{
+       text-decoration: underline;
+     }
+   }
+ }
+
+ @media screen and (max-width:987px) {
+   .newsletter{
+     &__title{
+       &--footer{
+         text-align: center;
+       }
+     }
+     &__input{
+       &--footer{
+         width: 80%;
+       }
+     }
+   }
+ }
+
+ @media screen and(max-width:795px) {
+   .linkSection{
+     &__link{
+       text-align: center;
+     &::before{
+       content: "";
+       width: 0;
+       background: none;
+     }
+     }
+   }
+ }
