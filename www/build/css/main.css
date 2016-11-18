@@ -506,6 +506,14 @@ p {
 .activated {
   display: block; }
 
+.no-js .discover__answer {
+  height: auto;
+  opacity: 1; }
+
+.no-js .discover__content {
+  display: block;
+  margin-top: 5em; }
+
 .actif {
   position: relative; }
   .actif::after {
@@ -522,6 +530,9 @@ p {
 @media screen and (max-width: 861px) {
   .discover__container {
     width: 95%;
+    margin: auto; }
+  .discover__answer {
+    width: 90%;
     margin: auto; } }
 
 @media screen and (max-width: 574px) {
@@ -942,6 +953,23 @@ p {
   border-color: rgba(81, 210, 204, 0);
   border-top-color: #51D2CC;
   border-width: 25px; }
+
+@media screen and (max-width: 1107px) {
+  .discover__question {
+    text-align: center;
+    width: 90%;
+    margin: auto; }
+    .discover__question::before {
+      display: block;
+      position: static;
+      text-align: center;
+      padding-bottom: 0.3em;
+      margin: 0; } }
+
+@media screen and (max-width: 1002px) {
+  .discover__header {
+    margin: 0;
+    padding-top: 3em; } }
 
 @media screen and (max-width: 773px) {
   .discover__element {

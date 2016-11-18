@@ -47,7 +47,15 @@
  .activated{
     display: block;
  }
+.no-js .discover__answer{
+  height: auto;
+  opacity: 1;
+}
 
+.no-js .discover__content{
+  display: block;
+  margin-top: 5em;
+}
  .actif{
      position: relative;
      &::after{
@@ -67,6 +75,10 @@
    .discover{
      &__container{
        width: 95%;
+       margin: auto;
+     }
+     &__answer{
+       width: 90%;
        margin: auto;
      }
    }

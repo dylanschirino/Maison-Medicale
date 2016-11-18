@@ -96,7 +96,33 @@
       border-width: 25px;
     }
   }
+  // Discover content
 
+  @media screen and (max-width:1107px) {
+    .discover{
+      &__question{
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        &::before{
+          display: block;
+          position: static;
+          text-align: center;
+          padding-bottom: 0.3em;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+@media screen and (max-width:1002px){
+  .discover{
+    &__header{
+      margin: 0;
+      padding-top: 3em;
+    }
+  }
+}
  @media screen and(max-width:773px) {
    .discover{
      &__element{
