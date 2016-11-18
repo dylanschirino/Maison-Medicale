@@ -103,10 +103,11 @@ a {
   color: inherit;
   display: block; }
 
+h2, h3 {
+  font-family: "museo"; }
+
 body {
-  font-size: 62.5%;
-  background: url("../images/grid.png") repeat-y center;
-  opacity: 0.7; }
+  font-size: 62.5%; }
 
 p {
   color: #436577;
@@ -419,6 +420,46 @@ p {
 
 /* CsiAngleur
  *
+ * /sass/object/newsletter.scss - Newsletter Object
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+.newsletter {
+  margin-top: -9em; }
+  .newsletter__form {
+    width: 80%;
+    margin: auto; }
+  .newsletter__input {
+    width: 75%;
+    height: 3em; }
+  .newsletter__submit {
+    width: 8.3333333333em;
+    margin-left: 1em; }
+
+@media screen and (max-width: 1187px) {
+  .newsletter__form {
+    width: 72%;
+    margin: auto; }
+  .newsletter__input {
+    width: 67%;
+    margin: auto; } }
+
+@media screen and (max-width: 1004px) {
+  .newsletter__form {
+    width: 90%;
+    margin: auto; }
+  .newsletter__input {
+    display: block;
+    width: 90%;
+    margin: auto; }
+  .newsletter__submit {
+    margin-left: 0;
+    display: block;
+    margin: 1em auto 0 auto; } }
+
+/* CsiAngleur
+ *
  * /sass/components/Animation.scss - Animation stylesheet
  *
  * coded by Dylan Schirino
@@ -703,3 +744,47 @@ p {
     font-size: 1.8em;
     line-height: 1.9444444444em;
     padding-top: 1.6666666667em; }
+
+/* CsiAngleur
+ *
+ * /sass/components/newsletter.scss - Newsletter Components
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+.newsletter {
+  background-color: #45B2AE; }
+  .newsletter__title {
+    font-size: 2.4em;
+    line-height: 1.2083333333em;
+    color: white;
+    text-align: center;
+    padding: 1.1em 0; }
+  .newsletter__form {
+    padding-bottom: 3em; }
+  .newsletter__input {
+    font: 1.6em/3em "open_sansregular", "Helvetica", Arial, sans-serif;
+    padding-left: 1em;
+    border: none;
+    border: 1px solid #CCCCCC;
+    border-radius: 7px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset; }
+  .newsletter__submit {
+    font: 1.8em/2.5em "museo";
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 7px;
+    background-color: #FFA33C;
+    color: white;
+    transition: .2s ease-in; }
+    .newsletter__submit:hover {
+      border: 1px solid #FFA33C;
+      color: #FFA33C;
+      background-color: white;
+      cursor: pointer; }
+
+@media screen and (max-width: 880px) {
+  .newsletter__title {
+    font-size: 1.8em; } }

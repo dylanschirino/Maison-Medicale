@@ -1,0 +1,54 @@
+/* CsiAngleur
+ *
+ * /sass/object/newsletter.scss - Newsletter Object
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+ .newsletter{
+   margin-top: -9em;
+   &__form{
+     width: 80%;
+     margin: auto;
+   }
+   &__input{
+     width: 75%;
+     height: 3em;
+   }
+   &__submit{
+     width: 8.3333333333em;
+     margin-left: 1em;
+   }
+ }
+
+ @media screen and (max-width:1187px) {
+    .newsletter{
+      &__form{
+        width: 72%;
+        margin: auto;
+      }
+      &__input{
+        width: 67%;
+        margin: auto;
+      }
+    }
+ }
+
+ @media screen and (max-width:1004px) {
+    .newsletter{
+      &__form{
+        width: 90%;
+        margin: auto;
+      }
+      &__input{
+        display: block;
+        width: 90%;
+        margin: auto;
+      }
+      &__submit{
+        margin-left: 0;
+        display: block;
+        margin: 1em auto 0 auto;
+      }
+    }
+ }

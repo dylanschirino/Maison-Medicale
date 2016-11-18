@@ -12,10 +12,13 @@ a{
   display: block;
 }
 
+h2,h3{
+  font-family: $museo;
+}
 body{
   font-size: 62.5%;
-  background: url("../images/grid.png")repeat-y center;
-  opacity: 0.7;
+  //background: url("../images/grid.png")repeat-y center;
+  //opacity: 0.7;
 }
 
 p{
