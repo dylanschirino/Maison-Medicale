@@ -9,7 +9,8 @@
   burger = document.querySelector("#header__burger"),
   sitecache = document.querySelector("#site-cache"),
   OpenInMenu = document.querySelectorAll(".menu__element--down"),
-  subLink = document.querySelectorAll(".menu__sublist");
+  subLink = document.querySelectorAll(".menu__sublist"),
+  question = document.querySelectorAll(".discover__question");
 
   // Quand le javascript est désactiver
   body.classList.remove("no-js");
@@ -23,6 +24,15 @@
         });
       });
     }
+
+    //discover content appear/disapear while clicking on questions
+    question.forEach( function(lien) {
+      lien.addEventListener("click", function(events){
+        events.preventDefault();
+        events.target.classList.toggle("discover__question--clicked");
+        events.target.nextElementSibling.classList.toggle("discover__answer--open");
+      });
+    });
 
 
   // Barre de recherche activé au click

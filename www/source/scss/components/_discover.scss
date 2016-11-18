@@ -14,7 +14,7 @@
    }
    &__services{
      background-color: $headerBckg;
-     padding-top: 8em;
+     padding: 8em 0;
    }
    &__title{
      font: 3.2em/1.4em $museo;
@@ -59,7 +59,7 @@
    &__question{
      font: 2.4em/1.375em $opensans;
      color: $greenLight;
-     padding-bottom: 1.25em;
+     transition: .2s ease-in;
      &::after{
        content: "";
        display: block;
@@ -69,13 +69,19 @@
        content: "\e90b";
        display: inline-block;
        font: 2em $glyphs;
-       vertical-align: top;
-       float: left;
        margin-right: 1.25em;
+       position: relative;
+       top: 15px;
+     }
+     &--clicked {
+       &::before{
+         content: "\e913";
+       }
      }
    }
    &__answer{
      font: 1.6em/1.6875em $opensans;
+     padding-top:1.25em;
    }
  }
  .answer{

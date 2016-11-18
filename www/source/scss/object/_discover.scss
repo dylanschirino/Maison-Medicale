@@ -34,6 +34,14 @@
    &__answer{
      width: 58%;
      margin: auto;
+     height: 0;
+     overflow: hidden;
+     opacity: 0;
+     transition: .3s ease-in-out;
+     &--open{
+       height: auto;
+       opacity: 1;
+     }
    }
  }
  .activated{
