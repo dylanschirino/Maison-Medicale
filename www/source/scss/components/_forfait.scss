@@ -6,7 +6,7 @@
  * started at 19/11/2016
  */
  .forfait{
-   &__container{
+   &__container, &__obligation{
      background-color: $cardsBckg;
      border-radius: 8px;
    }
@@ -24,7 +24,45 @@
      padding-bottom: 1em;
      padding-right: 3.75em;
    }
+   &__obligation{
+     padding-bottom: 6em;
+   }
  }
+
+ .obligation{
+   &__title{
+     font-size:1.8em;
+     line-height: 1.222em;
+     color: $greenBlue;
+     text-align: center;
+     &::before{
+       display: block;
+       font: 4em/1em $glyphs;
+       padding: 0.5em 0 0.2em 0;
+     }
+     &--house::before{
+       content: "\e907";
+     }
+     &--patient::before{
+       content: "\e912";
+     }
+   }
+   &__list{
+     padding-top: 1.5em;
+   }
+   &__element{
+     font: 1.4em/1.5714285714em $opensans;
+     color: #34586B;
+     padding-bottom: 1.1em;
+     &::before{
+       content: "\e901";
+       font: 1em/1.3em $glyphs;
+       color: $greenFlash;
+       padding-right: 1.5em;
+     }
+   }
+ }
+
 
  @media screen and(max-width:777px) {
    .forfait{

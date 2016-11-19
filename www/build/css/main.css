@@ -643,6 +643,20 @@ p {
   .forfait__svg {
     float: left;
     margin: auto 4.5em 4.1em 4.5em; }
+  .forfait__cardsContainer {
+    margin-top: 8em;
+    display: flex;
+    justify-content: space-between; }
+  .forfait__obligation {
+    width: 47.7%; }
+
+.obligation__list {
+  width: 80%;
+  margin: auto; }
+
+.obligation__element {
+  display: flex;
+  justify-content: flex-start; }
 
 @media screen and (max-width: 813px) {
   .forfait {
@@ -651,10 +665,17 @@ p {
       float: none;
       display: block;
       margin: 2em auto; }
+    .forfait__content {
+      padding-bottom: 3em; }
     .forfait__explaination {
       width: 80%;
       margin: auto;
-      padding-right: 0; } }
+      padding-right: 0; }
+    .forfait__cardsContainer {
+      display: block; }
+    .forfait__obligation {
+      width: 100%;
+      margin-bottom: 6em; } }
 
 /* CsiAngleur
  *
@@ -1218,7 +1239,7 @@ p {
  * coded by Dylan Schirino
  * started at 19/11/2016
  */
-.forfait__container {
+.forfait__container, .forfait__obligation {
   background-color: #ECF3F6;
   border-radius: 8px; }
 
@@ -1235,6 +1256,36 @@ p {
   line-height: 1.5625em;
   padding-bottom: 1em;
   padding-right: 3.75em; }
+
+.forfait__obligation {
+  padding-bottom: 6em; }
+
+.obligation__title {
+  font-size: 1.8em;
+  line-height: 1.222em;
+  color: #54EBCE;
+  text-align: center; }
+  .obligation__title::before {
+    display: block;
+    font: 4em/1em "glyphs";
+    padding: 0.5em 0 0.2em 0; }
+  .obligation__title--house::before {
+    content: "\e907"; }
+  .obligation__title--patient::before {
+    content: "\e912"; }
+
+.obligation__list {
+  padding-top: 1.5em; }
+
+.obligation__element {
+  font: 1.4em/1.571em "open_sansregular", "Helvetica", Arial, sans-serif;
+  color: #34586B;
+  padding-bottom: 1.1em; }
+  .obligation__element::before {
+    content: "\e901";
+    font: 1em/1.3em "glyphs";
+    color: #59EBCF;
+    padding-right: 1.5em; }
 
 @media screen and (max-width: 777px) {
   .forfait__explaination {
