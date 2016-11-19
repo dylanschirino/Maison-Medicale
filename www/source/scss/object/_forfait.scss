@@ -42,7 +42,16 @@
    }
  }
 
+.express{
+  height: 30em;
+  display: flex;
 
+  &__text{
+    width: 50%;
+    margin: auto;
+    align-items: center;
+  }
+}
 
  @media screen and (max-width:813px) {
    .forfait{

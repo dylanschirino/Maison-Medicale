@@ -63,6 +63,16 @@
    }
  }
 
+ .express{
+   background: url("../../images/smile.jpg") no-repeat center center;
+   background-size: cover;
+   &__text{
+     font: 2.4em/1.666em $museo;
+     color: #34586B;
+     text-align: center;
+   }
+ }
+
 
  @media screen and(max-width:777px) {
    .forfait{

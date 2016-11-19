@@ -658,6 +658,14 @@ p {
   display: flex;
   justify-content: flex-start; }
 
+.express {
+  height: 30em;
+  display: flex; }
+  .express__text {
+    width: 50%;
+    margin: auto;
+    align-items: center; }
+
 @media screen and (max-width: 813px) {
   .forfait {
     width: 90%; }
@@ -1286,6 +1294,14 @@ p {
     font: 1em/1.3em "glyphs";
     color: #59EBCF;
     padding-right: 1.5em; }
+
+.express {
+  background: url("../../images/smile.jpg") no-repeat center center;
+  background-size: cover; }
+  .express__text {
+    font: 2.4em/1.666em "museo";
+    color: #34586B;
+    text-align: center; }
 
 @media screen and (max-width: 777px) {
   .forfait__explaination {
