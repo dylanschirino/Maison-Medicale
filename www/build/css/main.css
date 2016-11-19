@@ -626,6 +626,38 @@ p {
 
 /* CsiAngleur
  *
+ * /sass/object/forfait.scss - Forfait Object
+ *
+ * coded by Dylan Schirino
+ * started at 19/11/2016
+ */
+.forfait {
+  width: 81%;
+  margin: 8em auto; }
+  .forfait__content {
+    margin-top: 1em; }
+    .forfait__content::after {
+      content: "";
+      display: block;
+      clear: both; }
+  .forfait__svg {
+    float: left;
+    margin: auto 4.5em 4.1em 4.5em; }
+
+@media screen and (max-width: 813px) {
+  .forfait {
+    width: 90%; }
+    .forfait__svg {
+      float: none;
+      display: block;
+      margin: 2em auto; }
+    .forfait__explaination {
+      width: 80%;
+      margin: auto;
+      padding-right: 0; } }
+
+/* CsiAngleur
+ *
  * /sass/components/Animation.scss - Animation stylesheet
  *
  * coded by Dylan Schirino
@@ -657,6 +689,19 @@ p {
     transform: rotate(90deg); }
   100% {
     transform: rotate(0deg); } }
+
+.text {
+  animation: fill-opacity 5s linear;
+  -webkit-animation-iteration-count: 10;
+  animation-iteration-count: 10; }
+
+@keyframes fill-opacity {
+  0% {
+    fill-opacity: 0; }
+  50% {
+    fill-opacity: 1; }
+  100% {
+    fill-opacity: 0; } }
 
 /* CSI Angleur
  *
@@ -1165,3 +1210,32 @@ p {
   line-height: 1.5556em;
   color: white;
   padding-top: 1.6667em; }
+
+/* CsiAngleur
+ *
+ * /sass/components/forfait.scss - Forfait Components
+ *
+ * coded by Dylan Schirino
+ * started at 19/11/2016
+ */
+.forfait__container {
+  background-color: #ECF3F6;
+  border-radius: 8px; }
+
+.forfait__title {
+  font-size: 2.4em;
+  line-height: 1.2083333333em;
+  color: #436577;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.25em 0 0.8333em 0; }
+
+.forfait__explaination {
+  font-size: 1.6em;
+  line-height: 1.5625em;
+  padding-bottom: 1em;
+  padding-right: 3.75em; }
+
+@media screen and (max-width: 777px) {
+  .forfait__explaination {
+    padding-right: 0; } }
