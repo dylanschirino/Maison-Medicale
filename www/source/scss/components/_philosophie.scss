@@ -1,0 +1,36 @@
+/* CsiAngleur
+ *
+ * /sass/components/philosophie.scss - Philosophie Components
+ *
+ * coded by Dylan Schirino
+ * started at 19/11/2016
+ */
+
+ .philosophie{
+   &__container{
+     border: 5px solid $BlueGreen;
+     padding-bottom: 3em;
+   }
+   &__title{
+     font-size: 2.4em;
+     line-height: 1.2004em;
+     text-transform: uppercase;
+     color: $BlueGreen;
+     text-align: center;
+     padding: 1em 0;
+     &::before{
+       content: "";
+       display: block;
+       height: 90px;
+       width: 50%;
+       margin: -1.3em auto;
+       background-color: $white;
+     }
+   }
+   &__content{
+      font: 1.6em/1.75em $opensans;
+   }
+   &__text{
+     padding-bottom: 1.5em;
+   }
+ }

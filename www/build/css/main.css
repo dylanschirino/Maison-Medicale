@@ -687,6 +687,28 @@ p {
 
 /* CsiAngleur
  *
+ * /sass/object/philosophie.scss - Philosophie Object
+ *
+ * coded by Dylan Schirino
+ * started at 19/11/2016
+ */
+.philosophie {
+  width: 81%;
+  margin: auto; }
+  .philosophie__container {
+    margin: 8em auto; }
+  .philosophie__content {
+    width: 80%;
+    margin: auto; }
+
+@media screen and (max-width: 400px) {
+  .philosophie {
+    width: 90%; }
+    .philosophie__content {
+      width: 85%; } }
+
+/* CsiAngleur
+ *
  * /sass/components/Animation.scss - Animation stylesheet
  *
  * coded by Dylan Schirino
@@ -1306,3 +1328,35 @@ p {
 @media screen and (max-width: 777px) {
   .forfait__explaination {
     padding-right: 0; } }
+
+/* CsiAngleur
+ *
+ * /sass/components/philosophie.scss - Philosophie Components
+ *
+ * coded by Dylan Schirino
+ * started at 19/11/2016
+ */
+.philosophie__container {
+  border: 5px solid #51D2CC;
+  padding-bottom: 3em; }
+
+.philosophie__title {
+  font-size: 2.4em;
+  line-height: 1.2004em;
+  text-transform: uppercase;
+  color: #51D2CC;
+  text-align: center;
+  padding: 1em 0; }
+  .philosophie__title::before {
+    content: "";
+    display: block;
+    height: 90px;
+    width: 50%;
+    margin: -1.3em auto;
+    background-color: white; }
+
+.philosophie__content {
+  font: 1.6em/1.75em "open_sansregular", "Helvetica", Arial, sans-serif; }
+
+.philosophie__text {
+  padding-bottom: 1.5em; }
