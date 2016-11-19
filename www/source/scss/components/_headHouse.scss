@@ -1,0 +1,28 @@
+/* CSI Angleur
+*
+* /sass/component/headHouse.scss - HeadHouse components
+*
+* coded by Dylan Schirino
+* started at 19/11/2016
+*/
+.headContent{
+  &--house{
+    background: none;
+    background-color: $BlueGreen;
+  }
+  &__slogan{
+    &--house{
+      padding-left: 0;
+    }
+  }
+  &__img{
+    border: 6px solid $white;
+    box-shadow: 0px 3px 5px rgba(#000000,0.5);
+  }
+  &__text{
+    font-size: 1.8em;
+    line-height: 1.5556em;
+    color: $white;
+    padding-top: 1.6667em;
+  }
+}

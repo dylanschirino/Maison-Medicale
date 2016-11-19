@@ -76,6 +76,11 @@
      &__slogan{
        padding: 3em 0;
        text-align: center;
+       &--house{
+         padding: 0;
+         padding-top:1.5em;
+
+       }
      }
    }
  }
