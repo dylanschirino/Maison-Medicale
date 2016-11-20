@@ -1,0 +1,29 @@
+/* CSI Angleur
+ *
+ * /sass/object/explaination.scss - Explaination object
+ *
+ * coded by Dylan Schirino
+ * started at 20/11/2016
+ */
+.subscription{
+  &__svg{
+    margin: 4.5em 0 4.5em 12.1em;
+    vertical-align: middle;
+  }
+  &__title{
+    display: inline-block;
+  }
+}
+@media screen and (max-width:974px) {
+  .subscription{
+    &__svg{
+      margin: 0;
+      display: block;
+      margin:auto;
+      padding: 4.5em 0;
+    }
+    &__title{
+      display: block;
+    }
+  }
+}

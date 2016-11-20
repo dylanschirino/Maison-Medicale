@@ -35,6 +35,9 @@
 @import "object/forfait";
 @import "object/philosophie";
 
+// Fonctionnement Page
+@import "object/explaination";
+
 // 6. Components - Design des composants, morceaux d'UI
 @import "components/animation";
 @import "components/header";
@@ -51,3 +54,6 @@
 @import "components/headHouse";
 @import "components/forfait";
 @import "components/philosophie";
+
+// Fonctionnement page
+@import "components/explaination";

@@ -711,6 +711,29 @@ p {
     .philosophie__content {
       width: 85%; } }
 
+/* CSI Angleur
+ *
+ * /sass/object/explaination.scss - Explaination object
+ *
+ * coded by Dylan Schirino
+ * started at 20/11/2016
+ */
+.subscription__svg {
+  margin: 4.5em 0 4.5em 12.1em;
+  vertical-align: middle; }
+
+.subscription__title {
+  display: inline-block; }
+
+@media screen and (max-width: 974px) {
+  .subscription__svg {
+    margin: 0;
+    display: block;
+    margin: auto;
+    padding: 4.5em 0; }
+  .subscription__title {
+    display: block; } }
+
 /* CsiAngleur
  *
  * /sass/components/Animation.scss - Animation stylesheet
@@ -757,6 +780,26 @@ p {
     fill-opacity: 1; }
   100% {
     fill-opacity: 0; } }
+
+.heart {
+  animation: heart 8s ease-in-out infinite;
+  transform-origin: 100px 45px;
+  animation-direction: alternate; }
+
+@keyframes heart {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  14% {
+    opacity: 0; }
+  28% {
+    opacity: 1; }
+  42% {
+    opacity: 0; }
+  70% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /* CSI Angleur
  *
@@ -1253,6 +1296,10 @@ p {
   background: none;
   background-color: #51D2CC; }
 
+.headContent--fonction {
+  background: none;
+  background-color: #54EBCE; }
+
 .headContent__slogan--house {
   padding-left: 0; }
 
@@ -1364,3 +1411,24 @@ p {
 
 .philosophie__text {
   padding-bottom: 1.5em; }
+
+/* CSI Angleur
+ *
+ * /sass/components/explaination.scss - Explaination components
+ *
+ * coded by Dylan Schirino
+ * started at 20/11/2016
+ */
+.subscription {
+  background-color: #48B2AD; }
+  .subscription__title {
+    font-size: 2.4em;
+    line-height: 1.20833em;
+    color: white;
+    padding-left: 4.1667em; }
+
+@media screen and (max-width: 974px) {
+  .subscription__title {
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 3em; } }
