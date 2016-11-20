@@ -1,0 +1,69 @@
+doctype html
+html(lang="fr")
+    head
+      <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+      <![endif]-->
+        meta(charset="utf-8")
+        meta(name="description", content="CSI Angleur | Maison médicale basé à Angleur, Belgique")
+        meta(name="viewport",content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+        title= "Accueil - CSI Angleur"
+        link(rel='stylesheet', href='css/main.css', type='text/css')
+
+    body.no-js
+      div.site-container
+        div.site-pusher
+          header.header
+           div.header__content
+            h1.header__logo
+              a(href="index.html").header__logolink
+                img.header__img(src="images/logo.svg",width="121",height="72")
+                span.hidden="CSI Angleur - Accueil"
+            nav.header__menu
+              a.header__burger#header__burger(href="#", title="Voir le menu")
+                span.hidden="Menu"
+              h2.hidden="CSI - Navigation"
+              div.menu__content
+                ul.menu__list
+                  li.menu__element.menu__element--down
+                    a.menu__link.menu__link--down(href="notremaison.html", title="En savoir plus sur la maison médicale")="Notre maison"
+                    ul.menu__sublist
+                      li.menu__subelement
+                        a.menu__sublink(href="notremaison.html#forfait", title="Comprendre le forfait")="Forfait"
+                      li.menu__subelement
+                        a.menu__sublink(href="notremaison.html#philosophie", title="Découvrez notre philosophie")="Philosophie"
+
+                  li.menu__element.menu__element--down
+                    a.menu__link.menu__link--down(href="fonctionnement.html" title="Découvrir comment nous fonctionnons")="Fonctionnement"
+                    ul.menu__sublist
+                      li.menu__subelement
+                        a.menu__sublink(href="fonctionnement.html#inscription", title="Comment puis-je m'inscrire?")="Inscription"
+                      li.menu__subelement
+                        a.menu__sublink(href="fonctionnement.html#désinscription", title="Vous souhaitez nous quitter?")="Désinscription"
+                  li.menu__element.menu__element--down
+                    a.menu__link.menu__link--down(href="services.html" title="En savoir plus sur le service de garde")="Service de garde"
+                    ul.menu__sublist
+                      li.menu__subelement
+                        a.menu__sublink(href="services.html#déplacer", title="Je souhaite me déplacer")="Me déplacer"
+                      li.menu__subelement
+                        a.menu__sublink(href="services.html#pasdéplacer", title="Je souhaite que le médecin vienne")="Domicile"
+                  li.menu__element
+                    a.menu__link(href="activite.html" title="Découvrez les activités que nous proposons")="Activités"
+                  li.menu__element
+                    a.menu__link(href="contact.html" title="Contacter nous et visionner nos horaires")="Contact"
+                  li.menu__element.menu__element--search
+                    a.menu__link.menu__link--search(href="#" title="Voir la barre de recherche")
+                      span.hidden="Search"
+                    div.menu__search
+                      form.header__search(method="get" action="/")
+                        input.search__box(type="search" placeholder="Recherche" name="search")
+                        input.search__submit(type="submit" value="OK")
+
+          div.site-content
+            main
+                include template/_functionHead.pug
+                include template/_footer.pug
+          div.site-cache#site-cache
+
+    script(src="script/script.js")
+    script(src="script/script-tab.js")
