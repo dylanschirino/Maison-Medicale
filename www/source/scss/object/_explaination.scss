@@ -25,6 +25,24 @@
   &__aside{
     width: 35%;
   }
+  &__article{
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease-in;
+  }
+  &__active{
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.no-js .subscription__article{
+  height: auto;
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (max-width:974px) {
   .subscription{

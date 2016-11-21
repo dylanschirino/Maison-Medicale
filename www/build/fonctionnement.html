@@ -104,7 +104,7 @@
             </section>
             <div class="subscription__content">
               <div class="subscription__articleContainer">
-                <article class="subscription__article" id="subscribe">
+                <article class="subscription__article subscription__active" id="subscribe">
                   <h3 class="article__title">Je veux m’inscrire à la maison médicale</h3>
                   <div class="article__content">
                     <p class="article__text">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker</p>
@@ -121,8 +121,8 @@
               </div>
               <aside class="subscription__aside">
                 <h2 class="hidden">Menu de choix entre inscription et désinscription</h2>
-                <div class="aside__container aside__container--active"><a class="aside__button aside__button--subscribe" href="#" data-tab-target="#subscribe" title="Voir le contenu relatif a l'inscription">Je veux m'inscrire</a></div>
-                <div class="aside__container"><a class="aside__button aside__button--unsubscribe" href="#" data-tab-target="#unsubscribe" title="Voir le contenu relatif a la désinscription">Je veux me désinscrire</a></div>
+                <div class="aside__container aside__container--active"><a class="aside__button aside__button--subscribe" href="#" data-tab-target="subscribe" title="Voir le contenu relatif a l'inscription">Je veux m'inscrire</a></div>
+                <div class="aside__container"><a class="aside__button aside__button--unsubscribe" href="#" data-tab-target="unsubscribe" title="Voir le contenu relatif a la désinscription">Je veux me désinscrire</a></div>
               </aside>
             </div>
             <footer class="footer">
@@ -177,5 +177,5 @@
     </div>
   </body>
   <script src="script/script.js"></script>
-  <script src="script/script-tab.js"></script>
+  <script src="script/script-tab-subscribe.js"></script>
 </html>

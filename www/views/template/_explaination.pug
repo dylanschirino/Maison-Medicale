@@ -40,7 +40,7 @@ section.subscription
 
 div.subscription__content
   div.subscription__articleContainer
-    article.subscription__article#subscribe
+    article.subscription__article.subscription__active#subscribe
       h3.article__title Je veux m’inscrire à la maison médicale
       div.article__content
         p.article__text Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker
@@ -54,6 +54,6 @@ div.subscription__content
   aside.subscription__aside
     h2.hidden Menu de choix entre inscription et désinscription
     div.aside__container.aside__container--active
-      a.aside__button.aside__button--subscribe(href="#",data-tab-target="#subscribe",title="Voir le contenu relatif a l'inscription") Je veux m'inscrire
+      a.aside__button.aside__button--subscribe(href="#", data-tab-target="subscribe",title="Voir le contenu relatif a l'inscription") Je veux m'inscrire
     div.aside__container
-      a.aside__button.aside__button--unsubscribe(href="#",data-tab-target="#unsubscribe",title="Voir le contenu relatif a la désinscription") Je veux me désinscrire
+      a.aside__button.aside__button--unsubscribe(href="#", data-tab-target="unsubscribe",title="Voir le contenu relatif a la désinscription") Je veux me désinscrire

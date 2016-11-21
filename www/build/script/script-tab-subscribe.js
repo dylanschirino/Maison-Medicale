@@ -25,31 +25,31 @@
         oEvent.preventDefault();
 
         // 0. do nothing if current link is already active
-        if ( this.parentNode.className.indexOf( "actif" ) > -1 ) {
+        if ( this.parentNode.className.indexOf( "aside__container--active" ) > -1 ) {
             return;
         }
 
         // 1. remove active class on pane
         for ( i = 0 ; i < $tabPanes.length ; i++ ) {
-            if ( $tabPanes[ i ].className.indexOf( "activated" ) > -1 ) {
-                $tabPanes[ i ].className = "discover__content";
+            if ( $tabPanes[ i ].className.indexOf( "subscription__active" ) > -1 ) {
+                $tabPanes[ i ].className = "subscription__article";
             }
         }
 
         // 2. get target pane
         sTargetPaneID = this.getAttribute( "data-tab-target" );
+        console.log(sTargetPaneID.className);
 
         // 3. add active class on target pane
-        document.getElementById( sTargetPaneID ).className = "discover__content activated";
-        
+        document.getElementById( sTargetPaneID ).className = "subscription__article subscription__active";
 
         // 4. remove active class from link
         for ( i = 0 ; i < $tabLinks.length ; i++ ) {
-            $tabLinks[ i ].parentNode.className = $tabLinks[ i ].parentNode.className.replace( "actif", "" );
+            $tabLinks[ i ].parentNode.className = $tabLinks[ i ].parentNode.className.replace( "aside__container--active", "" );
         }
 
         // 5. add active class on current link
-        this.parentNode.className = "discover__element actif";
+        this.parentNode.className = "aside__container aside__container--active";
     };
 
     fPageIsLoaded = function() {
@@ -64,8 +64,8 @@
         }
 
         // tab panes
-        $tabLinks = document.querySelectorAll( ".discover__menu li a" );
-        $tabPanes = document.querySelectorAll( ".discover__content" );
+        $tabLinks = document.querySelectorAll( ".subscription__aside div a" );
+        $tabPanes = document.querySelectorAll( ".subscription__article" );
 
         for ( i = 0 ; i < $tabLinks.length ; i++ ) {
             $tabLinks[ i ].addEventListener( "click", fTabLinkIsClicked );
