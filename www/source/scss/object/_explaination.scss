@@ -13,6 +13,18 @@
   &__title{
     display: inline-block;
   }
+  &__content{
+    width: 81%;
+    margin: 5em auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__articleContainer{
+    width: 53%;
+  }
+  &__aside{
+    width: 35%;
+  }
 }
 @media screen and (max-width:974px) {
   .subscription{
@@ -27,3 +39,27 @@
     }
   }
 }
+
+ // Aside Menu with je veux m'inscrire / désinscrire
+
+ .aside{
+   &__button{
+      height: 11.1em;
+      margin-bottom: 2.778em;
+   }
+   &__container{
+     &--active{
+       position: relative;
+       &::before{
+       right: 100%;
+       top: 50%;
+       border: solid transparent;
+       content: " ";
+       height: 0;
+       width: 0;
+       position: absolute;
+       pointer-events: none;
+       }
+     }
+   }
+ }

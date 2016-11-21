@@ -725,6 +725,18 @@ p {
 .subscription__title {
   display: inline-block; }
 
+.subscription__content {
+  width: 81%;
+  margin: 5em auto;
+  display: flex;
+  justify-content: space-between; }
+
+.subscription__articleContainer {
+  width: 53%; }
+
+.subscription__aside {
+  width: 35%; }
+
 @media screen and (max-width: 974px) {
   .subscription__svg {
     margin: 0;
@@ -733,6 +745,22 @@ p {
     padding: 4.5em 0; }
   .subscription__title {
     display: block; } }
+
+.aside__button {
+  height: 11.1em;
+  margin-bottom: 2.778em; }
+
+.aside__container--active {
+  position: relative; }
+  .aside__container--active::before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
 
 /* CsiAngleur
  *
@@ -1432,3 +1460,37 @@ p {
     text-align: center;
     padding-left: 0;
     padding-bottom: 3em; } }
+
+.aside__button {
+  font: 1.8em/1.5em "museo";
+  text-transform: uppercase;
+  color: #436577;
+  background-color: #ECF3F6;
+  border-radius: 8px;
+  text-align: center; }
+  .aside__button::before {
+    display: block;
+    font: 3em/1.7em "glyphs";
+    text-align: center;
+    padding-top: 0.60em; }
+  .aside__button--subscribe::before {
+    content: "\e909"; }
+  .aside__button--unsubscribe::before {
+    content: "\e906"; }
+
+.aside__container--active::before {
+  border-color: rgba(194, 225, 245, 0);
+  border-right-color: #ECF3F6;
+  border-width: 30px;
+  margin-top: -30px; }
+
+.article__title {
+  font-size: 2.4em;
+  line-height: 1.2083em;
+  color: #51D2CC;
+  padding-bottom: 1.666em; }
+
+.article__text {
+  font-size: 1.6em;
+  line-height: 1.6875em;
+  padding-bottom: 1.5em; }

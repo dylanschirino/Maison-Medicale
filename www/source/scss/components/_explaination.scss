@@ -23,3 +23,53 @@
      }
    }
  }
+
+ // Aside Menu with je veux m'inscrire / désinscrire
+
+.aside{
+  &__button{
+    font:1.8em/1.5em $museo;
+    text-transform: uppercase;
+    color: $texteColor;
+    background-color: $cardsBckg;
+    border-radius: 8px;
+    text-align: center;
+    &::before{
+      display: block;
+      font: 3em/1.7em $glyphs;
+      text-align: center;
+      padding-top: 0.60em;
+    }
+    &--subscribe::before{
+      content: "\e909";
+    }
+    &--unsubscribe::before{
+      content: "\e906";
+    }
+  }
+  &__container{
+    &--active{
+      &::before{
+        border-color: rgba(194, 225, 245, 0);
+        border-right-color: #ECF3F6;
+        border-width: 30px;
+        margin-top: -30px;
+      }
+    }
+  }
+}
+
+// Article correspondant
+.article{
+  &__title{
+    font-size: 2.4em;
+    line-height: 1.2083em;
+    color: $BlueGreen;
+    padding-bottom: 1.666em;
+  }
+  &__text{
+    font-size: 1.6em;
+    line-height: 1.6875em;
+    padding-bottom: 1.5em;
+  }
+}
