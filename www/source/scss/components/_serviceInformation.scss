@@ -70,12 +70,11 @@
      font-size: 2.4em;
      line-height: 2.8em;
      background-color: $cardsBckg;
-     border-bottom: 1px solid $texteColor;
+     border: 1px solid $texteColor;
    }
    &__tableHead{
      color: $white;
      background-color: $greenBlue;
-     border: 1px solid $texteColor;
      font-family: $museo;
      line-height: 1.5em;
      padding: 1em 0;
@@ -89,5 +88,14 @@
    &__tel{
      background-color: $white;
      border-radius: 8px;
+   }
+ }
+
+ @media screen and (max-width:400px) {
+   .information{
+     &__link{
+       font-size: 1.5em;
+       padding-bottom: 1em;
+     }
    }
  }

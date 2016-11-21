@@ -46,3 +46,23 @@
     margin:1.25em auto;
   }
 }
+
+@media screen and (max-width:951px) {
+  .information{
+    &__content{
+      width: 90%;
+      display: block;
+    }
+    &__article{
+      order: 1;
+      width: 100%;
+      margin: auto;
+    }
+    &__table{
+      width: 100%;
+      margin: 2em auto;
+      border-right: 1px solid $texteColor;
+      border-left: 1px solid $texteColor;
+    }
+  }
+}

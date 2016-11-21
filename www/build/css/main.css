@@ -864,6 +864,20 @@ p {
   width: 75%;
   margin: 1.25em auto; }
 
+@media screen and (max-width: 951px) {
+  .information__content {
+    width: 90%;
+    display: block; }
+  .information__article {
+    order: 1;
+    width: 100%;
+    margin: auto; }
+  .information__table {
+    width: 100%;
+    margin: 2em auto;
+    border-right: 1px solid #436577;
+    border-left: 1px solid #436577; } }
+
 /* CsiAngleur
  *
  * /sass/components/Animation.scss - Animation stylesheet
@@ -1693,12 +1707,11 @@ p {
   font-size: 2.4em;
   line-height: 2.8em;
   background-color: #ECF3F6;
-  border-bottom: 1px solid #436577; }
+  border: 1px solid #436577; }
 
 .information__tableHead {
   color: white;
   background-color: #54EBCE;
-  border: 1px solid #436577;
   font-family: "museo";
   line-height: 1.5em;
   padding: 1em 0; }
@@ -1712,3 +1725,8 @@ p {
 .information__tel {
   background-color: white;
   border-radius: 8px; }
+
+@media screen and (max-width: 400px) {
+  .information__link {
+    font-size: 1.5em;
+    padding-bottom: 1em; } }
