@@ -1,0 +1,93 @@
+/* CSI Angleur
+ *
+ * /sass/components/serviceInformation.scss - serviceInformation components
+ *
+ * coded by Dylan Schirino
+ * started at 21/11/2016
+ */
+ .information{
+   &__link{
+     font: 2.4em/1.5em $museo;
+     text-align: center;
+     color: $texteColor;
+     padding: 2.5em 0;
+     transition: .2s ease;
+     &:hover{
+       color: $white;
+       background-color: $texteColor;
+     }
+     &::before{
+       display: block;
+       font: 3em/1.5em $glyphs;
+     }
+     &--check{
+       background-color: $checkBckg;
+       &::before{
+         content: "\e901"
+       }
+     }
+     &--uncheck{
+       &::before{
+         content: "\e90f";
+       }
+     }
+   }
+   &__choix{
+     &--active{
+       position: relative;
+       background-color: $greenBlue;
+       &::after{
+         top: 100%;
+  	     left: 50%;
+  	     border: solid transparent;
+  	     content: " ";
+  	     height: 0;
+  	     width: 0;
+      	 position: absolute;
+  	     pointer-events: none;
+         border-color: rgba(136, 183, 213, 0);
+  	     border-top-color: $greenBlue;
+  	     border-width: 30px;
+  	     margin-left: -30px;
+       }
+     }
+   }
+   // information
+   &__title{
+     font-size: 2.4em;
+     line-height: 1.5em;
+     text-transform: uppercase;
+     text-align: center;
+     color: $texteColor;
+     padding-bottom: 1.25em;
+   }
+   &__text{
+     font-size: 1.6em;
+     line-height: 1.6875em;
+     padding-bottom: 1.5em;
+   }
+   &__table{
+     font-size: 2.4em;
+     line-height: 2.8em;
+     background-color: $cardsBckg;
+     border-bottom: 1px solid $texteColor;
+   }
+   &__tableHead{
+     color: $white;
+     background-color: $greenBlue;
+     border: 1px solid $texteColor;
+     font-family: $museo;
+     line-height: 1.5em;
+     padding: 1em 0;
+   }
+   &__tableData{
+     text-align: center;
+     font-family: $opensans;
+     color: $texteColor;
+     border:1px solid $texteColor;
+   }
+   &__tel{
+     background-color: $white;
+     border-radius: 8px;
+   }
+ }

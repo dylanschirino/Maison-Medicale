@@ -815,9 +815,54 @@ p {
   .services__svg {
     max-width: 80%;
     height: auto; }
-  .services__numero {
+  .services__numero, .services__info {
     width: 80%;
     margin: auto; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/serviceInformation.scss - serviceInformation object
+ *
+ * coded by Dylan Schirino
+ * started at 21/11/2016
+ */
+.information__container {
+  display: flex; }
+
+.information__choix {
+  width: 50%; }
+
+.information__content {
+  display: flex;
+  justify-content: space-around;
+  width: 81%;
+  margin: 8em auto;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden; }
+  .information__content--active {
+    height: auto;
+    opacity: 1;
+    visibility: visible; }
+
+.information__article {
+  order: 2;
+  width: 50%; }
+
+.information__table {
+  width: 48%;
+  margin-right: 5em; }
+
+.information__tableHead {
+  width: 100%; }
+
+.information__tableData {
+  width: 50%; }
+
+.information__tel {
+  width: 75%;
+  margin: 1.25em auto; }
 
 /* CsiAngleur
  *
@@ -1583,6 +1628,87 @@ p {
     text-align: center; }
   .services__info {
     font-size: 1.6em;
+    line-height: 1.8em;
     color: white;
     text-align: center;
     padding: 2.5em 0 4em 0; }
+
+/* CSI Angleur
+ *
+ * /sass/components/serviceInformation.scss - serviceInformation components
+ *
+ * coded by Dylan Schirino
+ * started at 21/11/2016
+ */
+.information__link {
+  font: 2.4em/1.5em "museo";
+  text-align: center;
+  color: #436577;
+  padding: 2.5em 0;
+  transition: .2s ease; }
+  .information__link:hover {
+    color: white;
+    background-color: #436577; }
+  .information__link::before {
+    display: block;
+    font: 3em/1.5em "glyphs"; }
+  .information__link--check {
+    background-color: #22FFD0; }
+    .information__link--check::before {
+      content: "\e901"; }
+  .information__link--uncheck::before {
+    content: "\e90f"; }
+
+.information__choix--active {
+  position: relative;
+  background-color: #54EBCE; }
+  .information__choix--active::after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #54EBCE;
+    border-width: 30px;
+    margin-left: -30px; }
+
+.information__title {
+  font-size: 2.4em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #436577;
+  padding-bottom: 1.25em; }
+
+.information__text {
+  font-size: 1.6em;
+  line-height: 1.6875em;
+  padding-bottom: 1.5em; }
+
+.information__table {
+  font-size: 2.4em;
+  line-height: 2.8em;
+  background-color: #ECF3F6;
+  border-bottom: 1px solid #436577; }
+
+.information__tableHead {
+  color: white;
+  background-color: #54EBCE;
+  border: 1px solid #436577;
+  font-family: "museo";
+  line-height: 1.5em;
+  padding: 1em 0; }
+
+.information__tableData {
+  text-align: center;
+  font-family: "open_sansregular", "Helvetica", Arial, sans-serif;
+  color: #436577;
+  border: 1px solid #436577; }
+
+.information__tel {
+  background-color: white;
+  border-radius: 8px; }

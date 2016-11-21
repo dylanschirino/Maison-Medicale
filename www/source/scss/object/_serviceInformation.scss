@@ -1,0 +1,48 @@
+/* CSI Angleur
+ *
+ * /sass/object/serviceInformation.scss - serviceInformation object
+ *
+ * coded by Dylan Schirino
+ * started at 21/11/2016
+ */
+.information{
+  &__container{
+    display: flex;
+  }
+  &__choix{
+    width: 50%;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-around;
+    width: 81%;
+    margin: 8em auto;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    &--active{
+      height: auto;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__article{
+    order: 2;
+    width: 50%;
+  }
+  &__table{
+    width: 48%;
+    margin-right: 5em;
+  }
+  &__tableHead{
+    width: 100%;
+  }
+  &__tableData{
+    width: 50%;
+  }
+  &__tel{
+    width: 75%;
+    margin:1.25em auto;
+  }
+}
