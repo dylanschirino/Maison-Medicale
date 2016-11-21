@@ -21,9 +21,11 @@
   }
   &__articleContainer{
     width: 53%;
+    order: 1;
   }
   &__aside{
     width: 35%;
+    order: 2;
   }
   &__article{
     height: 0;
@@ -58,6 +60,7 @@
   }
 }
 
+
  // Aside Menu with je veux m'inscrire / désinscrire
 
  .aside{
@@ -77,7 +80,29 @@
        width: 0;
        position: absolute;
        pointer-events: none;
+       border-color: rgba(194, 225, 245, 0);
+       border-right-color: #ECF3F6;
+       border-width: 30px;
+       margin-top: -30px;
        }
+     }
+   }
+ }
+
+
+ @media screen and (max-width:714px) {
+   .subscription{
+     &__content{
+       width: 90%;
+       display: block;
+     }
+     &__articleContainer{
+       width: 90%;
+       margin: auto;
+     }
+     &__aside{
+       width: 90%;
+       margin: auto;
      }
    }
  }
