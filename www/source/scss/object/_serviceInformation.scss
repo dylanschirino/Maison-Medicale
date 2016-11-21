@@ -17,14 +17,9 @@
     justify-content: space-around;
     width: 81%;
     margin: 8em auto;
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
+    display: none;
     &--active{
-      height: auto;
-      opacity: 1;
-      visibility: visible;
+      display: flex;
     }
   }
   &__article{
@@ -45,6 +40,10 @@
     width: 75%;
     margin:1.25em auto;
   }
+}
+
+.no-js .information__content{
+  display: flex;
 }
 
 @media screen and (max-width:951px) {

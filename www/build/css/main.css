@@ -837,14 +837,9 @@ p {
   justify-content: space-around;
   width: 81%;
   margin: 8em auto;
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden; }
+  display: none; }
   .information__content--active {
-    height: auto;
-    opacity: 1;
-    visibility: visible; }
+    display: flex; }
 
 .information__article {
   order: 2;
@@ -863,6 +858,9 @@ p {
 .information__tel {
   width: 75%;
   margin: 1.25em auto; }
+
+.no-js .information__content {
+  display: flex; }
 
 @media screen and (max-width: 951px) {
   .information__content {
@@ -1666,29 +1664,29 @@ p {
   .information__link::before {
     display: block;
     font: 3em/1.5em "glyphs"; }
-  .information__link--check {
-    background-color: #22FFD0; }
-    .information__link--check::before {
-      content: "\e901"; }
+  .information__link--check::before {
+    content: "\e901"; }
   .information__link--uncheck::before {
     content: "\e90f"; }
 
-.information__choix--active {
-  position: relative;
-  background-color: #54EBCE; }
-  .information__choix--active::after {
-    top: 100%;
-    left: 50%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(136, 183, 213, 0);
-    border-top-color: #54EBCE;
-    border-width: 30px;
-    margin-left: -30px; }
+.information__choix {
+  background-color: #22FFD0; }
+  .information__choix--active {
+    position: relative;
+    background-color: #54EBCE; }
+    .information__choix--active::after {
+      top: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(136, 183, 213, 0);
+      border-top-color: #54EBCE;
+      border-width: 30px;
+      margin-left: -30px; }
 
 .information__title {
   font-size: 2.4em;
@@ -1706,15 +1704,15 @@ p {
 .information__table {
   font-size: 2.4em;
   line-height: 2.8em;
-  background-color: #ECF3F6;
-  border: 1px solid #436577; }
+  background-color: #ECF3F6; }
 
 .information__tableHead {
   color: white;
   background-color: #54EBCE;
   font-family: "museo";
   line-height: 1.5em;
-  padding: 1em 0; }
+  padding: 1em 0;
+  border: 1px solid #436577; }
 
 .information__tableData {
   text-align: center;
