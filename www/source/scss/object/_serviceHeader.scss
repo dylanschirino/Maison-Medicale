@@ -1,0 +1,30 @@
+/* CSI Angleur
+ *
+ * /sass/object/serviceHeader.scss - serviceHeader object
+ *
+ * coded by Dylan Schirino
+ * started at 21/11/2016
+ */
+.services{
+  &__svg{
+    display: block;
+    margin: auto;
+  }
+  &__numero{
+    width: 15.84em;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .services{
+    &__svg{
+      max-width: 80%;
+      height: auto;
+    }
+    &__numero{
+      width: 80%;
+      margin: auto;
+    }
+  }
+}

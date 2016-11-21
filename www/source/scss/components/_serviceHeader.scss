@@ -1,0 +1,38 @@
+/* CSI Angleur
+ *
+ * /sass/components/serviceHeader.scss - serviceHeader components
+ *
+ * coded by Dylan Schirino
+ * started at 21/11/2016
+ */
+ .services{
+   background-color: $greenLight;
+   &__title{
+     font-size: 3.2em;
+     line-height: 1.40625em;
+     color: $white;
+     text-transform: uppercase;
+     text-align: center;
+     padding: 1.40625em 0;
+   }
+   &__label{
+     font:1.8em/1.9em $museo;
+     color: $white;
+     text-transform: uppercase;
+     text-align: center;
+     padding: 1.111em 0;
+   }
+   &__numero{
+     font:2.4em/2.5em $opensans;
+     color: $greenLight;
+     background-color: $white;
+     border-radius: 8px;
+     text-align: center;
+   }
+   &__info{
+     font-size: 1.6em;
+     color: $white;
+     text-align: center;
+     padding: 2.5em 0 4em 0;
+   }
+ }

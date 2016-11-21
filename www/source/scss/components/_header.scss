@@ -13,6 +13,8 @@
   }
 }
 .active{
+  font-family: $opensansBold;
+  color: $active;
   &::before{
     content: "";
     display: block;
