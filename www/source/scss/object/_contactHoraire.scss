@@ -1,0 +1,19 @@
+/* CSI Angleur
+ *
+ * /sass/object/ContactHoraire.scss - ContactHoraire object
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+ .horaire{
+   padding-bottom: 7em;
+   &__svg{
+     display: block;
+     margin: auto;
+     padding: 2em 0;
+   }
+   &__table{
+     width: 81%;
+     margin: auto;
+   }
+ }

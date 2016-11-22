@@ -1,0 +1,90 @@
+/* CSI Angleur
+ *
+ * /sass/components/ContactHoraire.scss - ContactHoraire components
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+ .horaire{
+  background: #56ecd0; /* Old browsers */
+  background: -moz-linear-gradient(top,  #56ecd0 0%, #51d2cc 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #56ecd0 0%,#51d2cc 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #56ecd0 0%,#51d2cc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56ecd0', endColorstr='#51d2cc',GradientType=0 ); /* IE6-9 */
+  &__table{
+    font:1.8em/1.8em $opensans;
+    background-color: $white;
+    color: $texteColor;
+    box-shadow: 0px 2px 7px rgba(0,0,0,0.5);
+    border-radius: 8px;
+  }
+  &__head{
+    background-color: #6FD1D7;
+    font-family: $museo;
+    color: $white;
+    border-radius: 8px;
+  }
+  &__th{
+      padding: 1.3888em 0;
+  }
+  &__row:not(:last-child){
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  &__data{
+    text-align: center;
+    padding: 0.8333em 0;
+  }
+  &__day{
+    text-align: left;
+    padding-left: 4.055em;
+    font-family: $museo;
+    text-transform: uppercase;
+  }
+ }
+
+ @media screen and(max-width:947px) {
+   .horaire{
+     &__table{
+       width: 95%;
+     }
+     &__day{
+       padding-left: 1em;
+     }
+   }
+ }
+
+ @media screen and (max-width:752px) {
+   .horaire{
+     &__table{
+       font-size: 1.4em;
+     }
+   }
+ }
+
+ @media screen and (max-width:525px) {
+   .horaire{
+     &__table{
+       font-size: 1.3em;
+     }
+     &__data{
+       padding-left: 1em;
+       padding-right: 1em;
+     }
+     &__th{
+       font-size: 0.9em;
+       padding-right: 0.5em;
+     }
+   }
+ }
+
+ @media screen and (max-width:350px) {
+   .horaire{
+     &__table{
+       width: 80%;
+     }
+     &__data{
+       padding-right: 0.5em;
+       padding-left: 0.5em;
+     }
+   }
+ }

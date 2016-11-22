@@ -137,12 +137,19 @@
    }
  }
 
- @media screen and(max-width:592px) {
+ @media screen and (max-width:663px) {
    .team{
      &__element{
        display: block;
        width: 100%;
 
+     }
+   }
+ }
+ @media screen and (max-width:400px) {
+   .team{
+     &__slideshow{
+       width: 100%;
      }
    }
  }

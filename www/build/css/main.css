@@ -1074,10 +1074,31 @@ p {
   .team__element {
     width: 45%; } }
 
-@media screen and (max-width: 592px) {
+@media screen and (max-width: 663px) {
   .team__element {
     display: block;
     width: 100%; } }
+
+@media screen and (max-width: 400px) {
+  .team__slideshow {
+    width: 100%; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/ContactHoraire.scss - ContactHoraire object
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.horaire {
+  padding-bottom: 7em; }
+  .horaire__svg {
+    display: block;
+    margin: auto;
+    padding: 2em 0; }
+  .horaire__table {
+    width: 81%;
+    margin: auto; }
 
 /* CsiAngleur
  *
@@ -2073,3 +2094,72 @@ p {
 
 .controls__button--next::before {
   transform: rotate(180deg); }
+
+/* CSI Angleur
+ *
+ * /sass/components/ContactHoraire.scss - ContactHoraire components
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.horaire {
+  background: #56ecd0;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #56ecd0 0%, #51d2cc 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #56ecd0 0%, #51d2cc 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #56ecd0 0%, #51d2cc 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56ecd0', endColorstr='#51d2cc',GradientType=0 );
+  /* IE6-9 */ }
+  .horaire__table {
+    font: 1.8em/1.8em "open_sansregular", "Helvetica", Arial, sans-serif;
+    background-color: white;
+    color: #436577;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+    border-radius: 8px; }
+  .horaire__head {
+    background-color: #6FD1D7;
+    font-family: "museo";
+    color: white;
+    border-radius: 8px; }
+  .horaire__th {
+    padding: 1.3888em 0; }
+  .horaire__row:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .horaire__data {
+    text-align: center;
+    padding: 0.8333em 0; }
+  .horaire__day {
+    text-align: left;
+    padding-left: 4.055em;
+    font-family: "museo";
+    text-transform: uppercase; }
+
+@media screen and (max-width: 947px) {
+  .horaire__table {
+    width: 95%; }
+  .horaire__day {
+    padding-left: 1em; } }
+
+@media screen and (max-width: 752px) {
+  .horaire__table {
+    font-size: 1.4em; } }
+
+@media screen and (max-width: 525px) {
+  .horaire__table {
+    font-size: 1.3em; }
+  .horaire__data {
+    padding-left: 1em;
+    padding-right: 1em; }
+  .horaire__th {
+    font-size: 0.9em;
+    padding-right: 0.5em; } }
+
+@media screen and (max-width: 350px) {
+  .horaire__table {
+    width: 80%; }
+  .horaire__data {
+    padding-right: 0.5em;
+    padding-left: 0.5em; } }
