@@ -107,9 +107,7 @@ h2, h3 {
   font-family: "museo"; }
 
 body {
-  font-size: 62.5%;
-  background: url("../images/grid.png") repeat-y center;
-  opacity: 0.7; }
+  font-size: 62.5%; }
 
 p {
   color: #436577;
@@ -336,7 +334,7 @@ p {
     width: 14.125em; }
   .headContent__cards {
     width: 42.7em;
-    height: 54.4em;
+    min-height: 54.4em;
     margin: 0 8em 0 0;
     position: absolute;
     right: -6px;
@@ -897,6 +895,60 @@ p {
 .cards__list--contact {
   width: 100%;
   padding-bottom: 8em; }
+
+.form {
+  display: block;
+  width: 73%;
+  margin: auto; }
+  .form__label {
+    display: block; }
+  .form__input {
+    margin: 0.625em 0 1.5em 0;
+    min-width: 95%; }
+  .form__submit {
+    width: 100%;
+    margin: 0em 0em 2em 0.5em; }
+
+@media screen and (max-width: 1111px) {
+  .contactHead__container {
+    margin-left: 2em; } }
+
+@media screen and (max-width: 951px) {
+  .contactHead {
+    padding-bottom: 5em; }
+    .contactHead__container {
+      display: block;
+      width: 90%;
+      margin: auto; }
+    .contactHead__title {
+      text-align: center; }
+    .contactHead__text {
+      width: 80%;
+      margin: auto; }
+  .headContent__cards--form {
+    margin-top: 1em; }
+  .cards__list--contact {
+    width: 80%;
+    margin: auto; }
+    .cards__list--contact li {
+      display: inline-block;
+      margin-right: 4em;
+      margin-bottom: 1em; } }
+
+@media screen and (max-width: 400px) {
+  .contactHead__container, .contactHead__text {
+    width: 90%;
+    margin: auto; }
+  .cards__list--contact {
+    width: 90%;
+    margin: auto; }
+    .cards__list--contact li {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 2em; }
+  .form {
+    width: 80%;
+    margin: auto; } }
 
 /* CsiAngleur
  *
@@ -1777,3 +1829,38 @@ p {
   color: white; }
   .cards__link--contact span:first-child::before {
     color: #56ECD0; }
+
+.form__legend {
+  font: 2.4em/1.208em "museo";
+  text-align: center;
+  color: #48B2AD;
+  padding: 1.25em 0 0.833em 0; }
+
+.form__label, .form__input {
+  font: 1.6em/1.562em "open_sansregular", "Helvetica", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #436577; }
+
+.form__input {
+  padding: 0.75em;
+  border: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+  text-transform: lowercase; }
+  .form__input--textarea {
+    text-transform: none; }
+
+.form__submit {
+  font: 1.6em/1.375em "museo";
+  background: #48B2AD;
+  border: 1px solid white;
+  -webkit-appearance: none;
+  color: white;
+  padding: 0.5em 0;
+  border-radius: 8px;
+  transition: .2s ease-in-out; }
+  .form__submit:hover {
+    border: 1px solid #48B2AD;
+    background: white;
+    color: #48B2AD;
+    cursor: pointer; }

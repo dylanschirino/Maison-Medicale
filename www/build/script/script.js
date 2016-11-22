@@ -26,7 +26,7 @@
     }
 
     //discover content appear/disapear while clicking on questions
-    question.forEach( function(lien) {
+    question.forEach(function(lien) {
       lien.addEventListener("click", function(events){
         events.preventDefault();
         events.target.classList.toggle("discover__question--clicked");

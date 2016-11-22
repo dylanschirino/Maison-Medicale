@@ -33,3 +33,44 @@
      }
    }
  }
+
+ // Formulaire
+ .form{
+   &__legend{
+     font: 2.4em/1.2083em $museo;
+     text-align: center;
+     color: $explainationBckg;
+     padding: 1.25em 0 0.833em 0;
+   }
+   &__label,&__input{
+     font: 1.6em/1.5625em $opensans;
+     text-transform: uppercase;
+     color: $texteColor;
+   }
+   &__input{
+     padding: 0.75em;
+     border: none;
+     border: 1px solid $inputBorder;
+     border-radius: 8px;
+     text-transform: lowercase;
+     &--textarea{
+       text-transform: none;
+     }
+   }
+   &__submit{
+     font: 1.6em/1.375em $museo;
+     background: $explainationBckg;;
+     border:1px solid $white;
+     -webkit-appearance:none;
+     color: $white;
+     padding: 0.5em 0;
+     border-radius: 8px;
+     transition: .2s ease-in-out;
+     &:hover{
+       border: 1px solid $explainationBckg;
+       background: $white;
+       color: $explainationBckg;
+       cursor: pointer;
+     }
+   }
+ }

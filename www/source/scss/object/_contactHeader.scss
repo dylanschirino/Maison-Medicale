@@ -30,3 +30,90 @@
      }
    }
  }
+ .form{
+   display: block;
+   width: 73%;
+   margin: auto;
+   &__label{
+     display: block;
+   }
+   &__input{
+     margin: 0.625em 0 1.5em 0;
+     min-width: 95%;
+   }
+   &__submit{
+     width: 100%;
+     margin: 0em 0em 2em 0.5em;
+   }
+ }
+
+ @media screen and(max-width:1111px) {
+   .contactHead{
+     &__container{
+        margin-left: 2em;
+     }
+   }
+ }
+ @media screen and(max-width:951px) {
+   .contactHead{
+     padding-bottom: 5em;
+     &__container{
+       display: block;
+       width: 90%;
+       margin: auto;
+     }
+     &__title{
+       text-align: center;
+     }
+     &__text{
+       width: 80%;
+       margin: auto;
+     }
+   }
+   .headContent{
+     &__cards{
+       &--form{
+         margin-top: 1em;
+       }
+     }
+   }
+   .cards{
+     &__list{
+       &--contact{
+         width: 80%;
+         margin: auto;
+         & li{
+           display: inline-block;
+           margin-right: 4em;
+           margin-bottom: 1em;
+         }
+       }
+     }
+   }
+ }
+
+ @media screen and (max-width:400px) {
+   .contactHead{
+     &__container,&__text{
+       width: 90%;
+       margin: auto;
+     }
+   }
+   .cards{
+     &__list{
+       &--contact{
+         width: 90%;
+         margin: auto;
+         & li{
+           display: block;
+           margin-right: 0;
+           margin-bottom:2em;
+         }
+       }
+     }
+   }
+   .form{
+     width: 80%;
+     margin: auto;
+   }
+ }

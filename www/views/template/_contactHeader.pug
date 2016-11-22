@@ -23,8 +23,8 @@ section.contactHead
 
   div.headContent__cards.headContent__cards--form
     div.headContent__cardsContact
-      form.cardsContact__form
-        fieldset
+      form.form(method="post", action="#")
+        fieldset.form__container
           legend.form__legend Posez nous vos questions
           label.form__label(for="nom") Nom
           input.form__input#nom(type="text" name="nom" value="" placeholder="Ex: Dupont Marc")
@@ -34,3 +34,4 @@ section.contactHead
           input.form__input#subject(type="text" name="subject" value="" placeholder="Ex: Je souhaite prendre rendez-vous")
           label.form__label(for="message") Message
           textarea.form__input.form__input--textarea#message(name="message" value="")
+          input.form__submit(type="submit",value="Envoyer")
