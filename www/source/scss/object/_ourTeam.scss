@@ -41,8 +41,8 @@
    //Slider
    &__slideshow{
      position: relative;
-     width: 1024px;
-     height: 400px;
+     width: 100%;
+     height: 40em;
      overflow: hidden;
    }
    &__slider{
@@ -55,12 +55,14 @@
    }
  }
 
-#s1:target #sContent { left: -762px; }
-#s2:target #sContent { left: 762px; }
+#s1:target #sContent { left: -75%; }
+#s2:target #sContent { left: 75%; }
+
 
  .team__element:hover .team__horaire{
    opacity: 1;
  }
+
 
  .controls{
    &__button{
@@ -76,4 +78,71 @@
    }
  }
 
- // SlideShow
+
+ @media screen and (max-width:1145px) {
+     .team{
+       &__slideshow{
+         width: 85em;
+         height: 80em;
+       }
+       &__img{
+         width: 15em;
+         height: auto;
+       }
+     }
+ }
+
+ @media screen and (max-width:956px) {
+   .team{
+     &__img{
+       display: none;
+     }
+     &__slideshow{
+       width: 100%;
+       margin: auto;
+       height: auto;
+     }
+     &__slider{
+       width: 100%;
+       position: static;
+     }
+     &__element{
+       background: $white;
+       display: inline-block;
+       padding-top: 0;
+       width: 30%;
+       margin: 3em 1em 3em 1em;
+     }
+     &__horaire{
+       opacity: 1;
+       position: static;
+       width: 100%;
+       text-align: center;
+     }
+   }
+   .button{
+     display: none;
+   }
+ }
+
+ @media screen and (max-width:818px) {
+   .team{
+     &__slideshow{
+       width: 80%;
+       margin: auto;
+     }
+     &__element{
+       width: 45%;
+     }
+   }
+ }
+
+ @media screen and(max-width:592px) {
+   .team{
+     &__element{
+       display: block;
+       width: 100%;
+
+     }
+   }
+ }
