@@ -124,10 +124,16 @@
     }
   }
 }
- @media screen and(max-width:773px) {
+ @media screen and (max-width:773px) {
    .discover{
      &__element{
        font-size: 1.8em;
+     }
+   }
+   .actif{
+     color: $texteColor;
+     &::after{
+       border: none;
      }
    }
  }

@@ -63,9 +63,42 @@
     color: $BlueGreen;
     padding-bottom: 1.666em;
   }
+  &__subtitle{
+    font-size: 1.8em;
+    line-height: 1.8em;
+    padding: 1em 0;
+    color: $greenLight;
+  }
   &__text{
     font-size: 1.6em;
     line-height: 1.6875em;
-    padding-bottom: 1.5em;
+    & p{
+      padding-bottom: 1.5em;
+    }
+    & b {
+      font-family: $opensansBold;
+    }
+    & a{
+      display: inline-block;
+      font-family: $opensansBold;
+      text-decoration: underline;
+    }
+    & ul {
+      padding-bottom: 1em;
+    }
+    & li {
+      font-family: $museo;
+      color: $texteColor;
+      padding-top: 0.5em;
+      &::before{
+        content: "";
+        width: 8px;
+        display: inline-block;
+        height: 8px;
+        background-color: $texteColor;
+        border-radius: 8px;
+        margin-right: 0.5em;
+      }
+    }
   }
 }

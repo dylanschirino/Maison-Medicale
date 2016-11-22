@@ -1572,7 +1572,11 @@ p {
 
 @media screen and (max-width: 773px) {
   .discover__element {
-    font-size: 1.8em; } }
+    font-size: 1.8em; }
+  .actif {
+    color: #436577; }
+    .actif::after {
+      border: none; } }
 
 /* CsiAngleur
  *
@@ -1840,10 +1844,37 @@ p {
   color: #51D2CC;
   padding-bottom: 1.666em; }
 
+.article__subtitle {
+  font-size: 1.8em;
+  line-height: 1.8em;
+  padding: 1em 0;
+  color: #45B2AE; }
+
 .article__text {
   font-size: 1.6em;
-  line-height: 1.6875em;
-  padding-bottom: 1.5em; }
+  line-height: 1.6875em; }
+  .article__text p {
+    padding-bottom: 1.5em; }
+  .article__text b {
+    font-family: "open_sansbold"; }
+  .article__text a {
+    display: inline-block;
+    font-family: "open_sansbold";
+    text-decoration: underline; }
+  .article__text ul {
+    padding-bottom: 1em; }
+  .article__text li {
+    font-family: "museo";
+    color: #436577;
+    padding-top: 0.5em; }
+    .article__text li::before {
+      content: "";
+      width: 8px;
+      display: inline-block;
+      height: 8px;
+      background-color: #436577;
+      border-radius: 8px;
+      margin-right: 0.5em; }
 
 /* CSI Angleur
  *
