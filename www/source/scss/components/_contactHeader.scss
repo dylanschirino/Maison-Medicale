@@ -1,0 +1,35 @@
+/* CSI Angleur
+ *
+ * /sass/components/ContactHeader.scss - ContactHeader components
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+
+ .contactHead{
+   background-color: $explainationBckg;
+   padding-top: 7.2em;
+   &__title{
+     font-size: 3.2em;
+     line-height: 1.40625em;
+     text-transform: uppercase;
+     color: $white;
+   }
+   &__text{
+     font-size: 1.6em;
+     line-height: 1.6875em;
+     color: $white;
+     padding: 1.875em 0;
+   }
+ }
+
+ .cards{
+   &__link{
+     &--contact{
+       color: $white;
+       & span:first-child::before{
+         color: #56ECD0;
+       }
+     }
+   }
+ }

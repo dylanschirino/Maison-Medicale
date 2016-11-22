@@ -42,6 +42,9 @@
 @import "object/serviceHeader";
 @import "object/serviceInformation";
 
+// Contact Page
+@import "object/contactHeader";
+
 // 6. Components - Design des composants, morceaux d'UI
 @import "components/animation";
 @import "components/header";
@@ -65,3 +68,6 @@
 // Service de garde Page
 @import "components/serviceHeader";
 @import "components/serviceInformation";
+
+// Contact Page
+@import "components/contactHeader";

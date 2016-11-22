@@ -1,0 +1,32 @@
+/* CSI Angleur
+ *
+ * /sass/object/ContactHeader.scss - ContactHeader object
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+ .contactHead{
+   &__container{
+     margin-left:12em;
+   }
+   &__text{
+     width: 30.0625em;
+   }
+ }
+ // Le container du formulaire
+ .headContent{
+   &__cards{
+     &--form{
+       margin-top: 7.2em;
+     }
+   }
+ }
+ // Les informations de contact
+ .cards{
+   &__list{
+     &--contact{
+       width: 100%;
+       padding-bottom: 8em;
+     }
+   }
+ }

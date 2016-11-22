@@ -107,7 +107,9 @@ h2, h3 {
   font-family: "museo"; }
 
 body {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  background: url("../images/grid.png") repeat-y center;
+  opacity: 0.7; }
 
 p {
   color: #436577;
@@ -875,6 +877,26 @@ p {
     margin: 2em auto;
     border-right: 1px solid #436577;
     border-left: 1px solid #436577; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/ContactHeader.scss - ContactHeader object
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.contactHead__container {
+  margin-left: 12em; }
+
+.contactHead__text {
+  width: 30.0625em; }
+
+.headContent__cards--form {
+  margin-top: 7.2em; }
+
+.cards__list--contact {
+  width: 100%;
+  padding-bottom: 8em; }
 
 /* CsiAngleur
  *
@@ -1729,3 +1751,29 @@ p {
   .information__link {
     font-size: 1.5em;
     padding-bottom: 1em; } }
+
+/* CSI Angleur
+ *
+ * /sass/components/ContactHeader.scss - ContactHeader components
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.contactHead {
+  background-color: #48B2AD;
+  padding-top: 7.2em; }
+  .contactHead__title {
+    font-size: 3.2em;
+    line-height: 1.40625em;
+    text-transform: uppercase;
+    color: white; }
+  .contactHead__text {
+    font-size: 1.6em;
+    line-height: 1.6875em;
+    color: white;
+    padding: 1.875em 0; }
+
+.cards__link--contact {
+  color: white; }
+  .cards__link--contact span:first-child::before {
+    color: #56ECD0; }

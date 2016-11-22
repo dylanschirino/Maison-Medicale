@@ -1,0 +1,36 @@
+
+section.contactHead
+  div.contactHead__container
+    h2.contactHead__title Contact
+    p.contactHead__text Vous pouvez nous contacter si vous avez des questions à nous poser, un rendez-vous à prendre. Merci de nous laisser le temps de répondre à vos demandes, nous répondons aproximativement sous 2-3 jours.
+    ul.cards__list.cards__list--contact
+      li.cards__element
+        a.cards__link.cards__link--contact(href="https://www.google.be/maps/place/Rue+Vaudr%C3%A9e+48,+4031+Li%C3%A8ge/@50.6127477,5.5951963,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0f746b29cb281:0x69612a0f1477f0cc!8m2!3d50.6127443!4d5.597385?hl=fr", title="Voir l'adresse sur google maps")
+          span.cards__label.cards__label--adress="Adresse : "
+          span.cards__info="48, Rue du vaudrée 4031 Angleur"
+      li.cards__element.cards__element--contact
+        a.cards__link.cards__link--contact(href="tel:0494344737", title="Téléphoner à la maison médicale")
+          span.cards__label.cards__label--tel="Téléphone : "
+          span.cards__info="04 94 34 47 37"
+      li.cards__element.cards__element--contact
+        a.cards__link.cards__link--contact(href="fax:043434737", title="Nous envoyer un fax!")
+          span.cards__label.cards__label--fax="Fax : "
+          span.cards__info="04 94 34 47 37"
+      li.cards__element.cards__element--contact
+        a.cards__link.cards__link--contact(href="mailto:contact@csiangleur.be", title="Nous envoyer un email")
+          span.cards__label.cards__label--email="Email : "
+          span.cards__info="contact@csiangleur.be"
+
+  div.headContent__cards.headContent__cards--form
+    div.headContent__cardsContact
+      form.cardsContact__form
+        fieldset
+          legend.form__legend Posez nous vos questions
+          label.form__label(for="nom") Nom
+          input.form__input#nom(type="text" name="nom" value="" placeholder="Ex: Dupont Marc")
+          label.form__label(for="mail") Email
+          input.form__input#mail(type="email" name="mail" value="" placeholder="Ex: Matthias@duchene")
+          label.form__label(for="subject") Sujet
+          input.form__input#subject(type="text" name="subject" value="" placeholder="Ex: Je souhaite prendre rendez-vous")
+          label.form__label(for="message") Message
+          textarea.form__input.form__input--textarea#message(name="message" value="")
