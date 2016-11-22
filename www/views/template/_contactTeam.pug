@@ -1,39 +1,63 @@
 section.team
-  div.team__controls
-    h2.team__title Notre équipe
-    div#s1
-      div#s2
-        a.controls__button--next.controls__button--next1(href="#s2")
-          span Next
-        a.controls__button--prev.controls__button--prev2(href="#s1")
-          span Prev
-        ul.team__slider
+  div.team__container
+    div.team__header
+      h2.team__title Notre équipe
+      div.controls__container
+        a.button.controls__button--prev.controls__button--prev1(href="#s2")
+          span.hiddenNext
+        a.button.controls__button--next.controls__button--next2(href="#s1")
+          span.hiddenPrev
+    div.team__slideshow
+      div#s1
+        div#s2
+        ul.team__slider#sContent
           li.team__element
             img.team__img(src="images/homme.jpg" width="215" height="215" alt="Photo d'un membre de l'équipe")
             div.team__horaire
-              p.horaire__info Disponible du Lun - Ven 8h30 à 19h et Samedi de 8h30 à 17h
-            p.team__info
+              p.team__horaire--info Disponible du Lun - Ven 8h30 à 19h et Samedi de 8h30 à 17h
+            div.team__info
               span.team__name Docteur Malinosky
               span.team__function Généraliste
 
           li.team__element
             img.team__img(src="images/femme.jpg" width="215" height="215" alt="Photo d'un membre de l'équipe")
             div.team__horaire
-              p.horaire__info Disponible du Lun - Ven 8h30 à 19h et Samedi de 8h30 à 17h
-            p.team__info
+              p.team__horaire--info Disponible du Lun - Ven 8h30 à 19h et Samedi de 8h30 à 17h
+            div.team__info
               span.team__name Docteur Malinosky
-              span.team__function Généraliste
+              span.team__function Cardiologue
           li.team__element
             img.team__img(src="images/homme.jpg" width="215" height="215" alt="Photo d'un membre de l'équipe")
             div.team__horaire
-              p.horaire__info Disponible du Lun - Ven 8h30 à 19h et Samedi de 8h30 à 17h
-            p.team__info
+              p.team__horaire--info Disponible du Lun - Ven 8h30 à 19h et Samedi de 8h30 à 17h
+            div.team__info
               span.team__name Docteur Malinosky
               span.team__function Infirmier
           li.team__element
             img.team__img(src="images/femme.jpg" width="215" height="215" alt="Photo d'un membre de l'équipe")
             div.team__horaire
-              p.horaire__info Disponible du Lun - Ven 8h30 à 19h et Samedi de 8h30 à 17h
-            p.team__info
-              span.team__name Docteur Mertens
+              p.team__horaire--info Disponible du Lun - Ven 8h30 à 19h et Samedi de 8h30 à 17h
+            div.team__info
+              span.team__name Docteur Marco
               span.team__function Psychologue
+          li.team__element
+            img.team__img(src="images/homme.jpg" width="215" height="215" alt="Photo d'un membre de l'équipe")
+            div.team__horaire
+              p.team__horaire--info Disponible du Lun - Ven 8h30 à 19h et Samedi de 8h30 à 17h
+            div.team__info
+              span.team__name Docteur Rul
+              span.team__function Infirmier
+          li.team__element
+            img.team__img(src="images/femme.jpg" width="215" height="215" alt="Photo d'un membre de l'équipe")
+            div.team__horaire
+              p.team__horaire--info Disponible du Lun - Ven 8h30 à 19h et Samedi de 8h30 à 17h
+            div.team__info
+              span.team__name Docteur Mamour
+              span.team__function Psychologue
+          li.team__element
+            img.team__img(src="images/femme.jpg" width="215" height="215" alt="Photo d'un membre de l'équipe")
+            div.team__horaire
+              p.team__horaire--info Disponible du Lun - Ven 8h30 à 19h et Samedi de 8h30 à 17h
+            div.team__info
+              span.team__name Docteur Last
+              span.team__function Infirmier

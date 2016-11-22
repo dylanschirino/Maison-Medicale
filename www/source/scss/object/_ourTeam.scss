@@ -1,0 +1,79 @@
+/* CSI Angleur
+ *
+ * /sass/object/ourTeam.scss - ourTeam object
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+
+ .team{
+   &__container{
+     width: 81%;
+     margin: auto;
+   }
+   &__header{
+     &::after{
+       content: "";
+       display: block;
+       clear: both;
+     }
+   }
+   &__title{
+     float: left;
+   }
+   &__element{
+     display: inline-block;
+     position: relative;
+     margin-right: 3.9em;
+     padding-top: 6em;
+   }
+   &__horaire{
+     width: 17.9167em;
+     position: absolute;
+     bottom: 137px;
+     opacity: 0;
+     transition: .2s ease-in-out;
+   }
+   &__name,&__function{
+     display: block;
+     margin-top: 1.25em ;
+   }
+   //Slider
+   &__slideshow{
+     position: relative;
+     width: 1024px;
+     height: 400px;
+     overflow: hidden;
+   }
+   &__slider{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 300%;
+     z-index: 10;
+     transition: all .2s ease-in;
+   }
+ }
+
+#s1:target #sContent { left: -762px; }
+#s2:target #sContent { left: 762px; }
+
+ .team__element:hover .team__horaire{
+   opacity: 1;
+ }
+
+ .controls{
+   &__button{
+     &--next, &--prev{
+       display: inline-block;
+     }
+     &--prev{
+       margin-right: 1.6em;
+     }
+   }
+   &__container{
+     float: right;
+   }
+ }
+
+ // SlideShow

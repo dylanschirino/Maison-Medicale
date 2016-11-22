@@ -967,6 +967,74 @@ p {
     width: 80%;
     margin: auto; } }
 
+/* CSI Angleur
+ *
+ * /sass/object/ourTeam.scss - ourTeam object
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.team__container {
+  width: 81%;
+  margin: auto; }
+
+.team__header::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.team__title {
+  float: left; }
+
+.team__element {
+  display: inline-block;
+  position: relative;
+  margin-right: 3.9em;
+  padding-top: 6em; }
+
+.team__horaire {
+  width: 17.9167em;
+  position: absolute;
+  bottom: 137px;
+  opacity: 0;
+  transition: .2s ease-in-out; }
+
+.team__name, .team__function {
+  display: block;
+  margin-top: 1.25em; }
+
+.team__slideshow {
+  position: relative;
+  width: 1024px;
+  height: 400px;
+  overflow: hidden; }
+
+.team__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  z-index: 10;
+  transition: all .2s ease-in; }
+
+#s1:target #sContent {
+  left: -762px; }
+
+#s2:target #sContent {
+  left: 762px; }
+
+.team__element:hover .team__horaire {
+  opacity: 1; }
+
+.controls__button--next, .controls__button--prev {
+  display: inline-block; }
+
+.controls__button--prev {
+  margin-right: 1.6em; }
+
+.controls__container {
+  float: right; }
+
 /* CsiAngleur
  *
  * /sass/components/Animation.scss - Animation stylesheet
@@ -1897,3 +1965,57 @@ p {
     background-color: #436577;
     border: 1px solid white;
     color: white; }
+
+/* CSI Angleur
+ *
+ * /sass/components/ourTeam.scss - ourTeam components
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.team {
+  background-color: #18FFD1; }
+  .team__container {
+    padding: 5em 0; }
+  .team__title {
+    font-size: 2.4em;
+    line-height: 1.2083em;
+    color: #436577; }
+  .team__header {
+    padding-bottom: 2em;
+    border-bottom: 5px solid #436577; }
+  .team__horaire {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    background-color: #45B2AE;
+    background-color: rgba(69, 178, 174, 0.6); }
+    .team__horaire--info {
+      padding: 2.0833em;
+      color: white; }
+  .team__name {
+    font: 1.6em/2em "museo";
+    color: #436577;
+    text-align: center; }
+  .team__function {
+    font: 1.6em/2em "open_sansregular", "Helvetica", Arial, sans-serif;
+    color: #436577;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 1.25em; }
+    .team__function::after {
+      content: "";
+      display: block;
+      width: 70%;
+      margin: 0.5em auto 0 auto;
+      height: 3px;
+      background: white; }
+
+.controls__button--prev, .controls__button--next {
+  color: #436577; }
+  .controls__button--prev::before, .controls__button--next::before {
+    content: "\e908";
+    display: inline-block;
+    font: 3em "glyphs"; }
+
+.controls__button--next::before {
+  transform: rotate(180deg); }

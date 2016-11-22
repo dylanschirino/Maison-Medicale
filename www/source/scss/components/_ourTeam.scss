@@ -1,0 +1,70 @@
+/* CSI Angleur
+ *
+ * /sass/components/ourTeam.scss - ourTeam components
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.team{
+  background-color: #18FFD1;
+  &__container{
+    padding: 5em 0;
+  }
+  &__title{
+    font-size: 2.4em;
+    line-height: 1.2083em;
+    color: $texteColor;
+  }
+  &__header{
+    padding-bottom: 2em;
+    border-bottom: 5px solid $texteColor;
+  }
+  &__horaire{
+    font-size:1.2em;
+    line-height: 1.6em;
+    background-color: #45B2AE;
+    background-color: rgba(69,178,174,0.6);
+    &--info{
+      padding: 2.0833em ;
+      color: $white;
+    }
+  }
+  &__name{
+    font: 1.6em/2em $museo;
+    color: $texteColor;
+    text-align: center;
+  }
+  &__function{
+    font: 1.6em/2em $opensans;
+    color: $texteColor;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 1.25em;
+    &::after{
+      content: "";
+      display: block;
+      width: 70%;
+      margin:0.5em auto 0 auto;
+      height: 3px;
+      background: $white;
+    }
+  }
+}
+
+.controls{
+  &__button{
+    &--prev,&--next{
+      color: $texteColor;
+      &::before{
+        content: "\e908";
+        display: inline-block;
+        font: 3em $glyphs;
+      }
+    }
+    &--next{
+      &::before{
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
