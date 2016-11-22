@@ -32,25 +32,25 @@ Le site doit pouvoir être utilisé par une majorité de personnes: fonctionnel,
 
 ## Menu principale 
 ### Qui sommes-nous = présentation générale
-	* Maison médicale au forfait ( explique ce qu’est le forfait etc ) 
-	* Philosophie de travail
-	* Centre pluridisciplinaire ( citer les disciplines et soins proposés )
+* Maison médicale au forfait ( explique ce qu’est le forfait etc ) 
+* Philosophie de travail
+* Centre pluridisciplinaire ( citer les disciplines et soins proposés )
 ### Fonctionnement
-	* Explication sur l’inscription à la maison médicale : Qu’est ce que j’ai pour une année, quels sont les avantages etc
-	* Explication sur la désinscription : comment se désinscire, quel démarche faut-il faire ?
+* Explication sur l’inscription à la maison médicale : Qu’est ce que j’ai pour une année, quels sont les avantages etc
+* Explication sur la désinscription : comment se désinscire, quel démarche faut-il faire ?
 ### Vous êtes malade en dehors des heures d’ouverture ?
-	* Service(s) de garde: fonctionnement, remboursement. 
+* Service(s) de garde: fonctionnement, remboursement. 
 Il n’est pas lié a la maison médicale mais liée à la ville. Le patient devra payer le médecin de garde et sera rembourser par la maison médicale.
 ### Activité du centre = PROJETS comme les balades, atelier cuisine, jardinage
-	* Fiches pratiques thématiques petite fiche médicale sur comment bien s’alimenter etc, vaccination
-	* Possibilité de s’inscrire à la newsletter ( intéressant à le rappeler )
+* Fiches pratiques thématiques petite fiche médicale sur comment bien s’alimenter etc, vaccination
+* Possibilité de s’inscrire à la newsletter ( intéressant à le rappeler )
 ### Nous contacter 
-	* Coordonnées (+ lien Google Maps et Streetview )
-		* 	 Heures d’ouverture par jour, par service, par thérapeute (avec photo des personnes concernées 3 pour le moment)
-		* Possibilité d’envoyer un message (adresse courriel générale) pas contacter un médecin en particulier. = formulaire de contact générale
-		* Avoir une vue générale de l’horaire et voir par docteur quand il est disponible etc.
+* Coordonnées (+ lien Google Maps et Streetview )
+* Heures d’ouverture par jour, par service, par thérapeute (avec photo des personnes concernées 3 pour le moment)
+* Possibilité d’envoyer un message (adresse courriel générale) pas contacter un médecin en particulier. = formulaire de contact générale
+* Avoir une vue générale de l’horaire et voir par docteur quand il est disponible etc.
 ### Liens utiles
-	* Vers sites Internet INAMI, Fédération des maisons médicales, services de garde,…
+* Vers sites Internet INAMI, Fédération des maisons médicales, services de garde,…
 	
 
 	
