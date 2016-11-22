@@ -1303,9 +1303,10 @@ p {
       font: 2em "glyphs";
       margin-right: 1.25em;
       position: relative;
-      top: 15px; }
+      top: 15px;
+      transition: .2s ease-in; }
     .discover__question--clicked::before {
-      content: "\e913"; }
+      transform: rotate(45deg); }
   .discover__answer {
     font: 1.6em/1.688em "open_sansregular", "Helvetica", Arial, sans-serif;
     padding-top: 1.25em; }
