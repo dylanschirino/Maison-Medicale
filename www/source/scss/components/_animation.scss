@@ -84,3 +84,17 @@
    opacity: 1;
  }
 }
+
+.aiguille{
+  transform-origin: 40px 40px;
+  animation: aiguille 6s infinite ease-in-out;
+}
+
+@keyframes aiguille{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(120deg);
+  }
+}
