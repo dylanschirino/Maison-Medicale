@@ -11,6 +11,8 @@
    margin: 8em auto;
    &__content{
      margin-top: 1em;
+     padding-bottom: 4em;
+     display: flex;
      &::after{
        content: "";
        display: block;
@@ -18,8 +20,8 @@
      }
    }
    &__svg{
-    float: left;
-    margin: auto 4.5em 4.1em 4.5em;
+    margin: 0 4.5em 0 4.5em;
+    flex-shrink: 0;
    }
    &__cardsContainer{
       margin-top: 8em;
@@ -57,12 +59,12 @@
    .forfait{
      width: 90%;
      &__svg{
-       float: none;
        display: block;
        margin: 2em auto;
      }
      &__content{
        padding-bottom: 3em;
+       display: block;
      }
      &__explaination{
        width: 80%;
