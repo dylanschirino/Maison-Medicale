@@ -890,7 +890,8 @@ p {
   width: 30.0625em; }
 
 .headContent__cards--form {
-  margin-top: 7.2em; }
+  margin-top: 7.2em;
+  z-index: 1; }
 
 .cards__list--contact {
   width: 100%;
@@ -908,6 +909,22 @@ p {
   .form__submit {
     width: 100%;
     margin: 0em 0em 2em 0.5em; }
+
+.maps__link {
+  height: 40em;
+  position: relative; }
+
+.maps__label {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden; }
+
+.maps__link:hover .maps__label {
+  visibility: visible;
+  height: auto; }
 
 @media screen and (max-width: 1111px) {
   .contactHead__container {
@@ -1864,3 +1881,19 @@ p {
     background: white;
     color: #48B2AD;
     cursor: pointer; }
+
+.maps__link {
+  background: url("../../images/maps.jpg") no-repeat center center;
+  background-size: cover; }
+
+.maps__label {
+  font: 1.8em/2em "museo";
+  text-transform: uppercase;
+  color: #436577;
+  background-color: white;
+  border: 1px solid #436577;
+  padding: 0.8em; }
+  .maps__label:hover {
+    background-color: #436577;
+    border: 1px solid white;
+    color: white; }

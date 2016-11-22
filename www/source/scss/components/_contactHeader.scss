@@ -74,3 +74,23 @@
      }
    }
  }
+
+.maps{
+  &__link{
+    background: url("../../images/maps.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  &__label{
+    font: 1.8em/2em $museo;
+    text-transform: uppercase;
+    color: $texteColor;
+    background-color: $white;
+    border: 1px solid $texteColor;
+    padding: 0.8em;
+    &:hover{
+      background-color: $texteColor;
+      border: 1px solid $white;
+      color: $white;
+    }
+  }
+}
