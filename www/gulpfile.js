@@ -2,7 +2,7 @@
 // Définition des dépendances dont on a besoin pour executer les taches
 var
 gulp = require( 'gulp' ),
-imagesMin = require( 'gulp-imagemin' ),
+tiny = require( 'gulp-tinypng-nokey'),
 newer = require( 'gulp-newer' ),
 size = require ( 'gulp-size' ),
 del = require ( 'del' ),
@@ -79,7 +79,7 @@ gulp.task('images', function(){
   .pipe(cleanDest( imagesOpts.out)) //pour supprimer les images dans build si on les supprime dans sources.
   .pipe(newer( imagesOpts.out ) )
   .pipe(size({title: 'Images size before compression:', showFiles: true}))
-  .pipe( imagesMin() )
+  .pipe( tiny() )
   .pipe(size({title: 'Images size after compression:', showFiles: true}))
   .pipe( gulp.dest( imagesOpts.out ) )
   // fonction dans laquelle on mets la commande qu'on veut executé
@@ -88,7 +88,7 @@ gulp.task('images', function(){
 gulp.task('imageuri', function(){
 
   return gulp.src(imageUriOpts.in)
-  .pipe(imagesMin())
+  .pipe(tiny())
   .pipe(imacss(imageUriOpts.filename, imageUriOpts.namespace))
   .pipe(gulp.dest(imageUriOpts.out));
 

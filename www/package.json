@@ -32,6 +32,7 @@
     "gulp-pug": "^3.0.4",
     "gulp-sass": "^2.3.2",
     "gulp-size": "^2.1.0",
+    "gulp-tinypng-nokey": "^1.0.4",
     "imacss": "^1.0.0"
   }
 }
