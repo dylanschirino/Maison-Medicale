@@ -1113,6 +1113,12 @@ p {
   display: block;
   margin: auto; }
 
+.archive__fiche {
+  width: 30em; }
+
+.archive__img {
+  vertical-align: baseline; }
+
 /* CsiAngleur
  *
  * /sass/components/Animation.scss - Animation stylesheet
@@ -2231,6 +2237,10 @@ p {
     text-align: center;
     padding: 1.3889em 0;
     color: white; }
+
+.fiche__content {
+  border: 2px solid #ECF3F6;
+  vertical-align: top; }
 
 @media screen and (max-width: 400px) {
   .archiveHead__svg {

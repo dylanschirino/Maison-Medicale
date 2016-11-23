@@ -11,3 +11,11 @@
     margin: auto;
   }
 }
+.archive{
+  &__fiche{
+    width: 30em;
+  }
+  &__img{
+    vertical-align: baseline;
+  }
+}

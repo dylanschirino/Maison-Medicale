@@ -5,6 +5,7 @@ gulp = require( 'gulp' ),
 tiny = require( 'gulp-tinypng-nokey'),
 newer = require( 'gulp-newer' ),
 size = require ( 'gulp-size' ),
+svgmin = require('gulp-svgmin'),
 del = require ( 'del' ),
 cleanDest = require ( 'gulp-dest-clean'),
 imacss = require ( 'gulp-imacss' ),
@@ -27,11 +28,15 @@ dest = 'build/';
 // Définition de quelques variables liées à nos taches ( options de taches)
 var
 imagesOpts = {
-  in: source + 'images/*.*',
+  in: source + 'images/*',
   out: dest + 'images/',
   watch: source + 'images/*.*'
-
 },
+svgOpts = {
+      in: source + 'images/svg/*',
+      out: dest + 'images/svg/',
+      watch: source + 'images/svg/*.*'
+  }
 imageUriOpts = {
   in: source + 'images/inline/*.*',
   out: source + 'scss/images/',
@@ -76,13 +81,33 @@ gulp.task('clean', function(){
 // Définition des taches
 gulp.task('images', function(){
   return gulp.src( imagesOpts.in )
-  .pipe(cleanDest( imagesOpts.out)) //pour supprimer les images dans build si on les supprime dans sources.
+  //.pipe(cleanDest( imagesOpts.out)) //pour supprimer les images dans build si on les supprime dans sources.
   .pipe(newer( imagesOpts.out ) )
   .pipe(size({title: 'Images size before compression:', showFiles: true}))
   .pipe( tiny() )
   .pipe(size({title: 'Images size after compression:', showFiles: true}))
   .pipe( gulp.dest( imagesOpts.out ) )
   // fonction dans laquelle on mets la commande qu'on veut executé
+});
+
+gulp.task('svgmin', function () {
+    return gulp.src(svgOpts.in)
+        .pipe(cleanDest(svgOpts.out))
+        .pipe(newer(svgOpts.out))
+        .pipe(size({title: 'SVG size before compression:', showFiles: true}))
+        .pipe(svgmin({
+            plugins: [{
+                removeTitle: true
+            },
+            {
+                removeDesc: true
+            },
+            {
+                removeViewBox: false
+            }]
+        }))
+        .pipe(size({title: 'SVG size after compression: ', showFiles: true}))
+        .pipe(gulp.dest('./build/images/svg/'));
 });
 
 gulp.task('imageuri', function(){
@@ -123,7 +148,7 @@ gulp.task('browserSync', function(){
 
 
 // Tache par défault exécuté lorsqu'on tape gulp dans le terminal
-gulp.task('default',['html','images','sass','browserSync'], function(){
+gulp.task('default',['html','images','sass','browserSync','svgmin'], function(){
 
   gulp.watch(html.watch, ['html',browserSync.reload]);
   gulp.watch(imagesOpts.watch, ['images']);
