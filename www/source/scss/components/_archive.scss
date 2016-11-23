@@ -23,3 +23,19 @@
      color: $white;
    }
  }
+
+ @media screen and (max-width:400px) {
+   .archiveHead{
+     &__svg{
+       width: 80%;
+       margin: auto;
+     }
+     &__text{
+       width: 80%;
+       margin: auto;
+     }
+     &__title{
+       font-size: 2.4em;
+     }
+   }
+ }
