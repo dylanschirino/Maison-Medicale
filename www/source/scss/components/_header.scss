@@ -39,7 +39,6 @@
     display: block;
     transition: .2s ease;
     &:hover{
-      font-family: $opensansBold;
       color: $active;
     }
     &--down{
