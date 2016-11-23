@@ -47,6 +47,12 @@
 @import "object/ourTeam";
 @import "object/contactHoraire";
 
+// Prévention page
+@import "object/archive";
+
+
+
+
 // 6. Components - Design des composants, morceaux d'UI
 @import "components/animation";
 @import "components/header";
@@ -71,7 +77,11 @@
 @import "components/serviceHeader";
 @import "components/serviceInformation";
 
+
 // Contact Page
 @import "components/contactHeader";
 @import "components/ourTeam";
 @import "components/contactHoraire";
+
+// Prévention page
+@import "components/archive";

@@ -1,0 +1,25 @@
+/* CSI Angleur
+ *
+ * /sass/components/archive.scss - archive components
+ *
+ * coded by Dylan Schirino
+ * started at 23/11/2016
+ */
+
+ .archiveHead{
+   background-color: $BlueGreen;
+   color: $white;
+   &__title{
+     font-size:3.2em;
+     line-height: 1.40625em;
+     text-align: center;
+     padding-top: 2.1875em;
+   }
+   &__text{
+     font-size: 1.8em;
+     line-height: 1.555em;
+     text-align: center;
+     padding: 1.3889em 0;
+     color: $white;
+   }
+ }
