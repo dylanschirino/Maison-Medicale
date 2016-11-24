@@ -36,15 +36,72 @@
    }
  }
 
- 
- // Conseils pratiques
 
+ // Conseils pratiques
+.pratique{
+  &__conseil{
+    width: 81%;
+    margin:auto;
+    &::after{
+      content: "";
+      width: 30%;
+      height: 3px;
+      display: block;
+      background: $texteColor;
+      margin: auto;
+    }
+  }
+}
+
+.conseil{
+  &__container{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    width: 52.5%;
+  }
+}
 
 
 
 
 
  // Mediaqueries
+
+ @media screen and (max-width:929px) {
+   .pratique{
+     &__conseil{
+       width: 90%;
+       &::after{
+         background: none;
+       }
+     }
+   }
+   .conseil{
+     &__content{
+       width: 90%;
+       margin: auto;
+     }
+     &__title,&__subtitle{
+       text-align: center;
+     }
+     &__title{
+       &::after{
+         margin: auto;
+       }
+     }
+     &__img{
+       width: 90%;
+       display: block;
+       height: auto;
+       margin: auto;
+     }
+     &__container{
+       display: block;
+     }
+   }
+ }
  @media screen and (max-width:673px) {
    .traitement{
      &__svg{
@@ -52,6 +109,20 @@
      }
      &__text{
         width: 100%;
+     }
+   }
+   .pratique{
+     &__title{
+       padding-top: 2em;
+     }
+   }
+ }
+
+
+ @media screen and (max-width:459px) {
+   .express{
+     &__svg{
+       display: none;
      }
    }
  }
