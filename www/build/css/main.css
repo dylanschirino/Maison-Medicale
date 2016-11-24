@@ -1132,9 +1132,35 @@ p {
   width: 85%;
   margin: 0 auto 1.875em auto; }
 
+.pagination {
+  width: 65%;
+  margin: 0 auto 10em auto; }
+  .pagination__button, .pagination__element, .pagination__list {
+    display: inline-block; }
+  .pagination__button {
+    width: 10.27em;
+    margin-left: 1.666em;
+    margin-right: 1.66em; }
+  .pagination__chiffre {
+    display: block;
+    width: 3.611em; }
+
+@media screen and (max-width: 1198px) {
+  .pagination {
+    width: 70%; } }
+
 @media screen and (max-width: 1114px) {
   .archive__container {
-    width: 95%; } }
+    width: 95%; }
+  .pagination {
+    width: 80%; }
+    .pagination__button {
+      display: block;
+      margin: auto; }
+    .pagination__list {
+      display: block;
+      margin: 3em auto;
+      text-align: center; } }
 
 @media screen and (max-width: 962px) {
   .archive__container {
@@ -1169,7 +1195,9 @@ p {
 
 @media screen and (max-width: 400px) {
   .archive__fiche {
-    width: 90%; } }
+    width: 90%; }
+  .pagination {
+    font-size: 0.9em; } }
 
 /* CsiAngleur
  *
@@ -2338,6 +2366,32 @@ p {
     background-color: white;
     color: #FFA33C;
     border: 1px solid #FFA33C; }
+
+.pagination__button {
+  font: 1.6em/2.7em "museo";
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background-color: #8898AA;
+  border: 1px solid #8898AA;
+  padding: 0.3em 0;
+  border-radius: 8px;
+  transition: .2s ease-in; }
+  .pagination__button:hover {
+    color: #8898AA;
+    background-color: white;
+    border: 1px solid #8898AA; }
+
+.pagination__chiffre {
+  background-color: #F6F9FC;
+  font: 1.6em/3.5em "museo";
+  color: #8898AA;
+  text-align: center;
+  transition: .2s ease-in;
+  border: 3px solid white; }
+  .pagination__chiffre:hover {
+    color: #F6F9FC;
+    background-color: #8898AA; }
 
 @media screen and (max-width: 400px) {
   .archiveHead__svg {

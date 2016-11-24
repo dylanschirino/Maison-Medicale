@@ -35,10 +35,44 @@
     margin: 0 auto 1.875em auto;
   }
 }
+
+.pagination{
+  width: 65%;
+  margin: 0 auto 10em auto;
+  &__button,&__element,&__list{
+    display: inline-block;
+  }
+  &__button{
+    width: 10.27em;
+    margin-left: 1.666em;
+    margin-right: 1.66em;
+  }
+  &__chiffre{
+    display: block;
+    width: 3.611em;
+  }
+}
+@media screen and (max-width:1198px) {
+  .pagination{
+    width: 70%;
+  }
+}
 @media screen and (max-width:1114px) {
   .archive{
     &__container{
       width: 95%;
+    }
+  }
+  .pagination{
+    width: 80%;
+    &__button{
+      display: block;
+      margin: auto;
+    }
+    &__list{
+      display: block;
+      margin: 3em auto;
+      text-align: center;
     }
   }
 }
@@ -96,5 +130,8 @@
     &__fiche{
       width: 90%;
     }
+  }
+  .pagination{
+    font-size: 0.9em;
   }
 }
