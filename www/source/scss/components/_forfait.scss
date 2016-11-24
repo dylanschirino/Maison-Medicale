@@ -47,9 +47,20 @@
      &--house::before{
        content: "\e907";
      }
+     &--cause::before{
+       content: "\e916";
+     }
+     &--cons::before{
+       content: "\e915";
+     }
      &--patient::before{
        content: "\e912";
      }
+   }
+   &__text{
+     font-size: 1.4em;
+     line-height: 1.6428571429em;
+     padding-top: 1.4285714286em;
    }
    &__list{
      padding-top: 1.5em;

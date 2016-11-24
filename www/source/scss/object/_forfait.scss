@@ -38,6 +38,10 @@
      width: 80%;
      margin: auto;
    }
+   &__text{
+     width: 65%;
+     margin: auto;
+   }
    &__element{
      display: flex;
      justify-content: flex-start;
@@ -80,6 +84,8 @@
      }
    }
    .obligation{
-
+    &__text{
+      width: 80%;
+    }
    }
  }
