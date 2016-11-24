@@ -1119,6 +1119,58 @@ p {
 .archive__img {
   vertical-align: baseline; }
 
+.archive__container {
+  width: 81%;
+  margin: 8em auto 8em auto;
+  display: flex;
+  justify-content: space-between; }
+
+.fiche__date {
+  display: block; }
+
+.fiche__button {
+  width: 85%;
+  margin: 0 auto 1.875em auto; }
+
+@media screen and (max-width: 1114px) {
+  .archive__container {
+    width: 95%; } }
+
+@media screen and (max-width: 962px) {
+  .archive__container {
+    display: block; }
+    .archive__container::after {
+      content: "";
+      display: block;
+      clear: both; }
+  .archive__fiche {
+    display: inline-block;
+    width: 45%;
+    float: left;
+    margin: 2em; }
+    .archive__fiche--last {
+      float: none;
+      display: block;
+      margin: auto; }
+  .fiche__img {
+    width: 100%;
+    height: auto; } }
+
+@media screen and (max-width: 843px) {
+  .archive__fiche {
+    float: none;
+    display: block;
+    width: 60%;
+    margin: 4em auto; } }
+
+@media screen and (max-width: 544px) {
+  .archive__fiche {
+    width: 80%; } }
+
+@media screen and (max-width: 400px) {
+  .archive__fiche {
+    width: 90%; } }
+
 /* CsiAngleur
  *
  * /sass/components/Animation.scss - Animation stylesheet
@@ -2240,7 +2292,52 @@ p {
 
 .fiche__content {
   border: 2px solid #ECF3F6;
-  vertical-align: top; }
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  vertical-align: top;
+  background-color: white;
+  position: relative;
+  top: -5px; }
+
+.fiche__date {
+  font: 1.2em/1.417em "open_sansbold";
+  text-transform: uppercase;
+  color: #436577;
+  text-align: center;
+  padding: 2.0833em 0 0.833em 0; }
+
+.fiche__title {
+  font-size: 1.8em;
+  line-height: 1.22em;
+  text-align: center;
+  color: #51D2CC; }
+  .fiche__title::after {
+    content: "";
+    display: block;
+    width: 8.3em;
+    height: 2px;
+    background: #436577;
+    margin: 0.9em auto 0 auto; }
+
+.fiche__text {
+  font-size: 1.4em;
+  line-height: 1.45em;
+  text-align: center;
+  padding: 1.8571428571em; }
+
+.fiche__button {
+  font: 1.6em/2.75em "museo";
+  background-color: #FFA33C;
+  text-transform: uppercase;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  transition: .2s ease-in; }
+  .fiche__button:hover {
+    background-color: white;
+    color: #FFA33C;
+    border: 1px solid #FFA33C; }
 
 @media screen and (max-width: 400px) {
   .archiveHead__svg {
