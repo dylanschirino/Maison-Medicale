@@ -25,6 +25,17 @@
    }
  }
 
+
+// Conseils pratiques
+.pratique{
+  background-color: $footerBckg;
+}
+
+
+
+
+
+// Mediaqueries
  @media screen and (max-width:420px) {
     .traitement{
       &__title{

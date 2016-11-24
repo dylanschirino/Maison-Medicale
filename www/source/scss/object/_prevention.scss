@@ -22,6 +22,29 @@
    }
  }
 
+ .express{
+   &__advice{
+     position: relative;
+   }
+   &__svg{
+     display: block;
+     position: absolute;
+     bottom: -140px;
+     left:0;
+     right:0;
+     margin: auto;
+   }
+ }
+
+ 
+ // Conseils pratiques
+
+
+
+
+
+
+ // Mediaqueries
  @media screen and (max-width:673px) {
    .traitement{
      &__svg{
