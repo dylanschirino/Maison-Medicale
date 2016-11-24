@@ -32,8 +32,8 @@
 
 @font-face {
   font-family: 'glyphs';
-  src: url("../fonts/glyphs/icomoon.eot?lob03q");
-  src: url("../fonts/glyphs/icomoon.eot?lob03q#iefix") format("embedded-opentype"), url("../fonts/glyphs/icomoon.ttf?lob03q") format("truetype"), url("../fonts/glyphs/icomoon.woff?lob03q") format("woff"), url("../fonts/glyphs/icomoon.svg?lob03q#icomoon") format("svg");
+  src: url("../fonts/glyphs/icomoon.eot?afyfff");
+  src: url("../fonts/glyphs/icomoon.eot?afyfff#iefix") format("embedded-opentype"), url("../fonts/glyphs/icomoon.ttf?afyfff") format("truetype"), url("../fonts/glyphs/icomoon.woff?afyfff") format("woff"), url("../fonts/glyphs/icomoon.svg?afyfff#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -660,6 +660,10 @@ p {
   width: 80%;
   margin: auto; }
 
+.obligation__text {
+  width: 65%;
+  margin: auto; }
+
 .obligation__element {
   display: flex;
   justify-content: flex-start; }
@@ -689,7 +693,9 @@ p {
       display: block; }
     .forfait__obligation {
       width: 100%;
-      margin-bottom: 6em; } }
+      margin-bottom: 6em; }
+  .obligation__text {
+    width: 80%; } }
 
 /* CsiAngleur
  *
@@ -1837,8 +1843,17 @@ p {
     padding: 0.5em 0 0.2em 0; }
   .obligation__title--house::before {
     content: "\e907"; }
+  .obligation__title--cause::before {
+    content: "\e916"; }
+  .obligation__title--cons::before {
+    content: "\e915"; }
   .obligation__title--patient::before {
     content: "\e912"; }
+
+.obligation__text {
+  font-size: 1.4em;
+  line-height: 1.6428571429em;
+  padding-top: 1.4285714286em; }
 
 .obligation__list {
   padding-top: 1.5em; }
