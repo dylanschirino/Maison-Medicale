@@ -63,8 +63,17 @@
   }
 }
 
-
-
+.lien{
+  &__svg{
+    display: block;
+    margin: auto;
+  }
+  &__list{
+    display: block;
+    width: 20%;
+    margin: auto;
+  }
+}
 
 
  // Mediaqueries
@@ -76,6 +85,11 @@
        &::after{
          background: none;
        }
+     }
+   }
+   .lien{
+     &__list{
+       width: 30%;
      }
    }
    .conseil{
@@ -102,18 +116,11 @@
      }
    }
  }
- @media screen and (max-width:673px) {
-   .traitement{
-     &__svg{
-       display: none;
-     }
-     &__text{
-        width: 100%;
-     }
-   }
-   .pratique{
-     &__title{
-       padding-top: 2em;
+
+ @media screen and (max-width:629px) {
+   .lien{
+     &__list{
+       width: 40%;
      }
    }
  }
@@ -125,12 +132,22 @@
        display: none;
      }
    }
+   .lien{
+     &__list{
+       width: 65%;
+     }
+   }
  }
 
  @media screen and (max-width:400px) {
     .traitement{
       &__container{
         width: 90%;
+      }
+    }
+    .lien{
+      &__list{
+        width: 80%;
       }
     }
  }
