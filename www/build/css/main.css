@@ -1205,6 +1205,37 @@ p {
   .pagination {
     font-size: 0.9em; } }
 
+/* CSI Angleur
+ *
+ * /sass/object/prevention.scss - prevention object
+ *
+ * coded by Dylan Schirino
+ * started at 24/11/2016
+ */
+.traitement__container {
+  display: flex;
+  justify-content: space-between;
+  width: 80.8%;
+  margin: auto; }
+
+.traitement__svg {
+  align-items: center;
+  flex-shrink: 0; }
+
+.traitement__text {
+  width: 80%;
+  margin: auto; }
+
+@media screen and (max-width: 673px) {
+  .traitement__svg {
+    display: none; }
+  .traitement__text {
+    width: 100%; } }
+
+@media screen and (max-width: 400px) {
+  .traitement__container {
+    width: 90%; } }
+
 /* CsiAngleur
  *
  * /sass/components/Animation.scss - Animation stylesheet
@@ -1871,6 +1902,10 @@ p {
 .express {
   background: url("../../images/smile.jpg") no-repeat center center;
   background-size: cover; }
+  .express__advice {
+    background: none;
+    background: url("../../images/advice.jpg") no-repeat center center;
+    background-size: cover; }
   .express__text {
     font: 2.4em/1.666em "museo";
     color: #34586B;
@@ -2416,4 +2451,31 @@ p {
     width: 80%;
     margin: auto; }
   .archiveHead__title {
+    font-size: 2.4em; } }
+
+/* CSI Angleur
+ *
+ * /sass/components/prevention.scss - prevention components
+ *
+ * coded by Dylan Schirino
+ * started at 24/11/2016
+ */
+.traitement {
+  background-color: #45B2AE; }
+  .traitement__title {
+    font: 3.2em/1.179em "museo";
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2.1875em 0; }
+  .traitement__container {
+    padding-bottom: 8em; }
+  .traitement__text {
+    font-size: 1.6em;
+    line-height: 1.625em;
+    color: white;
+    padding-bottom: 1.875em; }
+
+@media screen and (max-width: 420px) {
+  .traitement__title {
     font-size: 2.4em; } }

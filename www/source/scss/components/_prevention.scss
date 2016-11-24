@@ -1,0 +1,34 @@
+/* CSI Angleur
+ *
+ * /sass/components/prevention.scss - prevention components
+ *
+ * coded by Dylan Schirino
+ * started at 24/11/2016
+ */
+ .traitement{
+   background-color: $greenLight;
+   &__title{
+     font: 3.2em/1.1785em $museo;
+     color: $white;
+     text-transform: uppercase;
+     text-align: center;
+     padding: 2.1875em 0;
+   }
+   &__container{
+     padding-bottom: 8em;
+   }
+   &__text{
+     font-size: 1.6em;
+     line-height: 1.625em;
+     color: $white;
+     padding-bottom: 1.875em;
+   }
+ }
+
+ @media screen and (max-width:420px) {
+    .traitement{
+      &__title{
+        font-size: 2.4em;
+      }
+    }
+ }

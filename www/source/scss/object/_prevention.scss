@@ -1,0 +1,42 @@
+/* CSI Angleur
+ *
+ * /sass/object/prevention.scss - prevention object
+ *
+ * coded by Dylan Schirino
+ * started at 24/11/2016
+ */
+ .traitement{
+   &__container{
+     display: flex;
+     justify-content: space-between;
+     width: 80.8%;
+     margin: auto;
+   }
+   &__svg{
+     align-items: center;
+     flex-shrink: 0;
+   }
+   &__text{
+     width:80%;
+     margin: auto;
+   }
+ }
+
+ @media screen and (max-width:673px) {
+   .traitement{
+     &__svg{
+       display: none;
+     }
+     &__text{
+        width: 100%;
+     }
+   }
+ }
+
+ @media screen and (max-width:400px) {
+    .traitement{
+      &__container{
+        width: 90%;
+      }
+    }
+ }
