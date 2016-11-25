@@ -8,7 +8,7 @@
   searchBox = document.querySelector( ".menu__search" ),
   burger = document.querySelector("#header__burger"),
   sitecache = document.querySelector("#site-cache"),
-  OpenInMenu = document.querySelectorAll(".menu__element--down"),
+  OpenInMenu = document.querySelectorAll(".menu__link--down"),
   subLink = document.querySelectorAll(".menu__sublist"),
   question = document.querySelectorAll(".discover__question");
 

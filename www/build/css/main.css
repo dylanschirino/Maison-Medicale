@@ -1966,11 +1966,11 @@ p {
     padding-right: 1.5em; }
 
 .express {
-  background: url("../../images/smile.jpg") no-repeat center center;
+  background: url("../images/smile.jpg") no-repeat center center;
   background-size: cover; }
   .express__advice {
     background: none;
-    background: url("../../images/advice.jpg") no-repeat center center;
+    background: url("../images/advice.jpg") no-repeat center center;
     background-size: cover; }
   .express__text {
     font: 2.4em/1.666em "museo";
@@ -2274,7 +2274,7 @@ p {
     cursor: pointer; }
 
 .maps__link {
-  background: url("../../images/maps.jpg") no-repeat center center;
+  background: url("../images/maps.jpg") no-repeat center center;
   background-size: cover; }
 
 .maps__label {
