@@ -1,0 +1,2615 @@
+/* CsiAngleur
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Dylan Schirino
+ * started at 15/11/2016
+ */
+@font-face {
+  font-family: 'open_sansbold';
+  src: url("../fonts/opensans/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/opensans/opensans-bold-webfont.woff") format("woff"), url("../fonts/opensans/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'open_sansitalic';
+  src: url("../fonts/opensans/opensans-italic-webfont.woff2") format("woff2"), url("../fonts/opensans/opensans-italic-webfont.woff") format("woff"), url("../fonts/opensans/opensans-italic-webfont.svg#open_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("../fonts/opensans/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans/opensans-regular-webfont.woff") format("woff"), url("../fonts/opensans/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'museo';
+  src: url("../fonts/museo/Museo300-Regular-webfont.eot");
+  src: url("../fonts/museo/Museo300-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museo/Museo300-Regular-webfont.woff2") format("woff2"), url("../fonts/museo/Museo300-Regular-webfont.woff") format("woff"), url("../fonts/museo/Museo300-Regular-webfont.ttf") format("truetype"), url("../fonts/museo/Museo300-Regular-webfont.svg#museo300") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'glyphs';
+  src: url("../fonts/glyphs/icomoon.eot?afyfff");
+  src: url("../fonts/glyphs/icomoon.eot?afyfff#iefix") format("embedded-opentype"), url("../fonts/glyphs/icomoon.ttf?afyfff") format("truetype"), url("../fonts/glyphs/icomoon.woff?afyfff") format("woff"), url("../fonts/glyphs/icomoon.svg?afyfff#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*Fin du reset de meyer*/
+/* EspaceP
+ *
+ * /scss/base/root.scss - ROOT stylesheet
+ *
+ * coded by Dylan Schirino
+ * started at 19/07/2016
+ */
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block; }
+
+h2, h3 {
+  font-family: "museo"; }
+
+body {
+  font-size: 62.5%; }
+
+p {
+  color: #436577;
+  font-family: "open_sansregular", "Helvetica", Arial, sans-serif; }
+
+.centerContainer {
+  width: 81%;
+  margin: auto; }
+  .centerContainer::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+/* CSI Angleur
+*
+* /sass/object/header.scss - Header objects
+*
+* coded by Dylan Schirino
+* started at 15/11/2016
+*/
+.none {
+  position: absolute;
+  display: none; }
+
+.header::after {
+  content: "";
+  clear: both;
+  display: block; }
+
+.header__content {
+  max-width: 88.7%;
+  margin: auto;
+  height: 10em; }
+
+.header__logo {
+  display: block;
+  margin-left: 5em;
+  float: left; }
+
+.menu__content {
+  display: inline-block;
+  margin-left: 6em; }
+
+.menu__element {
+  display: inline-block;
+  margin-top: 2em;
+  vertical-align: top; }
+
+.menu__sublist {
+  margin-top: 2em;
+  width: 10em;
+  position: absolute;
+  height: 5.9375em;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s ease-in; }
+  .menu__sublist::after {
+    bottom: 100%;
+    left: 25%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+
+.menu__sublink {
+  display: block; }
+
+.menu__element--down:hover .menu__sublist {
+  opacity: 1;
+  visibility: visible; }
+
+@media only screen and (max-width: 1228px) {
+  .menu__content {
+    font-size: 0.9em;
+    margin-left: 3em; } }
+
+@media only screen and (max-width: 1093px) {
+  .none {
+    display: block;
+    position: static; }
+  .menu__element--down:hover .menu__sublist {
+    opacity: 0;
+    visibility: hidden; }
+  .header {
+    position: static; }
+    .header::after {
+      content: "";
+      display: block;
+      clear: both; }
+    .header__logo {
+      float: right; }
+    .header__menu::after {
+      content: "";
+      display: block;
+      clear: both; }
+    .header__burger {
+      position: relative;
+      display: block;
+      float: left;
+      width: 50px;
+      height: 66px; }
+      .header__burger::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 2em;
+        height: 0;
+        top: 30px;
+        left: 0px;
+        box-shadow: 0 10px 0 1px #436577, 0 16px 0 1px #436577, 0 22px 0 1px #436577; }
+  .site-pusher {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transition: transform .2s ease-in; }
+  .no-js .menu__list {
+    transform: translateX(0px); }
+  .no-js .menu__sublist {
+    height: auto;
+    opacity: 1;
+    visibility: visible; }
+  .menu__list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    transform: translateX(-250px);
+    -webkit-transition: transform .1s ease-in; }
+  .menu__element {
+    display: block; }
+  .menu__sublist {
+    position: static;
+    height: 0;
+    width: 100%;
+    margin: 0;
+    transition: .2s ease-in; }
+    .menu__sublist--open {
+      height: auto;
+      opacity: 1;
+      visibility: visible; }
+  .menu__element--down:hover .menu__sublist--open {
+    opacity: 1;
+    visibility: visible;
+    transition: .2s ease-in; }
+  .with--sidebar {
+    overflow: hidden;
+    height: 100%; }
+    .with--sidebar .site-pusher {
+      transform: translateX(250px); }
+    .with--sidebar .site-cache {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6); } }
+
+/* CsiAngleur
+ *
+ * /sass/object/searchbox.scss - Searchbox Objects
+ *
+ * coded by Dylan Schirino
+ * started at 16/11/2016
+ */
+.menu__element--search {
+  position: relative; }
+
+.menu__search {
+  position: absolute;
+  right: -25px;
+  bottom: -30px;
+  width: 15.625em;
+  padding: 1em 0;
+  display: none; }
+  .menu__search--open {
+    display: block; }
+  .menu__search::after {
+    bottom: 100%;
+    left: 75%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+
+.no-js .menu__search {
+  display: block; }
+
+.search__box {
+  height: 2.1875em;
+  margin-left: 1.25em; }
+
+.search__submit {
+  height: 2.5em;
+  position: relative;
+  top: -1px; }
+
+@media screen and (max-width: 1093px) {
+  .menu__element:last-child {
+    margin-top: 0.5em; }
+  .menu__search {
+    display: block;
+    position: static; }
+    .menu__search::after {
+      border: none; }
+  .search__box {
+    margin-left: 0; } }
+
+/* CsiAngleur
+ *
+ * /sass/object/mainimage.scss - Mainimage Object
+ *
+ * coded by Dylan Schirino
+ * started at 17/11/2016
+ */
+.headContent {
+  min-height: 45em;
+  position: relative; }
+  .headContent__slogan {
+    width: 14.125em; }
+  .headContent__cards {
+    width: 42.7em;
+    min-height: 54.4em;
+    margin: 0 8em 0 0;
+    position: absolute;
+    right: -6px;
+    top: 100px; }
+
+.cards__title {
+  display: inline-block;
+  margin: 1.25em 2.9166666667em 0.8333333333em 2.9166666667em; }
+  .cards__title--horaire {
+    margin: 1.25em  4em 0.8333333333em 4em; }
+
+.cards__list {
+  width: 73.5%;
+  margin: auto; }
+
+.cards__element {
+  margin-bottom: 1.4285714286em; }
+
+@media screen and (max-width: 981px) {
+  .headContent__slogan {
+    width: 90%;
+    margin: auto; }
+  .headContent__cards {
+    position: static;
+    width: 90%;
+    margin: auto;
+    padding: 1em 0; }
+  .cards__title {
+    display: block;
+    text-align: center; }
+    .cards__title--horaire {
+      margin: 1.25em 2.9166666667em 0.8333333333em 2.9166666667em; }
+  .cards__list {
+    width: 50%;
+    margin: auto;
+    display: block; } }
+
+@media screen and (max-width: 799px) {
+  .headContent__cards {
+    height: auto; }
+  .cards__list {
+    width: 80%;
+    margin: auto; } }
+
+@media screen and (max-width: 450px) {
+  .cards__title {
+    margin: 1.25em 1em; }
+  .cards__list {
+    width: 90%;
+    margin: auto; } }
+
+@media screen and (max-width: 352px) {
+  .headContent__cards {
+    width: 100%;
+    margin: auto; }
+  .cards__list {
+    width: 90%;
+    margin: auto; } }
+
+.table__element {
+  margin-bottom: 1.3em;
+  display: flex;
+  justify-content: space-between; }
+
+/* CsiAngleur
+ *
+ * /sass/objects/howitworks.scss - Howitworks Objects
+ *
+ * coded by Dylan Schirino
+ * started at 17/11/2016
+ */
+.howitworks__text {
+  width: 79%;
+  margin: auto; }
+
+.howitworks__svg--medic {
+  float: right; }
+
+@media screen and (max-width: 796px) {
+  .howitworks__text {
+    width: 100%;
+    margin: auto; } }
+
+/* CsiAngleur
+ *
+ * /sass/object/newsletter.scss - Newsletter Object
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+.newsletter {
+  margin-top: -9em;
+  position: relative; }
+  .newsletter__form {
+    width: 80%;
+    margin: auto; }
+  .newsletter__input {
+    width: 75%;
+    height: 3em; }
+  .newsletter__submit {
+    width: 8.3333333333em;
+    margin-left: 1em; }
+  .newsletter__container {
+    z-index: 111; }
+
+@media screen and (max-width: 1187px) {
+  .newsletter__form {
+    width: 72%;
+    margin: auto; }
+  .newsletter__input {
+    width: 67%;
+    margin: auto; } }
+
+@media screen and (max-width: 1004px) {
+  .newsletter__form {
+    width: 90%;
+    margin: auto; }
+  .newsletter__input {
+    display: block;
+    width: 90%;
+    margin: auto; }
+  .newsletter__submit {
+    margin-left: 0;
+    display: block;
+    margin: 1em auto 0 auto; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/discover.scss - Discover object
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+.discover__header {
+  margin-top: 5em; }
+
+.discover__container {
+  width: 84%;
+  margin: auto; }
+
+.discover__title {
+  margin-left: 0.6em; }
+
+.discover__menu {
+  display: flex;
+  justify-content: space-between; }
+
+.discover__content {
+  display: none;
+  transition: .2s ease-in;
+  width: 80.7%;
+  margin: auto; }
+
+.discover__question {
+  width: 80.7%;
+  margin: auto; }
+
+.discover__answer {
+  width: 58%;
+  margin: auto;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: .3s ease-in-out; }
+  .discover__answer--open {
+    height: auto;
+    opacity: 1; }
+
+.activated {
+  display: block; }
+
+.no-js .discover__answer {
+  height: auto;
+  opacity: 1; }
+
+.no-js .discover__content {
+  display: block;
+  margin-top: 5em; }
+
+.actif {
+  position: relative; }
+  .actif::after {
+    top: 100%;
+    left: 35%;
+    margin-top: 1.67em;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+
+@media screen and (max-width: 861px) {
+  .discover__container {
+    width: 95%;
+    margin: auto; }
+  .discover__answer {
+    width: 90%;
+    margin: auto; } }
+
+@media screen and (max-width: 574px) {
+  .discover__container {
+    width: 80%;
+    margin: auto; }
+    .discover__container::after {
+      content: "";
+      display: block;
+      clear: both; }
+  .discover__title {
+    text-align: center;
+    margin: 0; }
+  .discover__menu {
+    display: block; }
+  .discover__element {
+    padding-bottom: 1em; } }
+
+/* CsiAngleur
+ *
+ * /sass/object/footer.scss - Footer Object
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+.footer__container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between; }
+
+.table__element--footer {
+  display: flex;
+  justify-content: space-between; }
+
+@media screen and (max-width: 795px) {
+  .footer__container {
+    display: block;
+    width: 70%;
+    margin: auto; }
+  .footer__title {
+    text-align: center; }
+  .cards__element--footer {
+    display: block;
+    text-align: center; }
+  .table__element--footer {
+    display: block;
+    text-align: center; }
+  .linkSection__link {
+    text-align: center; }
+    .linkSection__link::before {
+      content: "";
+      width: 0;
+      background: none; } }
+
+/* CSI Angleur
+*
+* /sass/object/headHouse.scss - HeadHouse objects
+*
+* coded by Dylan Schirino
+* started at 19/11/2016
+*/
+.headContent__container {
+  width: 81%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between; }
+
+.headContent__img {
+  margin-top: 6.5em; }
+
+.headContent__text {
+  width: 23.722em; }
+
+@media screen and (max-width: 1062px) {
+  .headContent__container {
+    width: 80%;
+    display: block;
+    padding-bottom: 4em; }
+  .headContent__slogan--house {
+    text-align: center;
+    width: 100%; }
+  .headContent__figure {
+    padding-top: 1em; }
+  .headContent__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 4em auto 0 auto;
+    order: -2; }
+  .headContent__text {
+    width: 100%;
+    text-align: center;
+    order: 1; } }
+
+/* CsiAngleur
+ *
+ * /sass/object/forfait.scss - Forfait Object
+ *
+ * coded by Dylan Schirino
+ * started at 19/11/2016
+ */
+.forfait {
+  width: 81%;
+  margin: 8em auto; }
+  .forfait__content {
+    margin-top: 1em;
+    padding-bottom: 4em;
+    display: flex; }
+    .forfait__content::after {
+      content: "";
+      display: block;
+      clear: both; }
+  .forfait__svg {
+    margin: 0 4.5em 0 4.5em;
+    flex-shrink: 0; }
+  .forfait__cardsContainer {
+    margin-top: 8em;
+    display: flex;
+    justify-content: space-between; }
+  .forfait__obligation {
+    width: 47.7%; }
+
+.obligation__list {
+  width: 80%;
+  margin: auto; }
+
+.obligation__text {
+  width: 65%;
+  margin: auto; }
+
+.obligation__element {
+  display: flex;
+  justify-content: flex-start; }
+
+.express {
+  height: 30em;
+  display: flex; }
+  .express__text {
+    width: 50%;
+    margin: auto;
+    align-items: center; }
+
+@media screen and (max-width: 813px) {
+  .forfait {
+    width: 90%; }
+    .forfait__svg {
+      display: block;
+      margin: 2em auto; }
+    .forfait__content {
+      padding-bottom: 3em;
+      display: block; }
+    .forfait__explaination {
+      width: 80%;
+      margin: auto;
+      padding-right: 0; }
+    .forfait__cardsContainer {
+      display: block; }
+    .forfait__obligation {
+      width: 100%;
+      margin-bottom: 6em; }
+  .obligation__text {
+    width: 80%; } }
+
+/* CsiAngleur
+ *
+ * /sass/object/philosophie.scss - Philosophie Object
+ *
+ * coded by Dylan Schirino
+ * started at 19/11/2016
+ */
+.philosophie {
+  width: 81%;
+  margin: auto; }
+  .philosophie__container {
+    margin: 8em auto; }
+  .philosophie__content {
+    width: 80%;
+    margin: auto; }
+
+@media screen and (max-width: 400px) {
+  .philosophie {
+    width: 90%; }
+    .philosophie__content {
+      width: 85%; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/explaination.scss - Explaination object
+ *
+ * coded by Dylan Schirino
+ * started at 20/11/2016
+ */
+.subscription__svg {
+  margin: 4.5em 0 4.5em 12.1em;
+  vertical-align: middle; }
+
+.subscription__title {
+  display: inline-block; }
+
+.subscription__content {
+  width: 81%;
+  margin: 5em auto;
+  display: flex;
+  justify-content: space-between; }
+
+.subscription__articleContainer {
+  width: 53%;
+  order: 1; }
+
+.subscription__aside {
+  width: 35%;
+  order: 2; }
+
+.subscription__article {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s ease-in; }
+
+.subscription__active {
+  height: auto;
+  opacity: 1;
+  visibility: visible; }
+
+.no-js .subscription__article {
+  height: auto;
+  opacity: 1;
+  visibility: visible; }
+
+@media screen and (max-width: 974px) {
+  .subscription__svg {
+    margin: 0;
+    display: block;
+    margin: auto;
+    padding: 4.5em 0; }
+  .subscription__title {
+    display: block; } }
+
+.aside__button {
+  height: 11.1em;
+  margin-bottom: 2.778em; }
+
+.aside__container--active {
+  position: relative; }
+  .aside__container--active::before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(194, 225, 245, 0);
+    border-right-color: #ECF3F6;
+    border-width: 30px;
+    margin-top: -30px; }
+
+@media screen and (max-width: 714px) {
+  .subscription__content {
+    width: 90%;
+    display: block; }
+  .subscription__articleContainer {
+    width: 90%;
+    margin: auto; }
+  .subscription__aside {
+    width: 90%;
+    margin: auto; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/serviceHeader.scss - serviceHeader object
+ *
+ * coded by Dylan Schirino
+ * started at 21/11/2016
+ */
+.services__svg {
+  display: block;
+  margin: auto; }
+
+.services__numero {
+  width: 15.84em;
+  margin: auto; }
+
+@media screen and (max-width: 400px) {
+  .services__svg {
+    max-width: 80%;
+    height: auto; }
+  .services__numero, .services__info {
+    width: 80%;
+    margin: auto; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/serviceInformation.scss - serviceInformation object
+ *
+ * coded by Dylan Schirino
+ * started at 21/11/2016
+ */
+.information__container {
+  display: flex; }
+
+.information__choix {
+  width: 50%; }
+
+.information__content {
+  display: flex;
+  justify-content: space-around;
+  width: 81%;
+  margin: 8em auto;
+  display: none; }
+  .information__content--active {
+    display: flex; }
+
+.information__article {
+  order: 2;
+  width: 50%; }
+
+.information__table {
+  width: 48%;
+  margin-right: 5em; }
+
+.information__tableHead {
+  width: 100%; }
+
+.information__tableData {
+  width: 50%; }
+
+.information__tel {
+  width: 75%;
+  margin: 1.25em auto; }
+
+.no-js .information__content {
+  display: flex; }
+
+@media screen and (max-width: 951px) {
+  .information__content {
+    width: 90%;
+    display: block; }
+  .information__article {
+    order: 1;
+    width: 100%;
+    margin: auto; }
+  .information__table {
+    width: 100%;
+    margin: 2em auto;
+    border-right: 1px solid #436577;
+    border-left: 1px solid #436577; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/ContactHeader.scss - ContactHeader object
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.contactHead__container {
+  margin-left: 12em; }
+
+.contactHead__text {
+  width: 30.0625em; }
+
+.headContent__cards--form {
+  margin-top: 7.2em;
+  z-index: 1; }
+
+.cards__list--contact {
+  width: 100%;
+  padding-bottom: 8em; }
+
+.form {
+  display: block;
+  width: 73%;
+  margin: auto; }
+  .form__label {
+    display: block; }
+  .form__input {
+    margin: 0.625em 0 1.5em 0;
+    min-width: 95%; }
+  .form__submit {
+    width: 100%;
+    margin: 0em 0em 2em 0.5em; }
+
+.maps__link {
+  height: 40em;
+  position: relative; }
+
+.maps__label {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden; }
+
+.maps__link:hover .maps__label {
+  visibility: visible;
+  height: auto; }
+
+@media screen and (max-width: 1111px) {
+  .contactHead__container {
+    margin-left: 2em; } }
+
+@media screen and (max-width: 951px) {
+  .contactHead {
+    padding-bottom: 5em; }
+    .contactHead__container {
+      display: block;
+      width: 90%;
+      margin: auto; }
+    .contactHead__title {
+      text-align: center; }
+    .contactHead__text {
+      width: 80%;
+      margin: auto; }
+  .headContent__cards--form {
+    margin-top: 1em; }
+  .cards__list--contact {
+    width: 80%;
+    margin: auto; }
+    .cards__list--contact li {
+      display: inline-block;
+      margin-right: 4em;
+      margin-bottom: 1em; } }
+
+@media screen and (max-width: 400px) {
+  .contactHead__container, .contactHead__text {
+    width: 90%;
+    margin: auto; }
+  .cards__list--contact {
+    width: 90%;
+    margin: auto; }
+    .cards__list--contact li {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 2em; }
+  .form {
+    width: 80%;
+    margin: auto; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/ourTeam.scss - ourTeam object
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.team__container {
+  width: 81%;
+  margin: auto; }
+
+.team__header::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.team__title {
+  float: left; }
+
+.team__element {
+  display: inline-block;
+  position: relative;
+  margin-right: 3.9em;
+  padding-top: 6em; }
+
+.team__horaire {
+  width: 17.9167em;
+  position: absolute;
+  bottom: 137px;
+  opacity: 0;
+  transition: .2s ease-in-out; }
+
+.team__name, .team__function {
+  display: block;
+  margin-top: 1.25em; }
+
+.team__slideshow {
+  position: relative;
+  width: 100%;
+  height: 40em;
+  overflow: hidden; }
+
+.team__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  z-index: 10;
+  transition: all .2s ease-in; }
+
+#s1:target #sContent {
+  left: -75%; }
+
+#s2:target #sContent {
+  left: 75%; }
+
+.team__element:hover .team__horaire {
+  opacity: 1; }
+
+.controls__button--next, .controls__button--prev {
+  display: inline-block; }
+
+.controls__button--prev {
+  margin-right: 1.6em; }
+
+.controls__container {
+  float: right; }
+
+@media screen and (max-width: 1145px) {
+  .team__slideshow {
+    width: 85em;
+    height: 80em; }
+  .team__img {
+    width: 15em;
+    height: auto; } }
+
+@media screen and (max-width: 956px) {
+  .team__img {
+    display: none; }
+  .team__slideshow {
+    width: 100%;
+    margin: auto;
+    height: auto; }
+  .team__slider {
+    width: 100%;
+    position: static; }
+  .team__element {
+    background: white;
+    display: inline-block;
+    padding-top: 0;
+    width: 30%;
+    margin: 3em 1em 3em 1em; }
+  .team__horaire {
+    opacity: 1;
+    position: static;
+    width: 100%;
+    text-align: center; }
+  .button {
+    display: none; } }
+
+@media screen and (max-width: 818px) {
+  .team__slideshow {
+    width: 80%;
+    margin: auto; }
+  .team__element {
+    width: 45%; } }
+
+@media screen and (max-width: 663px) {
+  .team__element {
+    display: block;
+    width: 100%; } }
+
+@media screen and (max-width: 400px) {
+  .team__slideshow {
+    width: 100%; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/ContactHoraire.scss - ContactHoraire object
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.horaire {
+  padding-bottom: 7em; }
+  .horaire__svg {
+    display: block;
+    margin: auto;
+    padding: 2em 0; }
+  .horaire__table {
+    width: 81%;
+    margin: auto; }
+
+/* CSI Angleur
+ *
+ * /sass/object/archive.scss - archive object
+ *
+ * coded by Dylan Schirino
+ * started at 23/11/2016
+ */
+.archiveHead__svg {
+  display: block;
+  margin: auto; }
+
+.archive__fiche {
+  width: 30em; }
+
+.archive__img {
+  vertical-align: baseline; }
+
+.archive__container {
+  width: 81%;
+  margin: 8em auto 8em auto;
+  display: flex;
+  justify-content: space-between; }
+
+.fiche__date {
+  display: block; }
+
+.fiche__button {
+  width: 85%;
+  margin: 0 auto 1.875em auto; }
+
+.pagination {
+  width: 65%;
+  margin: 0 auto 10em auto; }
+  .pagination__button, .pagination__element, .pagination__list {
+    display: inline-block; }
+  .pagination__button {
+    width: 10.27em;
+    margin-left: 1.666em;
+    margin-right: 1.66em; }
+  .pagination__chiffre {
+    display: block;
+    width: 3.611em; }
+
+@media screen and (max-width: 1198px) {
+  .pagination {
+    width: 70%; } }
+
+@media screen and (max-width: 1114px) {
+  .archive__container {
+    width: 95%; }
+  .pagination {
+    width: 80%; }
+    .pagination__button {
+      display: block;
+      margin: auto; }
+    .pagination__list {
+      display: block;
+      margin: 3em auto;
+      text-align: center; } }
+
+@media screen and (max-width: 962px) {
+  .archive__container {
+    display: block; }
+    .archive__container::after {
+      content: "";
+      display: block;
+      clear: both; }
+  .archive__fiche {
+    display: inline-block;
+    width: 45%;
+    float: left;
+    margin: 2em; }
+    .archive__fiche--last {
+      float: none;
+      display: block;
+      margin: auto; }
+  .fiche__img {
+    width: 100%;
+    height: auto; } }
+
+@media screen and (max-width: 843px) {
+  .archive__fiche {
+    float: none;
+    display: block;
+    width: 60%;
+    margin: 4em auto; } }
+
+@media screen and (max-width: 544px) {
+  .archive__fiche {
+    width: 80%; } }
+
+@media screen and (max-width: 400px) {
+  .archive__fiche {
+    width: 90%; }
+  .pagination {
+    font-size: 0.9em; } }
+
+/* CSI Angleur
+ *
+ * /sass/object/prevention.scss - prevention object
+ *
+ * coded by Dylan Schirino
+ * started at 24/11/2016
+ */
+.traitement__container {
+  display: flex;
+  justify-content: space-between;
+  width: 80.8%;
+  margin: auto; }
+
+.traitement__svg {
+  align-items: center;
+  flex-shrink: 0; }
+
+.traitement__text {
+  width: 80%;
+  margin: auto; }
+
+.express__advice {
+  position: relative; }
+
+.express__svg {
+  display: block;
+  position: absolute;
+  bottom: -140px;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+.pratique__conseil {
+  width: 81%;
+  margin: auto; }
+  .pratique__conseil::after {
+    content: "";
+    width: 30%;
+    height: 3px;
+    display: block;
+    background: #436577;
+    margin: auto; }
+
+.conseil__container {
+  display: flex;
+  justify-content: space-between; }
+
+.conseil__content {
+  width: 52.5%; }
+
+.lien__svg {
+  display: block;
+  margin: auto; }
+
+.lien__list {
+  display: block;
+  width: 20%;
+  margin: auto; }
+
+@media screen and (max-width: 929px) {
+  .pratique__conseil {
+    width: 90%; }
+    .pratique__conseil::after {
+      background: none; }
+  .lien__list {
+    width: 30%; }
+  .conseil__content {
+    width: 90%;
+    margin: auto; }
+  .conseil__title, .conseil__subtitle {
+    text-align: center; }
+  .conseil__title::after {
+    margin: auto; }
+  .conseil__img {
+    width: 90%;
+    display: block;
+    height: auto;
+    margin: auto; }
+  .conseil__container {
+    display: block; } }
+
+@media screen and (max-width: 629px) {
+  .lien__list {
+    width: 40%; } }
+
+@media screen and (max-width: 459px) {
+  .express__svg {
+    display: none; }
+  .lien__list {
+    width: 65%; } }
+
+@media screen and (max-width: 400px) {
+  .traitement__container {
+    width: 90%; }
+  .lien__list {
+    width: 80%; } }
+
+/* CsiAngleur
+ *
+ * /sass/components/Animation.scss - Animation stylesheet
+ *
+ * coded by Dylan Schirino
+ * started at 17/11/2016
+ */
+.cercle {
+  transform-origin: 12px 12px;
+  animation: 5s infinite cercle; }
+
+@keyframes cercle {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2);
+    fill: #046C66; }
+  100% {
+    transform: scale(1); } }
+
+.medic-2 {
+  transform-origin: 70px 35px;
+  animation: 6s medic-top;
+  -webkit-animation-iteration-count: 10;
+  animation-iteration-count: 10; }
+
+@keyframes medic-top {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(90deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+.text {
+  animation: fill-opacity 5s linear;
+  -webkit-animation-iteration-count: 10;
+  animation-iteration-count: 10; }
+
+@keyframes fill-opacity {
+  0% {
+    fill-opacity: 0; }
+  50% {
+    fill-opacity: 1; }
+  100% {
+    fill-opacity: 0; } }
+
+.heart {
+  animation: heart 8s ease-in-out infinite;
+  transform-origin: 100px 45px;
+  animation-direction: alternate; }
+
+@keyframes heart {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  14% {
+    opacity: 0; }
+  28% {
+    opacity: 1; }
+  42% {
+    opacity: 0; }
+  70% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.aiguille {
+  transform-origin: 40px 40px;
+  animation: aiguille 6s infinite ease-in-out; }
+
+@keyframes aiguille {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(120deg); } }
+
+/* CSI Angleur
+ *
+ * /sass/components/header.scss - Header components
+ *
+ * coded by Dylan Schirino
+ * started at 15/11/2016
+ */
+.header {
+  background-color: #EFFFFB; }
+  .header__img {
+    padding: 1.4em 0; }
+
+.active {
+  font-family: "open_sansbold";
+  color: #64E0D1; }
+  .active::before {
+    content: "";
+    display: block;
+    background: #64E0D1;
+    width: 4em;
+    height: 5px;
+    position: absolute;
+    top: 0; }
+
+.menu__list {
+  font: 1.6em/2.3 "open_sansregular", "Helvetica", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #436577; }
+
+.menu__element {
+  padding-right: 2.1875em;
+  padding-bottom: 2em; }
+
+.menu__link {
+  display: block;
+  transition: .2s ease; }
+  .menu__link:hover {
+    color: #64E0D1; }
+  .menu__link--down::after {
+    content: "\e903";
+    font: 1em/1 "glyphs";
+    display: inline-block;
+    padding-left: 0.5em; }
+
+.menu__sublist {
+  background-color: white;
+  border: 3px solid #51D2CC;
+  border-radius: 5px;
+  z-index: 1; }
+  .menu__sublist::after {
+    border-color: rgba(81, 210, 204, 0);
+    border-bottom-color: #51D2CC;
+    border-width: 17px;
+    margin-left: -17px; }
+
+.menu__subelement + .menu__subelement {
+  border-top: 3px solid #51D2CC; }
+
+.menu__sublink {
+  text-align: center;
+  padding-top: 0.375em;
+  transition: .2s ease-in; }
+  .menu__sublink:hover {
+    font-family: "open_sansbold"; }
+
+@media only screen and (max-width: 1093px) {
+  .menu__list {
+    background-color: #EFFFFB;
+    height: 60em; }
+  .menu__sublist {
+    background: none;
+    border: none; }
+  .menu__subelement + .menu__subelement {
+    border: none; }
+  .menu__element {
+    padding-left: 2em;
+    border-bottom: 1px solid #436577;
+    transition: .2s ease-in-out; }
+    .menu__element:hover {
+      cursor: pointer; }
+  .menu__sublink {
+    text-align: left;
+    font-family: "open_sansbold"; }
+    .menu__sublink::after {
+      content: "";
+      display: block;
+      clear: both; }
+  .menu__link--down::after {
+    float: right;
+    padding-top: 0.8em; } }
+
+/* CsiAngleur
+ *
+ * /sass/components/searchbox.scss - Searchbox Components
+ *
+ * coded by Dylan Schirino
+ * started at 16/11/2016
+ */
+.menu__link {
+  display: block; }
+  .menu__link--search::before {
+    content: "\e90e";
+    display: block;
+    font: 1em/2em "glyphs";
+    padding-bottom: 3em; }
+
+.menu__search {
+  background-color: white;
+  border: 3px solid #51D2CC;
+  border-radius: 5px;
+  z-index: 10; }
+  .menu__search::after {
+    border-color: rgba(81, 210, 204, 0);
+    border-bottom-color: #51D2CC;
+    border-width: 17px;
+    margin-left: -17px; }
+
+.search__box {
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  background: none;
+  font: 1em/1.8em "open_sansregular", "Helvetica", Arial, sans-serif;
+  padding-left: 0.625em;
+  color: #436577;
+  outline: none; }
+
+.search__submit {
+  background: #51D2CC;
+  border: none;
+  border-radius: 4px;
+  color: #436577;
+  font: 0.88em/1.8em "open_sansregular", "Helvetica", Arial, sans-serif;
+  text-align: center;
+  transition: .2s ease-in; }
+  .search__submit:hover {
+    background-color: #436577;
+    color: #51D2CC;
+    cursor: pointer; }
+
+@media screen and (max-width: 1093px) {
+  .menu__link--search {
+    display: none; }
+    .menu__link--search::before {
+      padding-bottom: 0; }
+  .menu__search {
+    background: none;
+    border: none;
+    padding: 0;
+    padding-top: 1.5em; }
+  .search__box {
+    border-color: #436577;
+    background-color: white;
+    color: #436577; } }
+
+/* CsiAngleur
+ *
+ * /sass/components/mainimage.scss - Mainimage Components
+ *
+ * coded by Dylan Schirino
+ * started at 17/11/2016
+ */
+.headContent {
+  background: url("../images/mainimage.jpg") no-repeat center center;
+  background-size: cover; }
+  .headContent__slogan {
+    font: 3.2em/1.406em "museo";
+    color: white;
+    padding: 2.8125em 0 0 3.75em; }
+  .headContent__bold {
+    font-weight: bolder; }
+  .headContent__cards {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.5); }
+
+@media screen and (max-width: 1058px) {
+  .headContent__slogan {
+    padding-left: 1.5em; } }
+
+.cards__title {
+  font: 2.4em/1.208em "museo";
+  color: #45B2AE;
+  border-top: 1px solid #45B2AE;
+  border-bottom: 1px solid #45B2AE;
+  padding: 0.4166666667em 0; }
+
+.cards__label {
+  text-transform: uppercase;
+  padding-right: 0.7142857143em; }
+  .cards__label::before {
+    font: 1.6em "glyphs";
+    vertical-align: middle;
+    padding-right: 0.4em; }
+  .cards__label--adress::before {
+    content: "\e910"; }
+  .cards__label--tel::before {
+    content: "\e90a";
+    font-size: 1.3em; }
+  .cards__label--fax::before {
+    content: "\e905"; }
+  .cards__label--email::before {
+    content: "\e904";
+    font-size: 1.3em; }
+
+.cards__link {
+  font: 1.4em/1.357em "open_sansregular", "Helvetica", Arial, sans-serif;
+  color: #45B2AE; }
+
+@media screen and (max-width: 981px) {
+  .headContent {
+    background: none;
+    background-color: #3CE8C7;
+    padding-bottom: 4em; }
+    .headContent__slogan {
+      padding: 3em 0;
+      text-align: center; }
+      .headContent__slogan--house {
+        padding: 0;
+        padding-top: 1.5em; } }
+
+@media screen and (max-width: 537px) {
+  .headContent__slogan {
+    font-size: 2.4em; }
+  .headContent__cards {
+    box-shadow: none; }
+  .cards__title {
+    font-size: 1.8em; } }
+
+.table__day {
+  font: 1.4em/1.214em "museo";
+  text-transform: uppercase;
+  color: #45B2AE; }
+
+.table__info {
+  font: 1.4em/1.357em "open_sansregular", "Helvetica", Arial, sans-serif;
+  color: #046C66; }
+
+/* CsiAngleur
+ *
+ * /sass/components/howitworks.scss - Howitworks Components
+ *
+ * coded by Dylan Schirino
+ * started at 17/11/2016
+ */
+.howitworks {
+  background-color: #54EBCE;
+  padding-bottom: 11em; }
+  .howitworks__svg {
+    padding: 5.5em 0; }
+  .howitworks__title {
+    font: 3.2em/1.188em "museo";
+    text-align: center;
+    text-transform: uppercase;
+    color: #436577; }
+  .howitworks__text {
+    font-size: 1.8em;
+    line-height: 1.9444444444em;
+    padding-top: 1.6666666667em; }
+
+/* CsiAngleur
+ *
+ * /sass/components/newsletter.scss - Newsletter Components
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+.newsletter {
+  background-color: #45B2AE; }
+  .newsletter__title {
+    font-size: 2.4em;
+    line-height: 1.2083333333em;
+    color: white;
+    text-align: center;
+    padding: 1.1em 0; }
+  .newsletter__form {
+    padding-bottom: 3em; }
+  .newsletter__input {
+    font: 1.6em/3em "open_sansregular", "Helvetica", Arial, sans-serif;
+    padding-left: 1em;
+    border: none;
+    border: 1px solid #CCCCCC;
+    border-radius: 7px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset; }
+  .newsletter__submit {
+    font: 1.8em/2.5em "museo";
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 7px;
+    background-color: #FFA33C;
+    color: white;
+    transition: .2s ease-in; }
+    .newsletter__submit:hover {
+      border: 1px solid #FFA33C;
+      color: #FFA33C;
+      background-color: white;
+      cursor: pointer; }
+
+@media screen and (max-width: 880px) {
+  .newsletter__title {
+    font-size: 1.8em; } }
+
+/* CSI Angleur
+ *
+ * /sass/components/discover.scss - Discover components
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+.discover {
+  margin-top: -12.4em; }
+  .discover__header {
+    background-color: #51D2CC;
+    padding-bottom: 4em; }
+  .discover__services {
+    background-color: #EFFFFB;
+    padding: 8em 0; }
+  .discover__title {
+    font: 3.2em/1.4em "museo";
+    color: white;
+    text-transform: uppercase;
+    padding: 4.625em 0 2.0625em 0; }
+  .discover__element {
+    font: 2.4em/1.208em "museo";
+    text-transform: uppercase;
+    color: white;
+    text-align: center; }
+  .discover__link::before {
+    display: block;
+    font: 2.5em/1.5em "glyphs";
+    text-align: center; }
+  .discover__link--generale::before {
+    content: "\e902"; }
+  .discover__link--psy::before {
+    content: "\e90c"; }
+  .discover__link--kine::before {
+    content: "\e90d"; }
+  .discover__link--cardio::before {
+    content: "\e900"; }
+  .discover__link--infirmier::before {
+    content: "\e914"; }
+  .discover__content {
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    padding: 5em 0; }
+  .discover__question {
+    font: 2.4em/1.375em "open_sansregular", "Helvetica", Arial, sans-serif;
+    color: #45B2AE;
+    transition: .2s ease-in; }
+    .discover__question::after {
+      content: "";
+      display: block;
+      clear: both; }
+    .discover__question::before {
+      content: "\e90b";
+      display: inline-block;
+      font: 2em "glyphs";
+      margin-right: 1.25em;
+      position: relative;
+      top: 15px;
+      transition: .2s ease-in; }
+    .discover__question--clicked::before {
+      transform: rotate(45deg); }
+  .discover__answer {
+    font: 1.6em/1.688em "open_sansregular", "Helvetica", Arial, sans-serif;
+    padding-top: 1.25em; }
+
+.answer__text {
+  padding-bottom: 1.5em; }
+
+.actif::after {
+  border-color: rgba(81, 210, 204, 0);
+  border-top-color: #51D2CC;
+  border-width: 25px; }
+
+@media screen and (max-width: 1107px) {
+  .discover__question {
+    text-align: center;
+    width: 90%;
+    margin: auto; }
+    .discover__question::before {
+      display: block;
+      position: static;
+      text-align: center;
+      padding-bottom: 0.3em;
+      margin: 0; } }
+
+@media screen and (max-width: 1002px) {
+  .discover__header {
+    margin: 0;
+    padding-top: 3em; } }
+
+@media screen and (max-width: 773px) {
+  .discover__element {
+    font-size: 1.8em; }
+  .actif {
+    color: #436577; }
+    .actif::after {
+      border: none; } }
+
+/* CsiAngleur
+ *
+ * /sass/components/footer.scss - Footer  Components
+ *
+ * coded by Dylan Schirino
+ * started at 18/11/2016
+ */
+.footer {
+  background-color: #F6F9FC; }
+  .footer__title {
+    font: 1.8em/1.22em "museo";
+    text-transform: uppercase;
+    color: #8898AA;
+    padding: 1.9444em 0 1.6111em 0; }
+    .footer__title--center {
+      text-align: center; }
+
+.cards__link--footer {
+  color: #8898AA;
+  font: 1.2em/1.417em "open_sansregular", "Helvetica", Arial, sans-serif;
+  padding-bottom: 1.666em;
+  transition: .2s ease-in; }
+  .cards__link--footer:hover {
+    transform: scale(1.05); }
+
+.table__element--footer {
+  color: #8898AA;
+  font: 1.2em/1.417em "open_sansregular", "Helvetica", Arial, sans-serif;
+  padding-bottom: 1em; }
+
+.table__day--footer {
+  text-transform: uppercase;
+  padding-right: 1em; }
+
+.linkSection__link {
+  font: 1.2em/1.6em "open_sansregular", "Helvetica", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #8898AA;
+  padding-bottom: 0.8em; }
+  .linkSection__link:hover {
+    text-decoration: underline; }
+  .linkSection__link::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #8898AA;
+    margin-right: 1.5em; }
+
+.newsletter__title--footer {
+  color: #8898AA;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  text-align: left;
+  padding-top: 4em; }
+
+.newsletter__input--footer {
+  width: 56.4%; }
+
+.newsletter__submit--footer {
+  background-color: #8898AA;
+  border: 1px solid white; }
+  .newsletter__submit--footer:hover {
+    border-color: #8898AA;
+    color: #8898AA; }
+
+.designby {
+  background-color: #8898AA; }
+  .designby__ds {
+    color: white;
+    font: 1.4em/1.6em "museo";
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.2em 0; }
+    .designby__ds:hover {
+      text-decoration: underline; }
+
+@media screen and (max-width: 987px) {
+  .newsletter__title--footer {
+    text-align: center; }
+  .newsletter__input--footer {
+    width: 80%; } }
+
+@media screen and (max-width: 795px) {
+  .linkSection__link {
+    text-align: center; }
+    .linkSection__link::before {
+      content: "";
+      width: 0;
+      background: none; } }
+
+/* CSI Angleur
+*
+* /sass/component/headHouse.scss - HeadHouse components
+*
+* coded by Dylan Schirino
+* started at 19/11/2016
+*/
+.headContent--house {
+  background: none;
+  background-color: #51D2CC; }
+
+.headContent--fonction {
+  background: none;
+  background-color: #54EBCE; }
+
+.headContent__slogan--house {
+  padding-left: 0; }
+
+.headContent__img {
+  border: 6px solid white;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); }
+
+.headContent__text {
+  font-size: 1.8em;
+  line-height: 1.5556em;
+  color: white;
+  padding-top: 1.6667em; }
+
+/* CsiAngleur
+ *
+ * /sass/components/forfait.scss - Forfait Components
+ *
+ * coded by Dylan Schirino
+ * started at 19/11/2016
+ */
+.forfait__container, .forfait__obligation {
+  background-color: #ECF3F6;
+  border-radius: 8px; }
+
+.forfait__title {
+  font-size: 2.4em;
+  line-height: 1.2083333333em;
+  color: #436577;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2.25em 0 0.8333em 0; }
+
+.forfait__explaination {
+  font-size: 1.6em;
+  line-height: 1.5625em;
+  padding-bottom: 1em;
+  padding-right: 3.75em; }
+  .forfait__explaination b {
+    font-family: "open_sansbold";
+    color: #51D2CC; }
+
+.forfait__obligation {
+  padding-bottom: 6em; }
+
+.obligation__title {
+  font-size: 1.8em;
+  line-height: 1.222em;
+  color: #54EBCE;
+  text-align: center; }
+  .obligation__title::before {
+    display: block;
+    font: 4em/1em "glyphs";
+    padding: 0.5em 0 0.2em 0; }
+  .obligation__title--house::before {
+    content: "\e907"; }
+  .obligation__title--cause::before {
+    content: "\e916"; }
+  .obligation__title--cons::before {
+    content: "\e915"; }
+  .obligation__title--patient::before {
+    content: "\e912"; }
+
+.obligation__text {
+  font-size: 1.4em;
+  line-height: 1.6428571429em;
+  padding-top: 1.4285714286em; }
+
+.obligation__list {
+  padding-top: 1.5em; }
+
+.obligation__element {
+  font: 1.4em/1.571em "open_sansregular", "Helvetica", Arial, sans-serif;
+  color: #34586B;
+  padding-bottom: 1.1em; }
+  .obligation__element::before {
+    content: "\e901";
+    font: 1em/1.3em "glyphs";
+    color: #59EBCF;
+    padding-right: 1.5em; }
+
+.express {
+  background: url("../images/smile.jpg") no-repeat center center;
+  background-size: cover; }
+  .express__advice {
+    background: none;
+    background: url("../images/advice.jpg") no-repeat center center;
+    background-size: cover; }
+  .express__text {
+    font: 2.4em/1.666em "museo";
+    color: #34586B;
+    text-align: center; }
+
+@media screen and (max-width: 777px) {
+  .forfait__explaination {
+    padding-right: 0; } }
+
+/* CsiAngleur
+ *
+ * /sass/components/philosophie.scss - Philosophie Components
+ *
+ * coded by Dylan Schirino
+ * started at 19/11/2016
+ */
+.philosophie__container {
+  border: 5px solid #51D2CC;
+  padding-bottom: 3em; }
+
+.philosophie__title {
+  font-size: 2.4em;
+  line-height: 1.2004em;
+  text-transform: uppercase;
+  color: #51D2CC;
+  text-align: center;
+  padding: 1em 0; }
+  .philosophie__title::before {
+    content: "";
+    display: block;
+    height: 90px;
+    width: 50%;
+    margin: -1.3em auto;
+    background-color: white; }
+
+.philosophie__content {
+  font: 1.6em/1.75em "open_sansregular", "Helvetica", Arial, sans-serif; }
+
+.philosophie__text {
+  padding-bottom: 1.5em; }
+
+/* CSI Angleur
+ *
+ * /sass/components/explaination.scss - Explaination components
+ *
+ * coded by Dylan Schirino
+ * started at 20/11/2016
+ */
+.subscription {
+  background-color: #48B2AD; }
+  .subscription__title {
+    font-size: 2.4em;
+    line-height: 1.20833em;
+    color: white;
+    padding-left: 4.1667em; }
+
+@media screen and (max-width: 974px) {
+  .subscription__title {
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 3em; } }
+
+.aside__button {
+  font: 1.8em/1.5em "museo";
+  text-transform: uppercase;
+  color: #436577;
+  background-color: #ECF3F6;
+  border-radius: 8px;
+  text-align: center;
+  transition: .2s ease-in; }
+  .aside__button:hover {
+    background-color: #436577;
+    color: #ECF3F6; }
+  .aside__button::before {
+    display: block;
+    font: 3em/1.7em "glyphs";
+    text-align: center;
+    padding-top: 0.60em; }
+  .aside__button--subscribe::before {
+    content: "\e909"; }
+  .aside__button--unsubscribe::before {
+    content: "\e906"; }
+
+.article__title {
+  font-size: 2.4em;
+  line-height: 1.2083em;
+  color: #51D2CC;
+  padding-bottom: 1.666em; }
+
+.article__subtitle {
+  font-size: 1.8em;
+  line-height: 1.8em;
+  padding: 1em 0;
+  color: #45B2AE; }
+
+.article__text {
+  font-size: 1.6em;
+  line-height: 1.6875em; }
+  .article__text p {
+    padding-bottom: 1.5em; }
+  .article__text b {
+    font-family: "open_sansbold"; }
+  .article__text a {
+    display: inline-block;
+    font-family: "open_sansbold";
+    text-decoration: underline; }
+  .article__text ul {
+    padding-bottom: 1em; }
+  .article__text li {
+    font-family: "museo";
+    color: #436577;
+    padding-top: 0.5em; }
+    .article__text li::before {
+      content: "";
+      width: 8px;
+      display: inline-block;
+      height: 8px;
+      background-color: #436577;
+      border-radius: 8px;
+      margin-right: 0.5em; }
+
+/* CSI Angleur
+ *
+ * /sass/components/serviceHeader.scss - serviceHeader components
+ *
+ * coded by Dylan Schirino
+ * started at 21/11/2016
+ */
+.services {
+  background-color: #45B2AE; }
+  .services__title {
+    font-size: 3.2em;
+    line-height: 1.40625em;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.40625em 0; }
+  .services__label {
+    font: 1.8em/1.9em "museo";
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.111em 0; }
+  .services__numero {
+    font: 2.4em/2.5em "open_sansregular", "Helvetica", Arial, sans-serif;
+    color: #45B2AE;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center; }
+  .services__info {
+    font-size: 1.6em;
+    line-height: 1.8em;
+    color: white;
+    text-align: center;
+    padding: 2.5em 0 4em 0; }
+
+/* CSI Angleur
+ *
+ * /sass/components/serviceInformation.scss - serviceInformation components
+ *
+ * coded by Dylan Schirino
+ * started at 21/11/2016
+ */
+.information__link {
+  font: 2.4em/1.5em "museo";
+  text-align: center;
+  color: #436577;
+  padding: 2.5em 0;
+  transition: .2s ease; }
+  .information__link:hover {
+    color: white;
+    background-color: #436577; }
+  .information__link::before {
+    display: block;
+    font: 3em/1.5em "glyphs"; }
+  .information__link--check::before {
+    content: "\e901"; }
+  .information__link--uncheck::before {
+    content: "\e90f"; }
+
+.information__choix {
+  background-color: #22FFD0; }
+  .information__choix--active {
+    position: relative;
+    background-color: #54EBCE; }
+    .information__choix--active::after {
+      top: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(136, 183, 213, 0);
+      border-top-color: #54EBCE;
+      border-width: 30px;
+      margin-left: -30px; }
+
+.information__title {
+  font-size: 2.4em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #436577;
+  padding-bottom: 1.25em; }
+
+.information__text {
+  font-size: 1.6em;
+  line-height: 1.6875em;
+  padding-bottom: 1.5em; }
+
+.information__table {
+  font-size: 2.4em;
+  line-height: 2.8em;
+  background-color: #ECF3F6; }
+
+.information__tableHead {
+  color: white;
+  background-color: #54EBCE;
+  font-family: "museo";
+  line-height: 1.5em;
+  padding: 1em 0;
+  border: 1px solid #436577; }
+
+.information__tableData {
+  text-align: center;
+  font-family: "open_sansregular", "Helvetica", Arial, sans-serif;
+  color: #436577;
+  border: 1px solid #436577; }
+
+.information__tel {
+  background-color: white;
+  border-radius: 8px; }
+
+@media screen and (max-width: 400px) {
+  .information__link {
+    font-size: 1.5em;
+    padding-bottom: 1em; } }
+
+/* CSI Angleur
+ *
+ * /sass/components/ContactHeader.scss - ContactHeader components
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.contactHead {
+  background-color: #48B2AD;
+  padding-top: 7.2em; }
+  .contactHead__title {
+    font-size: 3.2em;
+    line-height: 1.40625em;
+    text-transform: uppercase;
+    color: white; }
+  .contactHead__text {
+    font-size: 1.6em;
+    line-height: 1.6875em;
+    color: white;
+    padding: 1.875em 0; }
+
+.cards__link--contact {
+  color: white; }
+  .cards__link--contact span:first-child::before {
+    color: #56ECD0; }
+
+.form__legend {
+  font: 2.4em/1.208em "museo";
+  text-align: center;
+  color: #48B2AD;
+  padding: 1.25em 0 0.833em 0; }
+
+.form__label, .form__input {
+  font: 1.6em/1.562em "open_sansregular", "Helvetica", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #436577; }
+
+.form__input {
+  padding: 0.75em;
+  border: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+  text-transform: lowercase; }
+  .form__input--textarea {
+    text-transform: none; }
+
+.form__submit {
+  font: 1.6em/1.375em "museo";
+  background: #48B2AD;
+  border: 1px solid white;
+  -webkit-appearance: none;
+  color: white;
+  padding: 0.5em 0;
+  border-radius: 8px;
+  transition: .2s ease-in-out; }
+  .form__submit:hover {
+    border: 1px solid #48B2AD;
+    background: white;
+    color: #48B2AD;
+    cursor: pointer; }
+
+.maps__link {
+  background: url("../images/maps.jpg") no-repeat center center;
+  background-size: cover; }
+
+.maps__label {
+  font: 1.8em/2em "museo";
+  text-transform: uppercase;
+  color: #436577;
+  background-color: white;
+  border: 1px solid #436577;
+  padding: 0.8em; }
+  .maps__label:hover {
+    background-color: #436577;
+    border: 1px solid white;
+    color: white; }
+
+/* CSI Angleur
+ *
+ * /sass/components/ourTeam.scss - ourTeam components
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.team {
+  background-color: #18FFD1; }
+  .team__container {
+    padding: 5em 0; }
+  .team__title {
+    font-size: 2.4em;
+    line-height: 1.2083em;
+    color: #436577; }
+  .team__header {
+    padding-bottom: 2em;
+    border-bottom: 5px solid #436577; }
+  .team__horaire {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    background-color: #45B2AE;
+    background-color: rgba(69, 178, 174, 0.6); }
+    .team__horaire--info {
+      padding: 2.0833em;
+      color: white; }
+  .team__name {
+    font: 1.6em/2em "museo";
+    color: #436577;
+    text-align: center; }
+  .team__function {
+    font: 1.6em/2em "open_sansregular", "Helvetica", Arial, sans-serif;
+    color: #436577;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 1.25em; }
+    .team__function::after {
+      content: "";
+      display: block;
+      width: 70%;
+      margin: 0.5em auto 0 auto;
+      height: 3px;
+      background: white; }
+
+.controls__button--prev, .controls__button--next {
+  color: #436577; }
+  .controls__button--prev::before, .controls__button--next::before {
+    content: "\e908";
+    display: inline-block;
+    font: 3em "glyphs"; }
+
+.controls__button--next::before {
+  transform: rotate(180deg); }
+
+/* CSI Angleur
+ *
+ * /sass/components/ContactHoraire.scss - ContactHoraire components
+ *
+ * coded by Dylan Schirino
+ * started at 22/11/2016
+ */
+.horaire {
+  background: #56ecd0;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #56ecd0 0%, #51d2cc 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #56ecd0 0%, #51d2cc 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #56ecd0 0%, #51d2cc 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56ecd0', endColorstr='#51d2cc',GradientType=0 );
+  /* IE6-9 */ }
+  .horaire__table {
+    font: 1.8em/1.8em "open_sansregular", "Helvetica", Arial, sans-serif;
+    background-color: white;
+    color: #436577;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+    border-radius: 8px; }
+  .horaire__head {
+    background-color: #6FD1D7;
+    font-family: "museo";
+    color: white;
+    border-radius: 8px; }
+  .horaire__th {
+    padding: 1.3888em 0; }
+  .horaire__row:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .horaire__data {
+    text-align: center;
+    padding: 0.8333em 0; }
+  .horaire__day {
+    text-align: left;
+    padding-left: 4.055em;
+    font-family: "museo";
+    text-transform: uppercase; }
+
+@media screen and (max-width: 947px) {
+  .horaire__table {
+    width: 95%; }
+  .horaire__day {
+    padding-left: 1em; } }
+
+@media screen and (max-width: 752px) {
+  .horaire__table {
+    font-size: 1.4em; } }
+
+@media screen and (max-width: 525px) {
+  .horaire__table {
+    font-size: 1.3em; }
+  .horaire__data {
+    padding-left: 1em;
+    padding-right: 1em; }
+  .horaire__th {
+    font-size: 0.9em;
+    padding-right: 0.5em; } }
+
+@media screen and (max-width: 350px) {
+  .horaire__table {
+    width: 80%; }
+  .horaire__data {
+    padding-right: 0.5em;
+    padding-left: 0.5em; } }
+
+/* CSI Angleur
+ *
+ * /sass/components/archive.scss - archive components
+ *
+ * coded by Dylan Schirino
+ * started at 23/11/2016
+ */
+.archiveHead {
+  background-color: #51D2CC;
+  color: white; }
+  .archiveHead__title {
+    font-size: 3.2em;
+    line-height: 1.40625em;
+    text-align: center;
+    padding-top: 2.1875em; }
+  .archiveHead__text {
+    font-size: 1.8em;
+    line-height: 1.555em;
+    text-align: center;
+    padding: 1.3889em 0;
+    color: white; }
+
+.fiche__content {
+  border: 2px solid #ECF3F6;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  vertical-align: top;
+  background-color: white;
+  position: relative;
+  top: -5px; }
+
+.fiche__date {
+  font: 1.2em/1.417em "open_sansbold";
+  text-transform: uppercase;
+  color: #436577;
+  text-align: center;
+  padding: 2.0833em 0 0.833em 0; }
+
+.fiche__title {
+  font-size: 1.8em;
+  line-height: 1.22em;
+  text-align: center;
+  color: #51D2CC; }
+  .fiche__title::after {
+    content: "";
+    display: block;
+    width: 8.3em;
+    height: 2px;
+    background: #436577;
+    margin: 0.9em auto 0 auto; }
+
+.fiche__text {
+  font-size: 1.4em;
+  line-height: 1.45em;
+  text-align: center;
+  padding: 1.8571428571em; }
+
+.fiche__button {
+  font: 1.6em/2.75em "museo";
+  background-color: #FFA33C;
+  text-transform: uppercase;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  transition: .2s ease-in; }
+  .fiche__button:hover {
+    background-color: white;
+    color: #FFA33C;
+    border: 1px solid #FFA33C; }
+
+.pagination__button {
+  font: 1.6em/2.7em "museo";
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background-color: #8898AA;
+  border: 1px solid #8898AA;
+  padding: 0.3em 0;
+  border-radius: 8px;
+  transition: .2s ease-in; }
+  .pagination__button:hover {
+    color: #8898AA;
+    background-color: white;
+    border: 1px solid #8898AA; }
+
+.pagination__chiffre {
+  background-color: #F6F9FC;
+  font: 1.6em/3.5em "museo";
+  color: #8898AA;
+  text-align: center;
+  transition: .2s ease-in;
+  border: 3px solid white; }
+  .pagination__chiffre:hover {
+    color: #F6F9FC;
+    background-color: #8898AA; }
+
+@media screen and (max-width: 400px) {
+  .archiveHead__svg {
+    width: 80%;
+    margin: auto; }
+  .archiveHead__text {
+    width: 80%;
+    margin: auto; }
+  .archiveHead__title {
+    font-size: 2.4em; } }
+
+/* CSI Angleur
+ *
+ * /sass/components/prevention.scss - prevention components
+ *
+ * coded by Dylan Schirino
+ * started at 24/11/2016
+ */
+.traitement {
+  background-color: #45B2AE; }
+  .traitement__title {
+    font: 3.2em/1.179em "museo";
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2.1875em 0; }
+  .traitement__container {
+    padding-bottom: 8em; }
+  .traitement__text {
+    font-size: 1.6em;
+    line-height: 1.625em;
+    color: white;
+    padding-bottom: 1.875em; }
+
+.pratique {
+  background-color: #F6F9FC; }
+  .pratique__conseil {
+    padding: 4em 0; }
+  .pratique__title {
+    font-size: 3.2em;
+    line-height: 1.1875em;
+    text-transform: uppercase;
+    color: #436577;
+    text-align: center;
+    padding-top: 5.9375em; }
+    .pratique__title::after {
+      content: "";
+      display: block;
+      width: 30%;
+      height: 3px;
+      background-color: #436577;
+      margin: 0.5em auto 0.5em auto; }
+
+.conseil__title {
+  font-size: 2.4em;
+  line-height: 1.20em;
+  text-transform: uppercase;
+  color: #436577; }
+  .conseil__title::after {
+    content: "";
+    display: block;
+    width: 21%;
+    height: 3px;
+    background-color: #436577;
+    margin-top: 0.3em; }
+
+.conseil__subtitle {
+  font: 1.8em/1.333em "open_sansbold";
+  padding: 2.7888em 0 1.666em 0; }
+
+.conseil__text {
+  font-size: 1.6em;
+  line-height: 1.6875em;
+  padding-bottom: 1.875em; }
+
+.lien {
+  background: #51D2CC; }
+  .lien__title {
+    font-size: 2.4em;
+    line-height: 1.5em;
+    text-align: center;
+    color: white;
+    padding: 2em 0;
+    text-transform: uppercase; }
+  .lien__list {
+    padding: 3em 0; }
+  .lien__link {
+    font: 1.6em/1.688em "open_sansregular", "Helvetica", Arial, sans-serif;
+    color: white;
+    padding-bottom: 2em; }
+    .lien__link:hover {
+      text-decoration: none;
+      color: #436577; }
+
+@media screen and (max-width: 420px) {
+  .traitement__title {
+    font-size: 2.4em; } }
+
+@media screen and (max-width: 673px) {
+  .traitement__svg {
+    display: none; }
+  .traitement__text {
+    width: 100%; }
+  .pratique__title {
+    padding-top: 2em; } }
