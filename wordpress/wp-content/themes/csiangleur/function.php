@@ -7,7 +7,6 @@ define('WPCF7_AUTOP', false);
 *  Register nav menus
 */
 register_nav_menu( 'menu__list', __('Menu principal, affiché dans le header.','p') );
-register_nav_menu( 'menu__list', __('Menu principal, affiché dans le header en Anglais.','p') );
 
 function p_get_menu_id( $location )
 {
