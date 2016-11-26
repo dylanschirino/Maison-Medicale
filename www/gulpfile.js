@@ -46,7 +46,7 @@ imageUriOpts = {
 css = {
   in: source + 'scss/main.scss',
   watch: [source + 'scss/**/*'],
-  out: dest + 'css/',
+  out: 'wordpress/wp-content/themes/csiangleur/css/',
   sassOpts: {
     outputStyle: 'expended',
     precision: 3,
