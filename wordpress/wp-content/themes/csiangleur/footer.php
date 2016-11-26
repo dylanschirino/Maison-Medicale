@@ -32,15 +32,17 @@
     </section>
     <section class="footer__horaire">
       <h3 class="footer__title footer__title--center">Horaires</h3>
+      <?php if( have_rows('horaire','option') ):?>
       <ul class="cars__list--footer">
-        <li class="table__element--footer"><span class="table__day--footer">Lun </span><span class="table__info--footer">8.00 - 20.00 / 9.00 - 19h (férié)</span></li>
-        <li class="table__element--footer"><span class="table__day--footer">Mar </span><span class="table__info--footer">8.00 - 20.00 / 9.00 - 19h (férié)</span></li>
-        <li class="table__element--footer"><span class="table__day--footer">Mer </span><span class="table__info--footer">8.00 - 20.00 / 9.00 - 19h (férié)</span></li>
-        <li class="table__element--footer"><span class="table__day--footer">Jeu </span><span class="table__info--footer">8.00 - 20.00 / 9.00 - 19h (férié)</span></li>
-        <li class="table__element--footer"><span class="table__day--footer">Ven </span><span class="table__info--footer">8.00 - 20.00 / 9.00 - 19h (férié)</span></li>
-        <li class="table__element--footer"><span class="table__day--footer">Sam </span><span class="table__info--footer">8.00 - 20.00 / 9.00 - 19h (férié)</span></li>
-        <li class="table__element--footer"><span class="table__day--footer">Dim </span><span class="table__info--footer">8.00 - 20.00 / 9.00 - 19h (férié)</span></li>
+        <?php while( have_rows('horaire', 'option') ): the_row(); ?>
+        <li class="table__element--footer">
+          <?php $jours = get_sub_field('jours');?>
+          <span class="table__day--footer"><?php echo substr($jours,0,3);?></span>
+          <span class="table__info--footer"><?php the_sub_field('heure');?></span>
+        </li>
+      <?php endwhile;?>
       </ul>
+    <?php endif;?>
     </section>
     <section class="footer__linkSection">
       <h3 class="footer__title">Liens Utiles</h3>
