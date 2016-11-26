@@ -4,10 +4,30 @@
     <section class="footer__information">
       <h3 class="footer__title">Information</h3>
       <ul class="cars__list--footer">
-        <li class="cards__element--footer"><a class="cards__link--footer" href="googlemaps" title="Voir l'adresse sur google maps"><span class="cards__label cards__label--adress">Adresse : </span><span class="cards__info">48, Rue du vaudrée 4031 Angleur</span></a></li>
-        <li class="cards__element--footer"><a class="cards__link--footer" href="tel:0494344737" title="Téléphoner à la maison médicale"><span class="cards__label cards__label--tel">Téléphone : </span><span class="cards__info">04 94 34 47 37</span></a></li>
-        <li class="cards__element--footer"><a class="cards__link--footer" href="fax:043434737" title="Nous envoyer un fax!"><span class="cards__label cards__label--fax">Fax : </span><span class="cards__info">04 94 34 47 37</span></a></li>
-        <li class="cards__element--footer"><a class="cards__link--footer" href="mailto:contact@csiangleur.be" title="Nous envoyer un email"><span class="cards__label cards__label--email">Email : </span><span class="cards__info">contact@csiangleur.be</span></a></li>
+        <li class="cards__element--footer">
+          <a class="cards__link--footer" href="googlemaps" title="Voir l'adresse sur google maps">
+          <span class="cards__label cards__label--adress">Adresse : </span>
+          <span class="cards__info"><?php the_field('adress', 'option'); ?></span>
+          </a>
+        </li>
+        <li class="cards__element--footer">
+          <a class="cards__link--footer" href="tel:0494344737" title="Téléphoner à la maison médicale">
+            <span class="cards__label cards__label--tel">Téléphone : </span>
+            <span class="cards__info cards__info--tel"><?php (the_field('telephone', 'option')); ?></span>
+          </a>
+        </li>
+        <li class="cards__element--footer">
+          <a class="cards__link--footer" href="fax:043434737" title="Nous envoyer un fax!">
+            <span class="cards__label cards__label--fax">Fax : </span>
+            <span class="cards__info"><?php the_field('fax', 'option');?></span>
+          </a>
+        </li>
+        <li class="cards__element--footer">
+          <a class="cards__link--footer" href="mailto:contact@csiangleur.be" title="Nous envoyer un email">
+          <span class="cards__label cards__label--email">Email : </span>
+          <span class="cards__info"><?php the_field('email', 'option');?></span>
+          </a>
+        </li>
       </ul>
     </section>
     <section class="footer__horaire">
