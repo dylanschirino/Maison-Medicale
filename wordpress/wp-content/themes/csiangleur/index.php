@@ -8,32 +8,30 @@ get_header();
   <h2 class="hidden">CSI - Navigation</h2>
   <div class="menu__content">
     <ul class="menu__list">
-      <li class="menu__element menu__element--down"><a class="menu__link menu__link--down" href="notremaison.html" title="En savoir plus sur la maison médicale">Notre maison</a>
+      <li class="menu__element menu__element--down"><a class="menu__link menu__link--down" href="<?php echo the_permalink('7');?>" title="En savoir plus sur la maison médicale">Notre maison</a>
         <ul class="menu__sublist">
-          <li class="menu__subelement"><a class="menu__sublink" href="notremaison.html#forfait" title="Comprendre le forfait">Forfait</a></li>
-          <li class="menu__subelement"><a class="menu__sublink" href="notremaison.html#philosophie" title="Découvrez notre philosophie">Philosophie</a></li>
+          <li class="menu__subelement"><a class="menu__sublink" href="<?php echo the_permalink('7').'#forfait';?>" title="Comprendre le forfait">Forfait</a></li>
+          <li class="menu__subelement"><a class="menu__sublink" href="<?php echo the_permalink('7').'#philosophie';?>" title="Découvrez notre philosophie">Philosophie</a></li>
         </ul>
       </li>
-      <li class="menu__element menu__element--down"><a class="menu__link menu__link--down" href="fonctionnement.html" title="Découvrir comment nous fonctionnons">Fonctionnement</a>
+      <li class="menu__element menu__element--down"><a class="menu__link menu__link--down" href="<?php echo the_permalink('59');?>" title="Découvrir comment nous fonctionnons">Fonctionnement</a>
         <ul class="menu__sublist">
-          <li class="menu__subelement"><a class="menu__sublink" href="fonctionnement.html#inscription" title="Comment puis-je m'inscrire?">Inscription</a></li>
-          <li class="menu__subelement"><a class="menu__sublink" href="fonctionnement.html#désinscription" title="Vous souhaitez nous quitter?">Désinscription</a></li>
+          <li class="menu__subelement"><a class="menu__sublink" href="<?php echo the_permalink('59').'#inscription';?>" title="Comment puis-je m'inscrire?">Inscription</a></li>
+          <li class="menu__subelement"><a class="menu__sublink" href="<?php echo the_permalink('59').'#désinscription';?>" title="Vous souhaitez nous quitter?">Désinscription</a></li>
         </ul>
       </li>
-      <li class="menu__element menu__element--down"><a class="menu__link menu__link--down" href="services.html" title="En savoir plus sur le service de garde">Service de garde</a>
+      <li class="menu__element menu__element--down"><a class="menu__link menu__link--down" href="<?php echo the_permalink('61');?>" title="En savoir plus sur le service de garde">Service de garde</a>
         <ul class="menu__sublist">
-          <li class="menu__subelement"><a class="menu__sublink" href="services.html#déplacer" title="Je souhaite me déplacer">Me déplacer</a></li>
-          <li class="menu__subelement"><a class="menu__sublink" href="services.html#pasdéplacer" title="Je souhaite que le médecin vienne">Domicile</a></li>
+          <li class="menu__subelement"><a class="menu__sublink" href="<?php echo the_permalink('61').'#déplacer';?>" title="Je souhaite me déplacer">Me déplacer</a></li>
+          <li class="menu__subelement"><a class="menu__sublink" href="<?php echo the_permalink('61').'#pasdéplacer';?>" title="Je souhaite que le médecin vienne">Domicile</a></li>
         </ul>
       </li>
-      <li class="menu__element"><a class="menu__link" href="prevention.html" title="Découvrez les activités que nous proposons">Prévention</a></li>
-      <li class="menu__element"><a class="menu__link" href="contact.html" title="Contacter nous et visionner nos horaires">Contact</a></li>
+      <li class="menu__element"><a class="menu__link" href="<?php echo the_permalink('65');?>" title="Découvrez les activités que nous proposons">Prévention</a></li>
+      <li class="menu__element"><a class="menu__link" href="<?php echo the_permalink('63');?>" title="Contacter nous et visionner nos horaires">Contact</a></li>
+
       <li class="menu__element menu__element--search"><a class="menu__link menu__link--search" href="#" title="Voir la barre de recherche"><span class="hidden">Search</span></a>
         <div class="menu__search">
-          <form class="header__search" method="get" action="/">
-            <input class="search__box" type="search" placeholder="Recherche" name="search">
-            <input class="search__submit" type="submit" value="OK">
-          </form>
+          <?php get_search_form(); ?>
         </div>
       </li>
     </ul>
