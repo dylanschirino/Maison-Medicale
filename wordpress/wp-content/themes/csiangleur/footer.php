@@ -46,12 +46,16 @@
     </section>
     <section class="footer__linkSection">
       <h3 class="footer__title">Liens Utiles</h3>
+      <?php if( have_rows('ressource_utiles','option') ):?>
       <ul class="linkSection__list">
-        <li class="linkSection__element"><a class="linkSection__link" href="http://inami.be" title="Vers le site de l'inami">Inami</a></li>
-        <li class="linkSection__element"><a class="linkSection__link" href="http://maisonmedicale.org" title="Vers le site officiel des maison médicales">Maisonmédicale</a></li>
-        <li class="linkSection__element"><a class="linkSection__link" href="http://glamo.be" title="Vers la page de l'inami">Glamo</a></li>
-        <li class="linkSection__element"><a class="linkSection__link" href="http://chu.be" title="Vers le site du CHU">Chu</a></li>
+        <?php while( have_rows('ressource_utiles', 'option') ): the_row(); ?>
+        <li class="linkSection__element">
+          <a class="linkSection__link" href="<?php the_sub_field('liens');?>" title="Vers le site de l'inami"><?php the_sub_field('nom_du_site');?>
+          </a>
+        </li>
+      <?php endwhile;?>
       </ul>
+    <?php endif;?>
     </section>
   </section>
   <div class="footer__newsletter">
