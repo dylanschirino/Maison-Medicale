@@ -57,10 +57,7 @@
   <div class="footer__newsletter">
     <div class="newsletter__form">
       <p class="newsletter__title newsletter__title--footer">Je m'inscris à la newsletter</p>
-      <form>
-        <input class="newsletter__input newsletter__input--footer" type="mail" name="newsletter" value="" id="newsletter" placeholder="Votre adresse email">
-        <input class="newsletter__submit newsletter__submit--footer" type="submit" value="S'inscrire">
-      </form>
+      <?php echo do_shortcode('[mc4wp_form id="22"]');?>
     </div>
   </div>
   <div class="designby"><a class="designby__ds" href="http://schirino.be" title="Aller vers le site internet du créateur de ce site">Designed by DS</a></div>
