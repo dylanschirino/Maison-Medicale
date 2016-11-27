@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
   }
-  &__img{
+  & img{
     margin-top: 6.5em;
   }
   &__text{
@@ -36,7 +36,7 @@
     &__figure{
       padding-top: 1em;
     }
-    &__img{
+    & img{
       display: block;
       max-width: 100%;
       height: auto;

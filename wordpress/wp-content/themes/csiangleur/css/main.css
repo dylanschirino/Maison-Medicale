@@ -601,7 +601,7 @@ p {
   display: flex;
   justify-content: space-between; }
 
-.headContent__img {
+.headContent img {
   margin-top: 6.5em; }
 
 .headContent__text {
@@ -617,7 +617,7 @@ p {
     width: 100%; }
   .headContent__figure {
     padding-top: 1em; }
-  .headContent__img {
+  .headContent img {
     display: block;
     max-width: 100%;
     height: auto;
@@ -1896,7 +1896,7 @@ p {
 .headContent__slogan--house {
   padding-left: 0; }
 
-.headContent__img {
+.headContent img {
   border: 6px solid white;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); }
 

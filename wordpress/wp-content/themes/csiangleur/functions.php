@@ -1,6 +1,6 @@
 <?php
 add_theme_support( 'post-thumbnails' );
-add_image_size( 'thumb-partenaire', 115,100, true );
+add_image_size( 'thumb-header', 480,320, true );
 
 define('WPCF7_AUTOP', false);
 
