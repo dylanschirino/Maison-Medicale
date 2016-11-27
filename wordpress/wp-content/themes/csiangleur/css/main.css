@@ -1796,6 +1796,11 @@ p {
     .footer__title--center {
       text-align: center; }
 
+.mc4wp-alert p {
+  font-size: 1.4em;
+  padding: 1em 0;
+  color: #51D2CC; }
+
 .cards__link--footer {
   color: #8898AA;
   font: 1.2em/1.417em "open_sansregular", "Helvetica", Arial, sans-serif;
