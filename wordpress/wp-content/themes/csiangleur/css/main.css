@@ -1749,7 +1749,7 @@ p {
     font: 1.6em/1.688em "open_sansregular", "Helvetica", Arial, sans-serif;
     padding-top: 1.25em; }
 
-.answer__text {
+.answer__text p {
   padding-bottom: 1.5em; }
 
 .actif::after {

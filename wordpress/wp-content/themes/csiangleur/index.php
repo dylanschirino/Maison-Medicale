@@ -137,7 +137,74 @@ get_header();
     </section>
   </div>
 
+  <section class="discover">
+    <div class="discover__header">
+      <div class="discover__container">
+        <h2 class="discover__title">Découvrez nos services</h2>
+        <ul class="discover__menu">
+          <li class="discover__element actif"><a class="discover__link discover__link--generale" href="" data-tab-target="tab-one" title="En savoir plus sur la section généraliste">Généraliste</a></li>
+          <li class="discover__element"><a class="discover__link discover__link--psy" href="" data-tab-target="tab-two" title="En savoir plus sur la section psychologie">Psychologue</a></li>
+          <li class="discover__element"><a class="discover__link discover__link--kine" href="" data-tab-target="tab-three" title="En savoir plus sur la section kine">Kiné</a></li>
+          <li class="discover__element"><a class="discover__link discover__link--cardio" href="" data-tab-target="tab-four" title="En savoir plus sur la section cardiologie">Cardiologue</a></li>
+          <li class="discover__element"><a class="discover__link discover__link--infirmier" href="" data-tab-target="tab-five" title="En savoir plus sur la section dentiste">Infirmier</a></li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="discover__services">
+      <?php if( have_rows('question_reponse_generaliste')):?>
+      <div class="discover__content activated" id="tab-one">
+        <?php while( have_rows('question_reponse_generaliste') ): the_row(); ?>
+        <a class="discover__question" href="#focus" title="Cliquez pour voir le contenu relatif"><?php echo get_sub_field('titre__question');?></a>
+        <div class="discover__answer" id="focus">
+          <div class="answer__text"><?php echo get_sub_field('texte_de_la_section');?></div>
+        </div>
+      <?php endwhile;?>
+      </div>
+    <?php endif;?>
 
+    <?php if( have_rows('question_reponse_psy')):?>
+      <div class="discover__content" id="tab-two">
+        <?php while( have_rows('question_reponse_psy') ): the_row(); ?>
+        <a class="discover__question" href="#focus" title="Cliquez pour voir le contenu relatif"><?php echo get_sub_field('titre__question');?></a>
+        <div class="discover__answer" id="focus">
+          <div class="answer__text"><?php echo get_sub_field('texte_de_la_section');?></div>
+        </div>
+      <?php endwhile;?>
+      </div>
+    <?php endif;?>
+    <?php if( have_rows('question_reponse_kine')):?>
+      <div class="discover__content" id="tab-three">
+        <?php while( have_rows('question_reponse_kine') ): the_row(); ?>
+        <a class="discover__question" href="#focus" title="Cliquez pour voir le contenu relatif"><?php echo get_sub_field('titre__question');?>
+        </a>
+        <div class="discover__answer" id="focus">
+          <div class="answer__text"><?php echo get_sub_field('texte_de_la_section');?></div>
+        </div>
+      <?php endwhile;?>
+      </div>
+    <?php endif;?>
+    <?php if( have_rows('question_reponse_cardio')):?>
+      <div class="discover__content" id="tab-four">
+        <?php while( have_rows('question_reponse_cardio') ): the_row(); ?>
+        <a class="discover__question" href="#focus" title="Cliquez pour voir le contenu relatif"><?php echo get_sub_field('titre__question');?></a>
+        <div class="discover__answer" id="focus">
+          <div class="answer__text"><?php echo get_sub_field('texte_de_la_section');?></div>
+        </div>
+      <?php endwhile;?>
+      </div>
+    <?php endif;?>
+    <?php if( have_rows('question_reponse_infirmière')):?>
+      <div class="discover__content" id="tab-five">
+        <?php while( have_rows('question_reponse_infirmière') ): the_row(); ?>
+        <a class="discover__question" href="#focus" title="Cliquez pour voir le contenu relatif"><?php echo get_sub_field('titre__question');?></a>
+        <div class="discover__answer" id="focus">
+          <div class="answer__text"><?php echo get_sub_field('texte_de_la_section');?></div>
+        </div>
+      <?php endwhile;?>
+      </div>
+    <?php endif;?>
+    </div>
+  </section>
 
 <?php get_footer();?>
