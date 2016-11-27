@@ -104,22 +104,23 @@ get_header();
     <div class="forfait__cardsContainer">
       <section class="forfait__obligation">
         <h3 class="obligation__title obligation__title--house">Droits et devoirs des maisons médicales</h3>
+        <?php if( have_rows('droits_maisons')):?>
         <ul class="obligation__list">
-          <li class="obligation__element">Organiser les consultations et visite pour répondre à la demande des patients.</li>
-          <li class="obligation__element">Assurer la continuité des soins en dehors des heures de visites 24h/24 et 7j/7.</li>
-          <li class="obligation__element">Informer le patient sur leur problème de santé.</li>
-          <li class="obligation__element">Faire bénéficier des actions de médecine préventive et promotion de santé à tous.</li>
-          <li class="obligation__element">Établir et tenir à jour un dossier médical global.</li>
+          <?php while( have_rows('droits_maisons')): the_row(); ?>
+          <li class="obligation__element"><?php echo the_sub_field('droits_ou_devoirs');?></li>
+        <?php endwhile;?>
         </ul>
+      <?php endif;?>
       </section>
       <section class="forfait__obligation">
         <h3 class="obligation__title obligation__title--patient">Droits et devoirs des patients</h3>
+        <?php if( have_rows('droits_patients')):?>
         <ul class="obligation__list">
-          <li class="obligation__element">Consulter uniquement la maison médicale dans laquelle il est inscris et pour lesquels la maison reçoit un forfait.</li>
-          <li class="obligation__element">A respecter le système de services mis en place par la maison médicale.</li>
-          <li class="obligation__element">A rester en ordre de mutuelle.</li>
-          <li class="obligation__element">Informer la maison de tout changement (adresse, téléphone, mutuelle)</li>
+          <?php while( have_rows('droits_patients')): the_row(); ?>
+          <li class="obligation__element"><?php echo the_sub_field('droits_ou_devoirs');?></li>
+        <?php endwhile;?>
         </ul>
+      <?php endif;?>
       </section>
     </div>
   </section>
