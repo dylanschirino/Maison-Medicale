@@ -73,5 +73,7 @@
 </div>
 </body>
 <script src="<?php echo get_template_directory_uri().'/script/script.js';?>"></script>
+<?php if (is_page(5)):?>
 <script src="<?php echo get_template_directory_uri().'/script/script-tab.js';?>"></script>
+<?php endif;?>
 </html>
