@@ -126,6 +126,7 @@
   }
   .no-js .menu__list{
     transform: translateX(0px);
+    z-index: 11;
   }
   .no-js .menu__sublist{
       height: auto;

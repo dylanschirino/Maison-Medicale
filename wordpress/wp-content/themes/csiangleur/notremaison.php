@@ -135,7 +135,5 @@ get_header();
       </div>
     </div>
   </section>
-
-
-
+  
 <?php get_footer();?>
