@@ -1564,6 +1564,9 @@ p {
   border-bottom: 1px solid #45B2AE;
   padding: 0.4166666667em 0; }
 
+.cards__list {
+  padding-bottom: 2em; }
+
 .cards__label {
   text-transform: uppercase;
   padding-right: 0.7142857143em; }

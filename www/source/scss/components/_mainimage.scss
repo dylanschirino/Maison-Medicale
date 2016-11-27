@@ -39,6 +39,9 @@
      border-bottom: 1px solid $greenLight;
      padding: 0.4166666667em 0;
    }
+   &__list{
+     padding-bottom: 2em;
+   }
    &__label{
      text-transform: uppercase;
      padding-right:0.7142857143em;

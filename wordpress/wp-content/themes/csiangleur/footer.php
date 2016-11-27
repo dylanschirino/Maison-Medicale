@@ -5,7 +5,7 @@
       <h3 class="footer__title">Information</h3>
       <ul class="cars__list--footer">
         <li class="cards__element--footer">
-          <a class="cards__link--footer" href="googlemaps" title="Voir l'adresse sur google maps">
+          <a class="cards__link--footer" href="https://www.google.be/maps/place/Rue+Vaudr%C3%A9e+48,+4031+Li%C3%A8ge/@50.6127477,5.5951963,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0f746b29cb281:0x69612a0f1477f0cc!8m2!3d50.6127443!4d5.597385?hl=fr" title="Voir l'adresse sur google maps">
           <span class="cards__label cards__label--adress">Adresse : </span>
           <span class="cards__info"><?php the_field('adress', 'option'); ?></span>
           </a>
@@ -23,7 +23,7 @@
           </a>
         </li>
         <li class="cards__element--footer">
-          <a class="cards__link--footer" href="mailto:contact@csiangleur.be" title="Nous envoyer un email">
+          <a class="cards__link--footer" href="mailto:<?php the_field('email', 'option');?>" title="Nous envoyer un email">
           <span class="cards__label cards__label--email">Email : </span>
           <span class="cards__info"><?php the_field('email', 'option');?></span>
           </a>

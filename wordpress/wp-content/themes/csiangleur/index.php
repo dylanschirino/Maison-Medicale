@@ -44,6 +44,35 @@ get_header();
 <div class="site-content">
 <main>
 
+  <section class="headContent">
+    <h2 class="hidden">Information principale</h2>
+    <p class="headContent__slogan"><?php echo bloginfo('description');?></p>
+    <div class="headContent__cards">
+      <div class="headContent__cardsContact">
+        <p class="cards__title">Centre de santé d'angleur</p>
+        <ul class="cards__list">
+          <li class="cards__element"><a class="cards__link" href="https://www.google.be/maps/place/Rue+Vaudr%C3%A9e+48,+4031+Li%C3%A8ge/@50.6127477,5.5951963,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0f746b29cb281:0x69612a0f1477f0cc!8m2!3d50.6127443!4d5.597385?hl=fr" title="Voir l'adresse sur google maps"><span class="cards__label cards__label--adress">Adresse : </span><span class="cards__info"><?php the_field('adress', 'option'); ?></span></a></li>
+          <li class="cards__element"><a class="cards__link" href="tel:0494344737" title="Téléphoner à la maison médicale"><span class="cards__label cards__label--tel">Téléphone : </span><span class="cards__info"><?php (the_field('telephone', 'option')); ?></span></a></li>
+          <li class="cards__element"><a class="cards__link" href="fax:043434737" title="Nous envoyer un fax!"><span class="cards__label cards__label--fax">Fax : </span><span class="cards__info"><?php the_field('fax', 'option');?></span></a></li>
+          <li class="cards__element"><a class="cards__link" href="mailto:<?php the_field('email', 'option');?>" title="Nous envoyer un email"><span class="cards__label cards__label--email">Email : </span><span class="cards__info"><?php the_field('email', 'option');?></span></a></li>
+        </ul>
+      </div>
+      <div class="cardsScheldule">
+        <p class="cards__title cards__title--horaire">Horaires d'ouverture</p>
+        <?php if( have_rows('horaire','option') ):?>
+        <ul class="cards__list">
+          <?php while( have_rows('horaire', 'option') ): the_row(); ?>
+          <li class="table__element">
+            <span class="table__day"><?php the_sub_field('jours');?></span>
+            <span class="table__info"><?php the_sub_field('heure');?></span>
+          </li>
+        <?php endwhile;?>
+        </ul>
+      <?php endif;?>
+      </div>
+    </div>
+  </section>
+
 
 
 
