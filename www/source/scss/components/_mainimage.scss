@@ -40,7 +40,9 @@
      padding: 0.4166666667em 0;
    }
    &__list{
-     padding-bottom: 2em;
+     &--last{
+       padding-bottom: 2em;
+     }
    }
    &__label{
      text-transform: uppercase;

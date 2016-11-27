@@ -60,7 +60,7 @@ get_header();
       <div class="cardsScheldule">
         <p class="cards__title cards__title--horaire">Horaires d'ouverture</p>
         <?php if( have_rows('horaire','option') ):?>
-        <ul class="cards__list">
+        <ul class="cards__list cards__list--last">
           <?php while( have_rows('horaire', 'option') ): the_row(); ?>
           <li class="table__element">
             <span class="table__day"><?php the_sub_field('jours');?></span>
