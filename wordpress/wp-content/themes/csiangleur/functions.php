@@ -55,7 +55,7 @@ function the_link($string, $replace = '%s')
 
 
 function gn_tinymce_filtre($arr){
-    $arr['block_formats'] = 'Paragraph=p;Address=address;Citation=blockquote;Titre Paragraphe=h4;Sous-titre=h5;Chiffre=pre;';
+    $arr['block_formats'] = 'Paragraph=p;Address=address;Citation=blockquote;Titre Paragraphe=h3;Sous-titre=h4;Gras=strong;';
     return $arr;
   }
 add_filter('tiny_mce_before_init', 'gn_tinymce_filtre');

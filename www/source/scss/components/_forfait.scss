@@ -18,12 +18,12 @@
      text-transform: uppercase;
      padding: 2.25em 0 0.8333em 0;
    }
-   &__explaination{
+   &__explaination p{
      font-size: 1.6em;
      line-height: 1.5625em;
      padding-bottom: 1em;
      padding-right: 3.75em;
-     & b {
+     & strong {
        font-family: $opensansBold;
        color: $BlueGreen;
      }
@@ -96,7 +96,7 @@
 
  @media screen and(max-width:777px) {
    .forfait{
-     &__explaination{
+     &__explaination p{
        padding-right: 0;
      }
    }

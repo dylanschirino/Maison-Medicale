@@ -685,7 +685,7 @@ p {
     .forfait__content {
       padding-bottom: 3em;
       display: block; }
-    .forfait__explaination {
+    .forfait__explaination p {
       width: 80%;
       margin: auto;
       padding-right: 0; }
@@ -1925,12 +1925,12 @@ p {
   text-transform: uppercase;
   padding: 2.25em 0 0.8333em 0; }
 
-.forfait__explaination {
+.forfait__explaination p {
   font-size: 1.6em;
   line-height: 1.5625em;
   padding-bottom: 1em;
   padding-right: 3.75em; }
-  .forfait__explaination b {
+  .forfait__explaination p strong {
     font-family: "open_sansbold";
     color: #51D2CC; }
 
@@ -1986,7 +1986,7 @@ p {
     text-align: center; }
 
 @media screen and (max-width: 777px) {
-  .forfait__explaination {
+  .forfait__explaination p {
     padding-right: 0; } }
 
 /* CsiAngleur
