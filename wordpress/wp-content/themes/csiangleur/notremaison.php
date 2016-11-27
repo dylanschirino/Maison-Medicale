@@ -46,7 +46,7 @@ get_header();
     <div class="headContent__container">
       <div class="headContent__texte">
         <h2 class="headContent__slogan headContent__slogan--house"><?php echo the_field('titre');?></h2>
-        <p class="headContent__text">Parce que une bonne relation médecin - patient est primordiale, nous vous proposons des médécins de qualité avec une philosophie de travail privilégiant le bien-être du patient.</p>
+        <div class="headContent__text"><?php echo the_field('texte_daccroche');?></div>
       </div>
       <?php if( get_field('photo_header')):
    $image = get_field('photo_header');
