@@ -2018,8 +2018,21 @@ p {
 .philosophie__content {
   font: 1.6em/1.75em "open_sansregular", "Helvetica", Arial, sans-serif; }
 
-.philosophie__text {
+.philosophie__text p {
   padding-bottom: 1.5em; }
+
+.philosophie__text strong {
+  color: #51D2CC;
+  font-family: "open_sansbold"; }
+
+.philosophie__text a {
+  display: inline-block;
+  color: #51D2CC;
+  text-decoration: underline;
+  font-family: "open_sansbold";
+  text-transform: uppercase; }
+  .philosophie__text a:hover {
+    text-decoration: none; }
 
 /* CSI Angleur
  *

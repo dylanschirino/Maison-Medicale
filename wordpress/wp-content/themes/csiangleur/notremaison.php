@@ -124,6 +124,17 @@ get_header();
       </section>
     </div>
   </section>
+  <div class="express">
+    <p class="express__text"><?php echo get_field('freedom');?></p>
+  </div>
+  <section class="philosophie" id="philosophie">
+    <div class="philosophie__container">
+      <h2 class="philosophie__title">Notre philosophie</h2>
+      <div class="philosophie__content">
+        <div class="philosophie__text"><?php echo the_field('philosophie');?></div>
+      </div>
+    </div>
+  </section>
 
 
 
