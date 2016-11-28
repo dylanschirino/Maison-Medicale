@@ -622,12 +622,10 @@ p {
     display: block;
     max-width: 100%;
     height: auto;
-    margin: 4em auto 0 auto;
-    order: -2; }
-  .headContent__text p {
+    margin: 4em auto 0 auto; }
+  .headContent__text {
     width: 100%;
-    text-align: center;
-    order: 1; } }
+    text-align: center; } }
 
 /* CsiAngleur
  *

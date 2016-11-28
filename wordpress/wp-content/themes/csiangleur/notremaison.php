@@ -8,7 +8,7 @@ get_header();
   <h2 class="hidden">CSI - Navigation</h2>
   <div class="menu__content">
     <ul class="menu__list">
-      <li class="menu__element menu__element--down active"><a class="menu__link menu__link--down" href="<?php echo the_permalink('7');?>" title="En savoir plus sur la maison médicale">Notre maison</a>
+      <li class="menu__element menu__element--down"><a class="menu__link menu__link--down active" href="<?php echo the_permalink('7');?>" title="En savoir plus sur la maison médicale">Notre maison</a>
         <ul class="menu__sublist">
           <li class="menu__subelement"><a class="menu__sublink" href="<?php echo the_permalink('7').'#forfait';?>" title="Comprendre le forfait">Forfait</a></li>
           <li class="menu__subelement"><a class="menu__sublink" href="<?php echo the_permalink('7').'#philosophie';?>" title="Découvrez notre philosophie">Philosophie</a></li>
@@ -135,5 +135,5 @@ get_header();
       </div>
     </div>
   </section>
-  
+
 <?php get_footer();?>
