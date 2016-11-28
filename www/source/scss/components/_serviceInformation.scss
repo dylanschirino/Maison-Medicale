@@ -61,10 +61,23 @@
      color: $texteColor;
      padding-bottom: 1.25em;
    }
-   &__text{
+   & p{
      font-size: 1.6em;
      line-height: 1.6875em;
      padding-bottom: 1.5em;
+   }
+   &__article{
+     & strong{
+       font-family: $opensansBold;
+       color: $BlueGreen;
+     }
+     & a {
+       text-decoration: underline;
+       font-family: $opensansBold;
+       color: $BlueGreen;
+       display: inline-block;
+       margin-left: 4px;
+     }
    }
    &__table{
      font-size: 2.4em;
@@ -88,6 +101,11 @@
    &__tel{
      background-color: $white;
      border-radius: 8px;
+     transition: .2s ease;
+     &:hover{
+       background-color: $texteColor;
+       color: $white;
+     }
    }
  }
 

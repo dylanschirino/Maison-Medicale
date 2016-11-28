@@ -98,66 +98,49 @@ get_header();
     <div class="information__content information__content--active" id="move">
       <article class="information__article" id="déplacer">
         <h3 class="information__title">Information</h3>
-        <p class="information__text">En cas de problème médical urgent nécessitant un médecin à domicile entre 19h00 et 8h30 ainsi que tout le week-end.</p>
-        <p class="information__text">La visite du médecin sera payante. Le paiement par bancontact est vivement conseillé, vous pouvez aussi demander de payer par virement.</p>
-        <p class="information__text">Il est important que vous ayez des vignettes de mutuelles.</p>
-        <p class="information__text">Vous pourrez vous faire rembourser la quote-part mutuelle à la Maison Médicale en déposant l'attestation de soins à l'accueil.</p>
+        <?php echo the_field('information_déplacer');?>
       </article>
+
+      <?php if( have_rows('horaire_medecin_centre')):?>
       <table class="information__table">
-        <caption class="hidden">Horaire des services d'urgence</caption>
+        <caption class="hidden">Horaire des médecins de garde à la maison médicale</caption>
+        <?php while( have_rows('horaire_medecin_centre') ): the_row(); ?>
         <tr class="information__tableRow">
-          <th class="information__tableHead" colspan="2">Du lundi au jeudi soir inclus</th>
+          <th class="information__tableHead" colspan="2"><?php echo the_sub_field('jour_de_la_semaine');?></th>
         </tr>
         <tr class="information__tableRow">
-          <td class="information__tableData">19h00</td>
-          <td class="information__tableData">8h30</td>
+          <td class="information__tableData"><?php echo the_sub_field('heures_ouvertures');?></td>
+          <td class="information__tableData"><?php echo the_sub_field('heures_clotures');?></td>
         </tr>
         <tr class="information__tableRow">
-          <td class="information__tableData" colspan="2"><a class="information__tel" href="tel:0474266436" title="Téléphoner à ce numéro?">04 74 26 64 36</a></td>
+          <td class="information__tableData" colspan="2"><a class="information__tel" href="tel:0474266436" title="Téléphoner à ce numéro?"><?php echo the_sub_field('numero_de_telephone');?></a></td>
         </tr>
-        <tr class="information__tableRow">
-          <th class="information__tableHead" colspan="2">Du vendredi au dimanche et jours fériés</th>
-        </tr>
-        <tr class="information__tableRow">
-          <td class="information__tableData">22h00</td>
-          <td class="information__tableData">/</td>
-        </tr>
-        <tr class="information__tableRow">
-          <td class="information__tableData" colspan="2"><a class="information__tel" href="tel:0474266436" title="Téléphoner à ce numéro?">04 74 26 64 36</a></td>
-        </tr>
+      <?php endwhile;?>
       </table>
+    <?php endif;?>
     </div>
     <div class="information__content" id="notmove">
       <article class="information__article">
         <h3 class="information__title">Information</h3>
-        <p class="information__text">Contenu je ne peux pas me déplacerEn cas de problème médical urgent nécessitant un médecin à domicile entre 19h00 et 8h30 ainsi que tout le week-end.</p>
-        <p class="information__text">La visite du médecin sera payante. Le paiement par bancontact est vivement conseillé, vous pouvez aussi demander de payer par virement.</p>
-        <p class="information__text">Il est important que vous ayez des vignettes de mutuelles.</p>
-        <p class="information__text">Vous pourrez vous faire rembourser la quote-part mutuelle à la Maison Médicale en déposant l'attestation de soins à l'accueil.</p>
+        <?php echo the_field('information_pasdéplacer');?>
       </article>
+      <?php if( have_rows('horaire_medecin')):?>
       <table class="information__table">
-        <caption class="hidden">Horaire des services d'urgence</caption>
+        <caption class="hidden">Horaire des médecins de garde à domicile</caption>
+        <?php while( have_rows('horaire_medecin') ): the_row(); ?>
         <tr class="information__tableRow">
-          <th class="information__tableHead" colspan="2">Du lundi au jeudi soir inclus</th>
+          <th class="information__tableHead" colspan="2"><?php echo the_sub_field('jour_de_la_semaine');?></th>
         </tr>
         <tr class="information__tableRow">
-          <td class="information__tableData">19h00</td>
-          <td class="information__tableData">8h30</td>
+          <td class="information__tableData"><?php echo the_sub_field('heures_ouvertures');?></td>
+          <td class="information__tableData"><?php echo the_sub_field('heures_clotures');?></td>
         </tr>
         <tr class="information__tableRow">
-          <td class="information__tableData" colspan="2"><a class="information__tel" href="tel:0474266436" title="Téléphoner à ce numéro?">04 74 26 64 36</a></td>
+          <td class="information__tableData" colspan="2"><a class="information__tel" href="tel:0474266436" title="Téléphoner à ce numéro?"><?php echo the_sub_field('numero_de_telephone');?></a></td>
         </tr>
-        <tr class="information__tableRow">
-          <th class="information__tableHead" colspan="2">Du vendredi au dimanche et jours fériés</th>
-        </tr>
-        <tr class="information__tableRow">
-          <td class="information__tableData">22h00</td>
-          <td class="information__tableData">/</td>
-        </tr>
-        <tr class="information__tableRow">
-          <td class="information__tableData" colspan="2"><a class="information__tel" href="tel:0474266436" title="Téléphoner à ce numéro?">04 74 26 64 36</a></td>
-        </tr>
+      <?php endwhile;?>
       </table>
+    <?php endif;?>
     </div>
   </section>
 <?php get_footer();?>

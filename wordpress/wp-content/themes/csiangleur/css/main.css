@@ -2205,10 +2205,21 @@ p {
   color: #436577;
   padding-bottom: 1.25em; }
 
-.information__text {
+.information p {
   font-size: 1.6em;
   line-height: 1.6875em;
   padding-bottom: 1.5em; }
+
+.information__article strong {
+  font-family: "open_sansbold";
+  color: #51D2CC; }
+
+.information__article a {
+  text-decoration: underline;
+  font-family: "open_sansbold";
+  color: #51D2CC;
+  display: inline-block;
+  margin-left: 4px; }
 
 .information__table {
   font-size: 2.4em;
@@ -2231,7 +2242,11 @@ p {
 
 .information__tel {
   background-color: white;
-  border-radius: 8px; }
+  border-radius: 8px;
+  transition: .2s ease; }
+  .information__tel:hover {
+    background-color: #436577;
+    color: white; }
 
 @media screen and (max-width: 400px) {
   .information__link {
