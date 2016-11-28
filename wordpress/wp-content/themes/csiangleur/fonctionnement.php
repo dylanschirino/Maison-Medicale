@@ -98,4 +98,52 @@ get_header();
     </svg>
     <h2 class="subscription__title">Comment puis-je m’inscrire ou me désinscrire ?</h2>
   </section>
+
+  <div class="subscription__content">
+    <aside class="subscription__aside">
+      <h2 class="hidden">Menu de choix entre inscription et désinscription</h2>
+      <div class="aside__container aside__container--active">
+        <a class="aside__button aside__button--subscribe" href="#" data-tab-target="subscribe" title="Voir le contenu relatif a l'inscription">Je veux m'inscrire</a>
+      </div>
+      <div class="aside__container">
+        <a class="aside__button aside__button--unsubscribe" href="#" data-tab-target="unsubscribe" title="Voir le contenu relatif a la désinscription">Je veux me désinscrire</a>
+      </div>
+    </aside>
+
+    <div class="subscription__articleContainer">
+      <section class="subscription__article subscription__active" id="subscribe">
+        <h2 class="article__title">Je veux m’inscrire à la maison médicale</h2>
+          <?php echo the_field('inscription');?>
+      </section>
+      <section class="subscription__article" id="unsubscribe">
+        <h2 class="article__title">Je veux me désinscrire à la maison médicale</h2>
+        <article class="article__content">
+          <h3 class="article__subtitle">Que faire si j’ai besoin de soins médicaux en dehors des heures d’ouverture et/ou en dehors de la zone de couverture de la maison médicale?</h3>
+          <div class="article__text">
+            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker</p>
+          </div>
+        </article>
+        <article class="article__content">
+          <h3 class="article__subtitle">Si je ne souhaite plus être inscrit à la Maison Médicale CSI Angleur, que dois-je faire?</h3>
+          <div class="article__text">
+            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq.</p>
+          </div>
+        </article>
+        <article class="article__content">
+          <h3 class="article__subtitle">Que se passe-t-il si je déménage?</h3>
+          <div class="article__text">
+            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </article>
+        <article class="article__content">
+          <h3 class="article__subtitle">Que se passe-t-il si je change de mutuelle?</h3>
+          <div class="article__text">
+            <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </div>
 <?php get_footer();?>
