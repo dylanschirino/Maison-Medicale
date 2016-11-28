@@ -28,6 +28,11 @@
      background-color: $white;
      border-radius: 8px;
      text-align: center;
+     transition: .2s ease-in;
+     &:hover{
+       background-color: $greenFlash;
+       color: $white;
+     }
    }
    &__info{
      font-size: 1.6em;

@@ -2142,7 +2142,11 @@ p {
     color: #45B2AE;
     background-color: white;
     border-radius: 8px;
-    text-align: center; }
+    text-align: center;
+    transition: .2s ease-in; }
+    .services__numero:hover {
+      background-color: #59EBCF;
+      color: white; }
   .services__info {
     font-size: 1.6em;
     line-height: 1.8em;
