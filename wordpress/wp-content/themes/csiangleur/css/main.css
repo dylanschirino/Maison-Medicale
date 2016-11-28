@@ -2092,12 +2092,14 @@ p {
   line-height: 1.6875em; }
   .article__text p {
     padding-bottom: 1.5em; }
-  .article__text b {
-    font-family: "open_sansbold"; }
+  .article__text strong {
+    font-family: "open_sansbold";
+    color: #51D2CC; }
   .article__text a {
     display: inline-block;
     font-family: "open_sansbold";
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #51D2CC; }
   .article__text ul {
     padding-bottom: 1em; }
   .article__text li {

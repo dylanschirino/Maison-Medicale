@@ -75,13 +75,15 @@
     & p{
       padding-bottom: 1.5em;
     }
-    & b {
+    & strong {
       font-family: $opensansBold;
+      color: $BlueGreen;
     }
     & a{
       display: inline-block;
       font-family: $opensansBold;
       text-decoration: underline;
+      color: $BlueGreen;
     }
     & ul {
       padding-bottom: 1em;
