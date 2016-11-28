@@ -623,7 +623,7 @@ p {
     max-width: 100%;
     height: auto;
     margin: 4em auto 0 auto; }
-  .headContent__text {
+  .headContent__text p {
     width: 100%;
     text-align: center; } }
 
