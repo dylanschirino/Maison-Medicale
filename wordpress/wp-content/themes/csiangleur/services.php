@@ -88,4 +88,76 @@ get_header();
     <p class="services__label">Numéro d'urgence</p><a class="services__numero" href="tel:0494364774" title="Sonner au numéro d'urgence"><?php echo the_field('num_urgence');?></a>
     <p class="services__info">A contacter uniquement si vous n’arrivez pas à nous contacter par d’autre moyen.</p>
   </section>
+
+  <section class="information">
+    <h2 class="hidden">Information sur le services de gardes</h2>
+    <div class="information__container">
+      <div class="information__choix information__choix--active"><a class="information__link information__link--check" href="#" data-tab-target="move" title="Cliquez pour voir le contenu de la section">Je peux me déplacer</a></div>
+      <div class="information__choix" id="pasdéplacer"><a class="information__link information__link--uncheck" href="#" data-tab-target="notmove" title="Cliquez pour voir le contenu de la section">Je ne peux pas me déplacer</a></div>
+    </div>
+    <div class="information__content information__content--active" id="move">
+      <article class="information__article" id="déplacer">
+        <h3 class="information__title">Information</h3>
+        <p class="information__text">En cas de problème médical urgent nécessitant un médecin à domicile entre 19h00 et 8h30 ainsi que tout le week-end.</p>
+        <p class="information__text">La visite du médecin sera payante. Le paiement par bancontact est vivement conseillé, vous pouvez aussi demander de payer par virement.</p>
+        <p class="information__text">Il est important que vous ayez des vignettes de mutuelles.</p>
+        <p class="information__text">Vous pourrez vous faire rembourser la quote-part mutuelle à la Maison Médicale en déposant l'attestation de soins à l'accueil.</p>
+      </article>
+      <table class="information__table">
+        <caption class="hidden">Horaire des services d'urgence</caption>
+        <tr class="information__tableRow">
+          <th class="information__tableHead" colspan="2">Du lundi au jeudi soir inclus</th>
+        </tr>
+        <tr class="information__tableRow">
+          <td class="information__tableData">19h00</td>
+          <td class="information__tableData">8h30</td>
+        </tr>
+        <tr class="information__tableRow">
+          <td class="information__tableData" colspan="2"><a class="information__tel" href="tel:0474266436" title="Téléphoner à ce numéro?">04 74 26 64 36</a></td>
+        </tr>
+        <tr class="information__tableRow">
+          <th class="information__tableHead" colspan="2">Du vendredi au dimanche et jours fériés</th>
+        </tr>
+        <tr class="information__tableRow">
+          <td class="information__tableData">22h00</td>
+          <td class="information__tableData">/</td>
+        </tr>
+        <tr class="information__tableRow">
+          <td class="information__tableData" colspan="2"><a class="information__tel" href="tel:0474266436" title="Téléphoner à ce numéro?">04 74 26 64 36</a></td>
+        </tr>
+      </table>
+    </div>
+    <div class="information__content" id="notmove">
+      <article class="information__article">
+        <h3 class="information__title">Information</h3>
+        <p class="information__text">Contenu je ne peux pas me déplacerEn cas de problème médical urgent nécessitant un médecin à domicile entre 19h00 et 8h30 ainsi que tout le week-end.</p>
+        <p class="information__text">La visite du médecin sera payante. Le paiement par bancontact est vivement conseillé, vous pouvez aussi demander de payer par virement.</p>
+        <p class="information__text">Il est important que vous ayez des vignettes de mutuelles.</p>
+        <p class="information__text">Vous pourrez vous faire rembourser la quote-part mutuelle à la Maison Médicale en déposant l'attestation de soins à l'accueil.</p>
+      </article>
+      <table class="information__table">
+        <caption class="hidden">Horaire des services d'urgence</caption>
+        <tr class="information__tableRow">
+          <th class="information__tableHead" colspan="2">Du lundi au jeudi soir inclus</th>
+        </tr>
+        <tr class="information__tableRow">
+          <td class="information__tableData">19h00</td>
+          <td class="information__tableData">8h30</td>
+        </tr>
+        <tr class="information__tableRow">
+          <td class="information__tableData" colspan="2"><a class="information__tel" href="tel:0474266436" title="Téléphoner à ce numéro?">04 74 26 64 36</a></td>
+        </tr>
+        <tr class="information__tableRow">
+          <th class="information__tableHead" colspan="2">Du vendredi au dimanche et jours fériés</th>
+        </tr>
+        <tr class="information__tableRow">
+          <td class="information__tableData">22h00</td>
+          <td class="information__tableData">/</td>
+        </tr>
+        <tr class="information__tableRow">
+          <td class="information__tableData" colspan="2"><a class="information__tel" href="tel:0474266436" title="Téléphoner à ce numéro?">04 74 26 64 36</a></td>
+        </tr>
+      </table>
+    </div>
+  </section>
 <?php get_footer();?>

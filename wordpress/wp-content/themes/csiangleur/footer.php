@@ -79,4 +79,7 @@
 <?php if (is_page(59)):?>
 <script src="<?php echo get_template_directory_uri().'/script/script-tab-subscribe.js';?>"></script>
 <?php endif;?>
+<?php if(is_page(61)):?>
+<script src="<?php echo get_template_directory_uri().'/script/script-tab-services.js';?>"></script>
+<?php endif;?>
 </html>
