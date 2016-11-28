@@ -72,4 +72,29 @@ get_header();
       </g>
     </svg>
   </section>
+  <section class="archive__list">
+    <h2 class="hidden">Liste des fiche de prévention</h2>
+    <div class="archive__container">
+      <?php $args = array( 'post_type' => 'prevention', 'posts_per_page' => 6 );
+      $loop = new WP_Query( $args );
+      while ( $loop->have_posts() ) : $loop->the_post();?>
+      <div class="archive__fiche">
+        <?php the_post_thumbnail('thumb-cards');?>
+        <article class="fiche__content"><span class="fiche__date">14 janvier 2016</span>
+          <h3 class="fiche__title"><?php echo the_title();?></h3>
+          <p class="fiche__text">L'hypertension artérielle, ou haute pression sanguine, se caractérise par une pression anormalement forte du sang sur la paroi des artères…</p><a class="fiche__button" href="<?php echo the_permalink();?>" title="Continuer la lecture vers la fiche complète">Vers la fiche pratique</a>
+        </article>
+      </div>
+    <?php endwhile;?>
+    </div>
+    <div class="pagination"><a class="pagination__button" href="#precedent" title="Vers la page précédente">Précédent</a>
+      <ul class="pagination__list">
+        <li class="pagination__element"><a class="pagination__chiffre" href="#1" title="Vers la page 1">1</a></li>
+        <li class="pagination__element"><a class="pagination__chiffre" href="#2" title="Vers la page 2">2</a></li>
+        <li class="pagination__element"><a class="pagination__chiffre" href="#3" title="Vers la page 3">3</a></li>
+        <li class="pagination__element"><a class="pagination__chiffre" href="#4" title="Vers la page 4">4</a></li>
+        <li class="pagination__element"><a class="pagination__chiffre" href="#5" title="Vers la page 5">5</a></li>
+      </ul><a class="pagination__button" href="#suivant" title="Vers la page suivante">Suivant</a>
+    </div>
+  </section>
 <?php get_footer();?>

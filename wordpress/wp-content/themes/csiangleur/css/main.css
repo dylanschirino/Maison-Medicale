@@ -1120,9 +1120,8 @@ p {
 
 .archive__fiche {
   width: 30em; }
-
-.archive__img {
-  vertical-align: baseline; }
+  .archive__fiche img {
+    vertical-align: baseline; }
 
 .archive__container {
   width: 81%;
@@ -1183,7 +1182,7 @@ p {
       float: none;
       display: block;
       margin: auto; }
-  .fiche__img {
+  .archive__fiche img {
     width: 100%;
     height: auto; } }
 

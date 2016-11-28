@@ -14,9 +14,9 @@
 .archive{
   &__fiche{
     width: 30em;
-  }
-  &__img{
-    vertical-align: baseline;
+    & img{
+      vertical-align: baseline;
+    }
   }
   &__container{
     width: 81%;
@@ -99,10 +99,12 @@
         }
       }
     }
-    .fiche{
-      &__img{
-        width: 100%;
-        height: auto;
+    .archive{
+      &__fiche{
+        & img{
+          width: 100%;
+          height: auto;
+        }
       }
     }
 }
