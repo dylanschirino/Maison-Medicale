@@ -16,6 +16,21 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
+register_post_type( 'prevention', [
+            'label' => __('Fiche Prévention ','p'),
+            'lapels' => [
+                        'singular_name' => __('Fiche de prévention','p'),
+                        'add_new' => __('Ajouter une fiche de prévention','p')
+                  ],
+            'description' => __('La liste de toute les fiches de prévention affiché sur le site.','p'),
+            'public' => true,
+            'menu_position' => 5,
+            'menu_icon' => 'dashicons-media-text',
+            'supports' => ['title','thumbnail'],
+            'has_archive' => true
+      ] );
+
+
 function get_the_link($string, $replace = '%s')
 {
       return str_replace($replace, '<span class="sro">' . get_the_title() . '</span>', __($string,'b'));
