@@ -14,11 +14,7 @@ get_header();
           <li class="menu__subelement"><a class="menu__sublink" href="<?php echo the_permalink('7').'#philosophie';?>" title="Découvrez notre philosophie">Philosophie</a></li>
         </ul>
       </li>
-      <li class="menu__element menu__element--down"><a class="menu__link menu__link--down active" href="<?php echo the_permalink('59');?>" title="Découvrir comment nous fonctionnons">Fonctionnement</a>
-        <ul class="menu__sublist">
-          <li class="menu__subelement"><a class="menu__sublink" href="<?php echo the_permalink('59').'#inscription';?>" title="Comment puis-je m'inscrire?">Inscription</a></li>
-          <li class="menu__subelement"><a class="menu__sublink" href="<?php echo the_permalink('59').'#désinscription';?>" title="Vous souhaitez nous quitter?">Désinscription</a></li>
-        </ul>
+      <li class="menu__element menu__element--down"><a class="menu__link active" href="<?php echo the_permalink('59');?>" title="Découvrir comment nous fonctionnons">Fonctionnement</a>
       </li>
       <li class="menu__element menu__element--down"><a class="menu__link menu__link--down" href="<?php echo the_permalink('61');?>" title="En savoir plus sur le service de garde">Service de garde</a>
         <ul class="menu__sublist">
