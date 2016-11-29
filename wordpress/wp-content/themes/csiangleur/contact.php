@@ -40,7 +40,7 @@ get_header();
   <section class="contactHead">
     <div class="contactHead__container">
       <h2 class="contactHead__title">Contact</h2>
-      <p class="contactHead__text">Vous pouvez nous contacter si vous avez des questions à nous poser, un rendez-vous à prendre. Merci de nous laisser le temps de répondre à vos demandes, nous répondons aproximativement sous 2-3 jours.</p>
+      <div class="contactHead__text"><?php echo the_field('explication_contact');?></div>
       <ul class="cars__list cards__list--contact">
         <li class="cards__element cards__element--contact">
           <a class="cards__link cards__link--contact" href="https://www.google.be/maps/place/Rue+Vaudr%C3%A9e+48,+4031+Li%C3%A8ge/@50.6127477,5.5951963,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0f746b29cb281:0x69612a0f1477f0cc!8m2!3d50.6127443!4d5.597385?hl=fr" title="Voir l'adresse sur google maps">

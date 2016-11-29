@@ -9,7 +9,7 @@
    &__container{
      margin-left:12em;
    }
-   &__text{
+   &__text p{
      width: 30.0625em;
    }
  }
@@ -80,7 +80,7 @@
 
  // Mediaqueries
 
- @media screen and(max-width:951px) {
+ @media screen and (max-width:951px) {
    .contactHead{
      padding-bottom: 5em;
      &__container{
@@ -91,7 +91,7 @@
      &__title{
        text-align: center;
      }
-     &__text{
+     &__text p{
        width: 80%;
        margin: auto;
      }

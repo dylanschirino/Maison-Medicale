@@ -893,7 +893,7 @@ p {
 .contactHead__container {
   margin-left: 12em; }
 
-.contactHead__text {
+.contactHead__text p {
   width: 30.0625em; }
 
 .headContent__cards--form {
@@ -946,7 +946,7 @@ p {
       margin: auto; }
     .contactHead__title {
       text-align: center; }
-    .contactHead__text {
+    .contactHead__text p {
       width: 80%;
       margin: auto; }
   .headContent__cards--form {
@@ -2275,7 +2275,7 @@ p {
     line-height: 1.40625em;
     text-transform: uppercase;
     color: white; }
-  .contactHead__text {
+  .contactHead__text p {
     font-size: 1.6em;
     line-height: 1.6875em;
     color: white;
