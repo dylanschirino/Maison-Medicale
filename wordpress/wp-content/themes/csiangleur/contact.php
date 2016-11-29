@@ -2,6 +2,11 @@
 /*
 Template Name: Contact
 */
+if(is_page()){
+  query_posts([
+    'post_type' => 'personnel'
+  ]);
+}
 get_header();
 ;?>
 <nav class="header__menu"><a class="header__burger" id="header__burger" href="#" title="Voir le menu"><span class="hidden">Menu</span></a>
@@ -75,6 +80,37 @@ get_header();
             <p class="form__legend">Posez nous vos questions</p>
             <?php echo do_shortcode('[contact-form-7 id="21" title="Contact form 1"]');?>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="maps">
+    <h2 class="hidden">Google maps</h2><a class="maps__link" href="https://www.google.be/maps/place/Rue+Vaudr%C3%A9e+48,+4031+Li%C3%A8ge/@50.6127477,5.5951963,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0f746b29cb281:0x69612a0f1477f0cc!8m2!3d50.6127443!4d5.597385?hl=fr" title="Google maps"><span class="maps__label">Google maps</span></a>
+  </section>
+  <section class="team">
+    <div class="team__container">
+      <div class="team__header">
+        <h2 class="team__title">Notre équipe</h2>
+        <div class="controls__container"><a class="button controls__button--prev controls__button--prev1" href="#s2"><span class="hiddenNext"></span></a><a class="button controls__button--next controls__button--next2" href="#s1"><span class="hiddenPrev"></span></a></div>
+      </div>
+      <div class="team__slideshow">
+        <div id="s1">
+          <div id="s2"></div>
+          <ul class="team__slider" id="sContent">
+            <?php $args = array( 'post_type' => 'personnel');
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post();?>
+            <li class="team__element">
+              <?php if( get_field('photo_du_membre')): $image = get_field('photo_du_membre'); $size='thumb-membre';?>
+              <?php echo wp_get_attachment_image($image['id'],$size);?>
+            <?php endif;?>
+              <div class="team__horaire">
+                <div class="team__horaire--info"><?php echo the_field('disponibilite');?></div>
+              </div>
+              <div class="team__info"><span class="team__name"><?php the_title();?></span><span class="team__function"><?php echo the_field('profession');?></span></div>
+            </li>
+          <?php endwhile;?>
+          </ul>
         </div>
       </div>
     </div>

@@ -78,23 +78,13 @@
    }
  }
 
-
  @media screen and (max-width:1145px) {
-     .team{
-       &__slideshow{
-         width: 85em;
-         height: 80em;
-       }
-       &__img{
-         width: 15em;
-         height: auto;
-       }
-     }
- }
-
- @media screen and (max-width:956px) {
    .team{
-     &__img{
+     &__slideshow{
+       width: 85em;
+       height: 80em;
+     }
+     img{
        display: none;
      }
      &__slideshow{

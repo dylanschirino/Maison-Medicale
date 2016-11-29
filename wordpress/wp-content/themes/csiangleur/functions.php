@@ -3,6 +3,7 @@ add_theme_support( 'post-thumbnails');
 add_image_size( 'thumb-header', 480,320, true );
 add_image_size( 'thumb-cards', 300, 200, true);
 add_image_size( 'thumb-conseil', 428, 285, true );
+add_image_size( 'thumb-membre', 215, 215, true );
 
 define('WPCF7_AUTOP', false);
 
@@ -29,6 +30,21 @@ register_post_type( 'prevention', [
             'menu_position' => 5,
             'rewrite'=>false,
             'menu_icon' => 'dashicons-media-text',
+            'supports' => ['title','thumbnail'],
+            'has_archive' => true
+      ] );
+
+register_post_type( 'personnel', [
+            'label' => __('Personnel médicale ','p'),
+            'lapels' => [
+                        'singular_name' => __('Personnel médicale','p'),
+                        'add_new' => __('Ajouter un membre de l\'équipe','p')
+                  ],
+            'description' => __('La liste de tout le personnel médical','p'),
+            'public' => true,
+            'menu_position' => 6,
+            'rewrite'=>false,
+            'menu_icon' => 'dashicons-groups',
             'supports' => ['title','thumbnail'],
             'has_archive' => true
       ] );

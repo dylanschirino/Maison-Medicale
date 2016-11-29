@@ -1056,12 +1056,7 @@ p {
   .team__slideshow {
     width: 85em;
     height: 80em; }
-  .team__img {
-    width: 15em;
-    height: auto; } }
-
-@media screen and (max-width: 956px) {
-  .team__img {
+  .team img {
     display: none; }
   .team__slideshow {
     width: 100%;
@@ -2370,7 +2365,7 @@ p {
     line-height: 1.6em;
     background-color: #45B2AE;
     background-color: rgba(69, 178, 174, 0.6); }
-    .team__horaire--info {
+    .team__horaire--info p {
       padding: 2.0833em;
       color: white; }
   .team__name {
