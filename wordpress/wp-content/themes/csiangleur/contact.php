@@ -70,20 +70,12 @@ get_header();
     </div>
     <div class="headContent__cards headContent__cards--form">
       <div class="headContent__cardsContact">
-        <form class="form" method="post" action="#">
-          <fieldset class="form__container">
-            <legend class="form__legend">Posez nous vos questions</legend>
-            <label class="form__label" for="nom">Nom</label>
-            <input class="form__input" id="nom" type="text" name="nom" value="" placeholder="Ex: Dupont Marc">
-            <label class="form__label" for="mail">Email</label>
-            <input class="form__input" id="mail" type="email" name="mail" value="" placeholder="Ex: Matthias@duchene">
-            <label class="form__label" for="subject">Sujet</label>
-            <input class="form__input" id="subject" type="text" name="subject" value="" placeholder="Ex: Je souhaite prendre rendez-vous">
-            <label class="form__label" for="message">Message</label>
-            <textarea class="form__input form__input--textarea" id="message" name="message" value=""></textarea>
-            <input class="form__submit" type="submit" value="Envoyer">
-          </fieldset>
-        </form>
+        <div class="form">
+          <div class="form__container">
+            <p class="form__legend">Posez nous vos questions</p>
+            <?php echo do_shortcode('[contact-form-7 id="21" title="Contact form 1"]');?>
+          </div>
+        </div>
       </div>
     </div>
   </section>

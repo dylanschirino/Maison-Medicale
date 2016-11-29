@@ -904,18 +904,28 @@ p {
   width: 100%;
   padding-bottom: 8em; }
 
+.screen-reader-response, .wpcf7-response-output {
+  display: none; }
+
+.wpcf7-not-valid-tip {
+  font: 1.2em/1.2em "open_sansregular", "Helvetica", Arial, sans-serif;
+  color: red;
+  display: block;
+  padding-top: 0.5em; }
+
 .form {
   display: block;
   width: 73%;
   margin: auto; }
   .form__label {
-    display: block; }
+    display: block;
+    margin-top: 1.5em; }
   .form__input {
-    margin: 0.625em 0 1.5em 0;
-    min-width: 95%; }
+    margin-top: 0.625em;
+    width: 95%; }
   .form__submit {
     width: 100%;
-    margin: 0em 0em 2em 0.5em; }
+    margin: 1.5em 0em 2em 0.5em; }
 
 .maps__link {
   height: 40em;
@@ -2290,7 +2300,7 @@ p {
   font: 2.4em/1.208em "museo";
   text-align: center;
   color: #48B2AD;
-  padding: 1.25em 0 0.833em 0; }
+  padding-top: 1.25em; }
 
 .form__label, .form__input {
   font: 1.6em/1.562em "open_sansregular", "Helvetica", Arial, sans-serif;
@@ -2302,7 +2312,7 @@ p {
   border: none;
   border: 1px solid #CCCCCC;
   border-radius: 8px;
-  text-transform: lowercase; }
+  text-transform: none; }
   .form__input--textarea {
     text-transform: none; }
 

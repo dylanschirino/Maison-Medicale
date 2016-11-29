@@ -40,7 +40,7 @@
      font: 2.4em/1.2083em $museo;
      text-align: center;
      color: $explainationBckg;
-     padding: 1.25em 0 0.833em 0;
+     padding-top: 1.25em;
    }
    &__label,&__input{
      font: 1.6em/1.5625em $opensans;
@@ -52,7 +52,7 @@
      border: none;
      border: 1px solid $inputBorder;
      border-radius: 8px;
-     text-transform: lowercase;
+     text-transform: none;
      &--textarea{
        text-transform: none;
      }
