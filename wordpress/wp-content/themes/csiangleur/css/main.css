@@ -1959,7 +1959,7 @@ p {
   .obligation__title--patient::before {
     content: "\e912"; }
 
-.obligation__text {
+.obligation__text p {
   font-size: 1.4em;
   line-height: 1.6428571429em;
   padding-top: 1.4285714286em; }

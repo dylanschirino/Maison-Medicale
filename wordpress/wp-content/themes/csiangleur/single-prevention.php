@@ -58,4 +58,31 @@ get_header();
     <?php endif;?>
     </div>
   </section>
+  <section class="forfait" id="forfait">
+    <h2 class="hidden">Cause et conséquences</h2>
+    <div class="forfait__cardsContainer">
+      <section class="forfait__obligation">
+        <h3 class="obligation__title obligation__title--cause">Cause de la maladie</h3>
+        <div class="obligation__text"><?php echo get_field('maladie_explain_cause');?></div>
+        <?php if( have_rows('cause_de_la_maladie')):?>
+        <ul class="obligation__list">
+          <?php while (have_rows('cause_de_la_maladie')): the_row(); ?>
+          <li class="obligation__element"><?php echo the_sub_field('cause_element');?></li>
+        <?php endwhile;?>
+        </ul>
+      <?php endif;?>
+      </section>
+      <section class="forfait__obligation">
+        <h3 class="obligation__title obligation__title--cons">Conséquence de la maladie</h3>
+        <div class="obligation__text"><?php echo get_field('maladie_explain_cons');?></div>
+        <?php if( have_rows('consequence_de_la_maladie')):?>
+        <ul class="obligation__list">
+          <?php while (have_rows('consequence_de_la_maladie')): the_row(); ?>
+          <li class="obligation__element"><?php echo the_sub_field('cons_element');?></li>
+        <?php endwhile;?>
+        </ul>
+      <?php endif;?>
+      </section>
+    </div>
+  </section>
 <?php get_footer();?>

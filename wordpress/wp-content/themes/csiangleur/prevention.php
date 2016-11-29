@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Prevention
+Template Name: Archives
 */
 if(is_page()){
   query_posts([
