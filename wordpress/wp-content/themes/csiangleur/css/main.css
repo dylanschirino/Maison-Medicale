@@ -2582,7 +2582,7 @@ p {
     padding: 2.1875em 0; }
   .traitement__container {
     padding-bottom: 8em; }
-  .traitement__text {
+  .traitement p {
     font-size: 1.6em;
     line-height: 1.625em;
     color: white;
@@ -2655,7 +2655,7 @@ p {
 @media screen and (max-width: 673px) {
   .traitement__svg {
     display: none; }
-  .traitement__text {
+  .traitement p {
     width: 100%; }
   .pratique__title {
     padding-top: 2em; } }

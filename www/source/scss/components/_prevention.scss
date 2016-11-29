@@ -17,7 +17,7 @@
    &__container{
      padding-bottom: 8em;
    }
-   &__text{
+   & p{
      font-size: 1.6em;
      line-height: 1.625em;
      color: $white;
@@ -117,7 +117,7 @@
      &__svg{
        display: none;
      }
-     &__text{
+     & p{
         width: 100%;
      }
    }
