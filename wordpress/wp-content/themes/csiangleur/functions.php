@@ -2,6 +2,7 @@
 add_theme_support( 'post-thumbnails');
 add_image_size( 'thumb-header', 480,320, true );
 add_image_size( 'thumb-cards', 300, 200, true);
+add_image_size( 'thumb-conseil', 428, 285, true );
 
 define('WPCF7_AUTOP', false);
 

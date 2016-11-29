@@ -65,17 +65,22 @@
       margin-top: 0.3em;
     }
   }
-  &__subtitle{
-    font: 1.8em/1.333em $opensansBold;
-    padding: 2.7888em 0 1.666em 0;
-  }
   &__content{
+    h4 {
+      font: 1.8em/1.333em $opensansBold;
+      display: block;
+      padding: 1.675em 0 1em 0;
+      color: $texteColor;
+    }
     p {
     font-size: 1.6em;
     line-height: 1.6875em;
-    padding-bottom: 1.875em;
+    padding-bottom: 1.3em;
   }
+  strong {
+    font-family: $opensansBold;
   }
+}
 }
 
 .lien{
