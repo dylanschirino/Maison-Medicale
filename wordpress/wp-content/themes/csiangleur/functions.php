@@ -42,33 +42,35 @@ function the_link($string, $replace = '%s')
       echo get_the_link($string, $replace);
 }
 
-  function share_button($content) {
-       global $post;
+if( !function_exists( 'theme_pagination' ) ) {
 
-        $share_URL = get_permalink();
-        $share_title = str_replace( ' ', '%20', get_the_title());
-        $share_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-        $share_excerpt = strip_tags(get_the_content());
+    function theme_pagination() {
 
-        $twitterURL = 'https://twitter.com/intent/tweet?text='.$share_title.'&amp;url='.$share_URL.'&amp;via=showyourglitters';
-        $facebookURL = 'https://www.facebook.com/sharer/sharer.php?url='.$share_URL;
-        $googleURL = 'https://plus.google.com/share?url='.$share_URL;
-        $pinterestURL='https://pinterest.com/pin/create/button/?url='.$share_URL.'&media='.$share_thumbnail[0];
-        $linkedinURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$share_URL.'/&title='.$share_title.'&summary=&source=';
+	global $wp_query, $wp_rewrite;
+	$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
 
-        $content .= '<!-- Facebook Share Button -->
-        <ul class="etiquette__list">
-        <li class="etiquette__element etiquette__element--facebook">
-        <a class="etiquette__link etiquette__link--facebook" href="'.$facebookURL.'" title="Partager sur facebook"><span class="hidden">Facebook</span></a>
-        </li>
-        <!-- Twitter Share Button -->
-        <li class="etiquette__element etiquette__element--twitter">
-        <a class="etiquette__link etiquette__link--twitter" href="'.$twitterURL.'" title="Partager sur twitter"><span class="hidden">Twitter</span></a>
-        </li>
-        </ul>';
-    return $content;
+	$pagination = array(
+		'base' => @add_query_arg('page','%#%'),
+		'format' => '',
+		'total' => $wp_query->max_num_pages,
+		'current' => $current,
+	        'show_all' => false,
+	        'end_size'     => 1,
+	        'mid_size'     => 2,
+		'type' => 'list',
+		'next_text' => '»',
+		'prev_text' => '«'
+	);
+
+	if( $wp_rewrite->using_permalinks() )
+		$pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
+
+	if( !empty($wp_query->query_vars['s']) )
+		$pagination['add_args'] = array( 's' => str_replace( ' ' , '+', get_query_var( 's' ) ) );
+
+	echo str_replace('page/1/','', paginate_links( $pagination ) );
+    }
 }
-
 
 function gn_tinymce_filtre($arr){
     $arr['block_formats'] = 'Paragraph=p;Address=address;Citation=blockquote;Titre Paragraphe=h3;Sous-titre=h4;Gras=strong;';
