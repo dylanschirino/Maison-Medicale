@@ -35,7 +35,7 @@ register_post_type( 'prevention', [
       ] );
 
 register_post_type( 'personnel', [
-            'label' => __('Personnel médicale ','p'),
+            'label' => __('Staff médicale ','p'),
             'lapels' => [
                         'singular_name' => __('Personnel médicale','p'),
                         'add_new' => __('Ajouter un membre de l\'équipe','p')

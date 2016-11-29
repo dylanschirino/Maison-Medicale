@@ -115,6 +115,7 @@ get_header();
       </div>
     </div>
   </section>
+  <?php wp_reset_query(); ?>
   <section class="horaire">
     <h2 class="horaire__title hidden">Heures de visite par section</h2>
     <svg class="horaire__svg" width="80px" height="80px" viewBox="0 0 80 80">
@@ -152,68 +153,76 @@ get_header();
         </g>
       </g>
     </svg>
+    <?php if( have_rows('horaire_par_services')):?>
     <table class="horaire__table">
       <caption class="hidden">Horaire de visites par section</caption>
       <thead class="horaire__head">
         <tr class="horaire__rows">
           <th class="horaire__th"></th>
-          <th class="horaire__th">Générale</th>
-          <th class="horaire__th">Cardiologie</th>
-          <th class="horaire__th">Psychologie</th>
-          <th class="horaire__th">Infirmière</th>
+          <?php while( have_rows('horaire_par_services')): the_row(); ?>
+          <th class="horaire__th"> <?php echo the_sub_field('nom_services');?></th>
+        <?php endwhile;?>
         </tr>
       </thead>
       <tbody class="horaire__body">
         <tr class="horaire__row">
           <th class="horaire__day">Lundi</th>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
+          <?php while(have_rows('horaire_par_services')): the_row();?>
+          <?php while( have_rows('horaires_complet')): the_row();?>
+          <td class="horaire__data"><?php echo the_sub_field('horaire_lundi');?></td>
+        <?php endwhile;?>
+        <?php endwhile;?>
         </tr>
         <tr class="horaire__row">
           <th class="horaire__day">Mardi</th>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
+          <?php while(have_rows('horaire_par_services')): the_row();?>
+          <?php while( have_rows('horaires_complet')): the_row();?>
+          <td class="horaire__data"><?php echo the_sub_field('horaire_mardi');?></td>
+        <?php endwhile;?>
+        <?php endwhile;?>
         </tr>
         <tr class="horaire__row">
           <th class="horaire__day">Mercredi</th>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
+          <?php while(have_rows('horaire_par_services')): the_row();?>
+          <?php while( have_rows('horaires_complet')): the_row();?>
+          <td class="horaire__data"><?php echo the_sub_field('horaire_mercredi');?></td>
+        <?php endwhile;?>
+        <?php endwhile;?>
         </tr>
         <tr class="horaire__row">
           <th class="horaire__day">Jeudi</th>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
+          <?php while(have_rows('horaire_par_services')): the_row();?>
+          <?php while( have_rows('horaires_complet')): the_row();?>
+          <td class="horaire__data"><?php echo the_sub_field('horaire_jeudi');?></td>
+        <?php endwhile;?>
+        <?php endwhile;?>
         </tr>
         <tr class="horaire__row">
           <th class="horaire__day">Vendredi</th>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
+          <?php while(have_rows('horaire_par_services')): the_row();?>
+          <?php while( have_rows('horaires_complet')): the_row();?>
+          <td class="horaire__data"><?php echo the_sub_field('horaire_vendredi');?></td>
+        <?php endwhile;?>
+        <?php endwhile;?>
         </tr>
         <tr class="horaire__row">
           <th class="horaire__day">Samedi</th>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
+          <?php while(have_rows('horaire_par_services')): the_row();?>
+          <?php while( have_rows('horaires_complet')): the_row();?>
+          <td class="horaire__data"><?php echo the_sub_field('horaire_samedi');?></td>
+        <?php endwhile;?>
+        <?php endwhile;?>
         </tr>
         <tr class="horaire__row">
           <th class="horaire__day">Dimanche</th>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
-          <td class="horaire__data">8h30 - 18h30</td>
+          <?php while(have_rows('horaire_par_services')): the_row();?>
+          <?php while( have_rows('horaires_complet')): the_row();?>
+          <td class="horaire__data"><?php echo the_sub_field('horaire_dimanche');?></td>
+        <?php endwhile;?>
+        <?php endwhile;?>
         </tr>
       </tbody>
     </table>
+  <?php endif;?>
   </section>
 <?php get_footer();?>
