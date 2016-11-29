@@ -1119,15 +1119,17 @@ p {
   margin: auto; }
 
 .archive__fiche {
-  width: 30em; }
+  width: 30em;
+  margin-bottom: 4em; }
   .archive__fiche img {
     vertical-align: baseline; }
 
 .archive__container {
   width: 81%;
-  margin: 8em auto 8em auto;
+  margin: 8em auto;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
 
 .fiche__date {
   display: block; }
@@ -1136,17 +1138,19 @@ p {
   width: 85%;
   margin: 0 auto 1.875em auto; }
 
+.wp-pagenavi {
+  text-align: center; }
+
 .pagination {
   width: 65%;
   margin: 0 auto 10em auto; }
-  .pagination__button, .pagination__element, .pagination__list {
+  .pagination a {
     display: inline-block; }
-  .pagination__button {
+  .pagination .nextpostslink, .pagination .previouspostslink {
     width: 10.27em;
     margin-left: 1.666em;
     margin-right: 1.66em; }
-  .pagination__chiffre {
-    display: block;
+  .pagination .page {
     width: 3.611em; }
 
 @media screen and (max-width: 1198px) {
@@ -1158,13 +1162,15 @@ p {
     width: 95%; }
   .pagination {
     width: 80%; }
-    .pagination__button {
+    .pagination .nextpostslink, .pagination .previouspostslink {
       display: block;
       margin: auto; }
-    .pagination__list {
+    .pagination .wp-pagenavi {
       display: block;
-      margin: 3em auto;
-      text-align: center; } }
+      margin: auto;
+      text-align: center; }
+    .pagination .page {
+      margin: 3em auto; } }
 
 @media screen and (max-width: 962px) {
   .archive__container {
@@ -1200,7 +1206,7 @@ p {
 @media screen and (max-width: 400px) {
   .archive__fiche {
     width: 90%; }
-  .pagination {
+  .wp-pagenavi {
     font-size: 0.9em; } }
 
 /* CSI Angleur
@@ -2523,7 +2529,7 @@ p {
     color: #FFA33C;
     border: 1px solid #FFA33C; }
 
-.pagination__button {
+.wp-pagenavi .previouspostslink, .wp-pagenavi .nextpostslink {
   font: 1.6em/2.7em "museo";
   text-align: center;
   text-transform: uppercase;
@@ -2533,19 +2539,19 @@ p {
   padding: 0.3em 0;
   border-radius: 8px;
   transition: .2s ease-in; }
-  .pagination__button:hover {
+  .wp-pagenavi .previouspostslink:hover, .wp-pagenavi .nextpostslink:hover {
     color: #8898AA;
     background-color: white;
     border: 1px solid #8898AA; }
 
-.pagination__chiffre {
+.wp-pagenavi .page {
   background-color: #F6F9FC;
   font: 1.6em/3.5em "museo";
   color: #8898AA;
   text-align: center;
   transition: .2s ease-in;
   border: 3px solid white; }
-  .pagination__chiffre:hover {
+  .wp-pagenavi .page:hover {
     color: #F6F9FC;
     background-color: #8898AA; }
 

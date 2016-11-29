@@ -78,8 +78,8 @@
    }
  }
 
- .pagination{
-   &__button{
+ .wp-pagenavi{
+   & .previouspostslink, .nextpostslink{
      font: 1.6em/2.7em $museo;
      text-align: center;
      text-transform: uppercase;
@@ -95,7 +95,7 @@
        border: 1px solid $footerColor;
      }
    }
-   &__chiffre{
+   & .page{
      background-color: $footerBckg;
      font: 1.6em/3.5em $museo;
      color: $footerColor;

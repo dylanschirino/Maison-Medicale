@@ -4,7 +4,8 @@ Template Name: Prevention
 */
 if(is_page()){
   query_posts([
-    'post_type' => 'prevention'
+    'post_type' => 'prevention',
+    'paged' => get_query_var('paged')
   ]);
 }
 get_header();
@@ -75,7 +76,8 @@ get_header();
   <section class="archive__list">
     <h2 class="hidden">Liste des fiche de prévention</h2>
     <div class="archive__container">
-      <?php $args = array( 'post_type' => 'prevention', 'posts_per_page' => 3 );
+      <?php $paged = get_query_var('paged') ? get_query_var('paged') : 1;?>
+      <?php $args = array( 'post_type' => 'prevention', 'posts_per_page' => 6,'paged' => $paged );
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post();?>
 
@@ -92,14 +94,7 @@ get_header();
     <?php endwhile;?>
     </div>
     <div class="pagination">
-      <a class="pagination__button" href="#precedent" title="Vers la page précédente">Précédent</a>
-      <ul class="pagination__list">
-        <li class="pagination__element"><a class="pagination__chiffre" href="#1" title="Vers la page 1">1</a></li>
-        <li class="pagination__element"><a class="pagination__chiffre" href="#2" title="Vers la page 2">2</a></li>
-        <li class="pagination__element"><a class="pagination__chiffre" href="#3" title="Vers la page 3">3</a></li>
-        <li class="pagination__element"><a class="pagination__chiffre" href="#4" title="Vers la page 4">4</a></li>
-        <li class="pagination__element"><a class="pagination__chiffre" href="#5" title="Vers la page 5">5</a></li>
-      </ul><a class="pagination__button" href="#suivant" title="Vers la page suivante">Suivant</a>
+      <?php wp_pagenavi( array( 'query' => $loop ) ); ?>
     </div>
   </section>
 <?php get_footer();?>

@@ -14,15 +14,17 @@
 .archive{
   &__fiche{
     width: 30em;
+    margin-bottom: 4em;
     & img{
       vertical-align: baseline;
     }
   }
   &__container{
     width: 81%;
-    margin: 8em auto 8em auto;
+    margin: 8em auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -36,19 +38,21 @@
   }
 }
 
+.wp-pagenavi{
+  text-align: center;
+}
 .pagination{
   width: 65%;
   margin: 0 auto 10em auto;
-  &__button,&__element,&__list{
+  & a{
     display: inline-block;
   }
-  &__button{
+  & .nextpostslink, .previouspostslink {
     width: 10.27em;
     margin-left: 1.666em;
     margin-right: 1.66em;
   }
-  &__chiffre{
-    display: block;
+  & .page{
     width: 3.611em;
   }
 }
@@ -65,14 +69,17 @@
   }
   .pagination{
     width: 80%;
-    &__button{
+    & .nextpostslink, .previouspostslink{
       display: block;
       margin: auto;
     }
-    &__list{
+    & .wp-pagenavi{
       display: block;
-      margin: 3em auto;
+      margin: auto;
       text-align: center;
+    }
+    & .page{
+        margin: 3em auto;
     }
   }
 }
@@ -133,7 +140,7 @@
       width: 90%;
     }
   }
-  .pagination{
+  .wp-pagenavi{
     font-size: 0.9em;
   }
 }
