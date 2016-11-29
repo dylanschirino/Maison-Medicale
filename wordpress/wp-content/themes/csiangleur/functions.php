@@ -19,6 +19,16 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
+//Remove Articles from dashboard
+function remove_menus(){
+
+  remove_menu_page( 'edit.php' );
+
+}
+add_action( 'admin_menu', 'remove_menus' );
+
+
+// Register post type
 register_post_type( 'prevention', [
             'label' => __('Fiche Prévention ','p'),
             'lapels' => [
@@ -33,7 +43,6 @@ register_post_type( 'prevention', [
             'supports' => ['title','thumbnail'],
             'has_archive' => true
       ] );
-
 register_post_type( 'personnel', [
             'label' => __('Staff médicale ','p'),
             'lapels' => [
@@ -49,7 +58,7 @@ register_post_type( 'personnel', [
             'has_archive' => true
       ] );
 
-
+// Get the link
 function get_the_link($string, $replace = '%s')
 {
       return str_replace($replace, '<span class="sro">' . get_the_title() . '</span>', __($string,'b'));
@@ -60,7 +69,7 @@ function the_link($string, $replace = '%s')
       echo get_the_link($string, $replace);
 }
 
-
+// TinyMCE
 function gn_tinymce_filtre($arr){
     $arr['block_formats'] = 'Paragraph=p;Address=address;Citation=blockquote;Titre Paragraphe=h3;Sous-titre=h4;Gras=strong;';
     return $arr;
