@@ -2624,7 +2624,7 @@ p {
   font: 1.8em/1.333em "open_sansbold";
   padding: 2.7888em 0 1.666em 0; }
 
-.conseil__text {
+.conseil__content p {
   font-size: 1.6em;
   line-height: 1.6875em;
   padding-bottom: 1.875em; }

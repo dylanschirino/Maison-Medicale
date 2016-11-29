@@ -145,4 +145,32 @@ get_header();
     </g>
   </svg>
 </div>
+<section class="pratique">
+  <h2 class="pratique__title">Conseils pratiques</h2>
+  <?php if(have_rows('conseil_pratique')):?>
+    <?php while(have_rows('conseil_pratique')): the_row();?>
+  <article class="pratique__conseil">
+    <h3 class="conseil__title"><?php echo the_sub_field('titre_du_conseil');?></h3>
+    <p class="conseil__subtitle">Régime selon flash</p>
+    <div class="conseil__container">
+      <div class="conseil__content">
+        <?php echo the_sub_field('conseil_texte');?>
+      </div>
+      <img class="conseil__img" src="images/food.jpg" width="428" height="285" alt="Photo d'un aliment">
+    </div>
+  </article>
+<?php endwhile;?>
+<?php endif;?>
+  <article class="pratique__conseil">
+    <h3 class="conseil__title">Exercices Physiques</h3>
+    <p class="conseil__subtitle">Exercices de type cardiovasculaires</p>
+    <div class="conseil__container">
+      <div class="conseil__content">
+        <p class="conseil__text">Les exercices de type cardiovasculaire (marche rapide, course, vélo, danse, natation) sont recommandés. On suggère d'en faire au moins 20 minutes par jour, mais tout exercice physique, même moins intense, est bénéfique. À long terme, l’exercice physique régulier permet de réduire la pression systolique de 4 mmHg à 9 mmHg, même sans perte de poids.</p>
+        <p class="conseil__text">Cependant, prudence avec les exercices qui obligent à lever des poids (au gym, par exemple). Ils deviennent contre-indiqués lorsque la tension artérielle est élevée.</p>
+        <p class="conseil__text">Dans tous les cas, il est préférable de demander l'avis de son médecin avant d'entreprendre un programme d'exercice.</p>
+      </div><img class="conseil__img" src="images/sport.jpg" width="428" height="285" alt="Photo d'un aliment">
+    </div>
+  </article>
+</section>
 <?php get_footer();?>
