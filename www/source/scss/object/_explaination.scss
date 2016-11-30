@@ -89,6 +89,10 @@
    }
  }
 
+ .aside__container:hover:before{
+   border-right-color: $texteColor;
+ }
+
 
  @media screen and (max-width:714px) {
    .subscription{
