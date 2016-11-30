@@ -14,7 +14,7 @@
   &__search{
     position: absolute;
     right:-25px;
-    bottom: -30px;
+    top: 60px;
     width: 15.625em;
     padding: 1em 0;
     display: none;
@@ -42,6 +42,7 @@
   &__box{
     height: 2.1875em;
     margin-left: 1em;
+    width: 72%;
   }
   &__submit{
     height: 2.5em;

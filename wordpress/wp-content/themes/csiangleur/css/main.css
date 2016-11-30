@@ -294,7 +294,7 @@ p {
 .menu__search {
   position: absolute;
   right: -25px;
-  bottom: -30px;
+  top: 60px;
   width: 15.625em;
   padding: 1em 0;
   display: none; }
@@ -315,7 +315,8 @@ p {
 
 .search__box {
   height: 2.1875em;
-  margin-left: 1em; }
+  margin-left: 1em;
+  width: 72%; }
 
 .search__submit {
   height: 2.5em;
@@ -1558,6 +1559,9 @@ p {
     border-bottom-color: #51D2CC;
     border-width: 17px;
     margin-left: -17px; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
 
 .search__box {
   border: 1px solid #CCCCCC;

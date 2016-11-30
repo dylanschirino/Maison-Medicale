@@ -11,7 +11,7 @@
   OpenInMenu = document.querySelectorAll(".menu__link--down"),
   subLink = document.querySelectorAll(".menu__sublist"),
   question = document.querySelectorAll(".discover__question"),
-  nofocus = document.querySelectorAll(".nofocus");
+  nofocus = document.querySelectorAll('.menu__sublist .menu__sublink');
 
   // Quand le javascript est désactiver
   body.classList.remove("no-js");
@@ -25,18 +25,20 @@
         });
       });
     }
+
     OpenInMenu.forEach(function(element) {
       element.addEventListener("focusin",function(e){
         e.target.nextElementSibling.classList.toggle('menu__sublist--open');
       });
     });
 
-
-    nofocus.forEach(function(element){
-      element.addEventListener("focusout",function(e){
-        e.target.nextElementSibling.classList.remove('menu__sublist--open');
-      });
+    nofocus[1].addEventListener("focusout", function(e){
+      document.querySelector('.menu__sublist').classList.remove('menu__sublist--open');
     });
+    nofocus[3].addEventListener("focusout", function(e){
+      document.querySelector('.menu__sublist2').classList.remove('menu__sublist--open');
+    });
+    console.log(nofocus[3]);
 
 
 
