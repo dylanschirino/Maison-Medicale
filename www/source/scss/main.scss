@@ -51,7 +51,8 @@
 @import "object/archive";
 @import "object/prevention";
 
-
+// Wordpress page
+@import "object/wordpress";
 
 
 // 6. Components - Design des composants, morceaux d'UI
@@ -87,3 +88,6 @@
 // Prévention page
 @import "components/archive";
 @import "components/prevention";
+
+// Wordpress page
+@import "components/wordpress";

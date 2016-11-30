@@ -1,0 +1,57 @@
+/* CSI Angleur
+ *
+ * /sass/components/wordpress.scss - wordpress components
+ *
+ * coded by Dylan Schirino
+ * started at 30/11/2016
+ */
+ .search{
+   background-color: $explainationBckg;
+   padding-bottom: 4em;
+   &__svg{
+     padding: 4em 0;
+   }
+   &__title{
+     font-size: 2.4em;
+     line-height: 1.6em;
+     color: $white;
+     letter-spacing: 1px;
+     text-align: center;
+     &:after{
+       width: 94%;
+       margin: 1em auto;
+       height: 2px;
+       display: block;
+       content: "";
+       background-color: $white;
+     }
+   }
+   &__link{
+     font: 1.8em/1.6em $opensans;
+     color: $white;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     padding-bottom: 1em;
+     text-decoration: underline;
+     transition: .2s ease;
+     &:hover{
+       text-decoration: none;
+       font-family: $opensansBold;
+     }
+   }
+   &__span{
+     font-family: $museo;
+     text-transform: none;
+     padding-bottom: 0.5em;
+   }
+   &__subtitle{
+     background-color: $footerBckg;
+     color: $texteColor;
+     font-size: 2em;
+     line-height: 1.675em;
+     padding: 2em 0;
+     text-align: center;
+     text-transform: uppercase;
+     font-family: $opensansBold;
+   }
+ }

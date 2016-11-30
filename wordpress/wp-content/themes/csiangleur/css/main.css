@@ -1313,6 +1313,38 @@ p {
   .lien__list {
     width: 80%; } }
 
+/* CSI Angleur
+ *
+ * /sass/object/wordpress.scss - wordpress object
+ *
+ * coded by Dylan Schirino
+ * started at 30/11/2016
+ */
+.search__svg {
+  display: block;
+  margin: auto; }
+
+.search__title {
+  width: 50%;
+  margin: auto; }
+
+.search__link, .search__subtitle {
+  display: block;
+  width: 47%;
+  margin: auto; }
+
+.search__span {
+  display: block; }
+
+@media screen and (max-width: 668px) {
+  .search__link, .search__subtitle, .search__title {
+    width: 80%;
+    margin: auto; } }
+
+@media screen and (max-width: 350px) {
+  .search__link, .search__subtitle, .search__title {
+    width: 81%; } }
+
 /* CsiAngleur
  *
  * /sass/components/Animation.scss - Animation stylesheet
@@ -2673,3 +2705,53 @@ p {
     width: 100%; }
   .pratique__title {
     padding-top: 2em; } }
+
+/* CSI Angleur
+ *
+ * /sass/components/wordpress.scss - wordpress components
+ *
+ * coded by Dylan Schirino
+ * started at 30/11/2016
+ */
+.search {
+  background-color: #48B2AD;
+  padding-bottom: 4em; }
+  .search__svg {
+    padding: 4em 0; }
+  .search__title {
+    font-size: 2.4em;
+    line-height: 1.6em;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center; }
+    .search__title:after {
+      width: 94%;
+      margin: 1em auto;
+      height: 2px;
+      display: block;
+      content: "";
+      background-color: white; }
+  .search__link {
+    font: 1.8em/1.6em "open_sansregular", "Helvetica", Arial, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 1em;
+    text-decoration: underline;
+    transition: .2s ease; }
+    .search__link:hover {
+      text-decoration: none;
+      font-family: "open_sansbold"; }
+  .search__span {
+    font-family: "museo";
+    text-transform: none;
+    padding-bottom: 0.5em; }
+  .search__subtitle {
+    background-color: #F6F9FC;
+    color: #436577;
+    font-size: 2em;
+    line-height: 1.675em;
+    padding: 2em 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "open_sansbold"; }

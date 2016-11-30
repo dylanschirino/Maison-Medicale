@@ -56,9 +56,6 @@ get_header();
     </g>
   </svg>
   <h2 class="search__title">Voici les pages où se trouve le mots que vous avez recherché : </h2>
-  <span class="search__span">Votre recherche : </span>
-  <p class="search__subtitle"><?php the_search_query(); ?></p>
-  <p class="search__correspond"> La liste des pages correspondante : </p>
   <ul>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <li class="search__element">
@@ -66,5 +63,7 @@ get_header();
   </li>
   <?php endwhile; endif;?>
 </ul>
+
+  <p class="search__subtitle"><span class="search__span">Pour votre recherche : </span><?php the_search_query(); ?></p>
 </section>
 <?php get_footer();?>

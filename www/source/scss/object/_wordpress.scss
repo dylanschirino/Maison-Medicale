@@ -1,0 +1,41 @@
+/* CSI Angleur
+ *
+ * /sass/object/wordpress.scss - wordpress object
+ *
+ * coded by Dylan Schirino
+ * started at 30/11/2016
+ */
+.search{
+  &__svg{
+    display: block;
+    margin:auto;
+  }
+  &__title{
+    width: 50%;
+    margin: auto;
+  }
+  &__link,&__subtitle{
+    display:block;
+    width: 47%;
+    margin: auto;
+  }
+  &__span{
+    display: block;
+  }
+}
+
+@media screen and (max-width:668px) {
+  .search{
+    &__link,&__subtitle,&__title{
+      width: 80%;
+      margin: auto;
+    }
+  }
+}
+@media screen and (max-width:350px) {
+  .search{
+    &__link,&__subtitle,&__title{
+      width: 81%;
+    }
+  }
+}
