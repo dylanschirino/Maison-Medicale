@@ -121,7 +121,7 @@ get_header();
   <div class="centerContainer centerContainer--newsletter">
     <section class="newsletter">
       <div class="newsletter__container">
-        <h3 class="newsletter__title" id="newsletter-section">Inscrivez vous à notre newsletter pour recevoir notre actualité</h3>
+        <h3 class="newsletter__title">Inscrivez vous à notre newsletter pour recevoir notre actualité</h3>
         <div class="newsletter__container">
           <div class="newsletter__form">
             <?php echo do_shortcode('[mc4wp_form id="22"]');?>

@@ -55,7 +55,6 @@ get_header();
   </section>
 
   <section class="subscription">
-    <?xml version="1.0" encoding="UTF-8"?>
     <svg class="subscription__svg" width="220px" height="159px" viewBox="0 0 220 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
         <polygon id="path-1" points="0.0417 31 27.2657 31 27.2657 0.6045 0.0417 0.6045 0.0417 31"></polygon>
