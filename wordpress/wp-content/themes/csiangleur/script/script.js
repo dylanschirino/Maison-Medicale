@@ -24,6 +24,14 @@
         });
       });
     }
+    OpenInMenu.forEach(function(element) {
+      element.addEventListener("focusin",function(e){
+        e.target.nextElementSibling.classList.toggle('menu__sublist--open');
+      });
+    });
+
+
+
 
     //discover content appear/disapear while clicking on questions
     question.forEach(function(lien) {

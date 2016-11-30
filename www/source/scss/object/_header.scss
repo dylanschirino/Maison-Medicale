@@ -60,6 +60,18 @@
     display: block;
   }
 }
+.menu__sublist--open{
+  opacity: 1;
+  visibility: visible;
+}
+.menu__link--down:focus ~ .menu__sublist{
+  opacity: 1;
+  visibility: visible;
+}
+.menu__link--down:active ~ .menu__sublist{
+  opacity: 1;
+  visibility: visible;
+}
 .menu__element--down:hover .menu__sublist{
   opacity: 1;
   visibility: visible;
