@@ -39,7 +39,6 @@ get_header();
 <main>
   <section class="services">
     <h2 class="services__title"><?php echo the_title();?></h2>
-    <?xml version="1.0" encoding="UTF-8"?>
     <svg class="services__svg" width="354px" height="234px" viewBox="0 0 354 234" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
         <polygon id="path-1" points="353.27 12.3121 353.27 0.8441 0 0.8441 2.71050543e-20 12.3121 353.27 12.3121"></polygon>

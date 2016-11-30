@@ -101,7 +101,7 @@ get_header();
         <path d="M74.798 37.566c0 1.715-1.394 3.107-3.11 3.107-1.72 0-3.112-1.392-3.112-3.107V9.712c0-1.725 1.392-3.117 3.113-3.117 1.714 0 3.108 1.392 3.108 3.117v27.854z" fill="#D3D3D3"/>
         <path d="M94.435 37.566c0 1.715-1.393 3.107-3.113 3.107s-3.11-1.392-3.11-3.107V9.712c0-1.725 1.39-3.117 3.11-3.117s3.113 1.392 3.113 3.117v27.854z" fill="#D3D3D3"/>
         <path d="M114.072 37.566c0 1.715-1.393 3.107-3.112 3.107-1.72 0-3.113-1.392-3.113-3.107V9.712c0-1.725 1.393-3.117 3.113-3.117s3.112 1.392 3.112 3.117v27.854z" fill="#D3D3D3"/>
-        <mask id="b" fill="#fff">
+        <mask id="ba" fill="#fff">
           <use xlink:href="#a"/>
         </mask>
         <path fill="#FFD369" mask="url(#b)" d="M16.153 104.29h91.432V77.12H16.153"/>
@@ -116,19 +116,19 @@ get_header();
   <div class="express__text"><?php echo the_field('express');?></div>
   <svg class="express__svg" width="35" height="217" viewBox="0 0 35 217" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
-      <path id="a" d="M22.52.862H.568v45.33H22.52V.86z"/>
-      <path id="c" d="M0 217.138h70.54V1H0z"/>
+      <path id="aa" d="M22.52.862H.568v45.33H22.52V.86z"/>
+      <path id="cd" d="M0 217.138h70.54V1H0z"/>
     </defs>
     <g transform="translate(-36 -1)" fill="none" fill-rule="evenodd">
       <g transform="translate(42 .138)">
-        <mask id="b" fill="#fff">
+        <mask id="bcs" fill="#fff">
           <use xlink:href="#a"/>
         </mask>
         <path d="M20.004.862H3.082C1.693.862.568 1.99.568 3.382v.1C.567 4.878 1.693 6 3.083 6h3.47v37.672c0 1.392 1.13 2.52 2.52 2.52h4.944c1.39 0 2.517-1.128 2.517-2.52V6h3.47c1.39 0 2.517-1.123 2.517-2.517v-.1c0-1.393-1.125-2.52-2.516-2.52" fill="#15303D" mask="url(#b)"/>
       </g>
       <path d="M66.266 37.268H40.822c-2.362 0-4.277 1.916-4.277 4.275 0 2.36 1.915 4.275 4.277 4.275h1.78c-.038.252-.075.504-.075.76v88.58c0 2.778 2.255 5.034 5.036 5.034h11.962c2.78 0 5.036-2.256 5.036-5.035V46.58c0-.258-.04-.51-.075-.762h1.78c2.36 0 4.276-1.915 4.276-4.275 0-2.36-1.914-4.275-4.274-4.275" fill="#EEE"/>
       <path d="M64.48 135.56c0 2.556-2.253 4.632-5.035 4.632H47.64c-2.78 0-5.035-2.076-5.035-4.632V88.247c0-2.556 2.254-4.633 5.036-4.633h11.805c2.782 0 5.036 2.077 5.036 4.633v47.313z" fill="#FF5938"/>
-      <mask id="d" fill="#fff">
+      <mask id="dsfs" fill="#fff">
         <use xlink:href="#c"/>
       </mask>
       <path fill="#15303D" mask="url(#d)" d="M43.03 69.12h11.017v-3.046H43.03"/>
@@ -168,7 +168,7 @@ get_header();
   <h2 class="lien__title">Ressource utiles</h2>
   <svg class="lien__svg" width="131" height="93" viewBox="0 0 131 93" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
-      <path id="a" d="M.28 93H107.1V.465H.28z"/>
+      <path id="aaaf" d="M.28 93H107.1V.465H.28z"/>
       <path id="c" d="M130.488 64.347V.187H0v64.16z"/>
     </defs>
     <g fill="none" fill-rule="evenodd">
