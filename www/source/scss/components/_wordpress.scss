@@ -55,3 +55,29 @@
      font-family: $opensansBold;
    }
  }
+
+ .notfound{
+   background-color: $BlueGreen;
+   padding-bottom: 4em;
+   &__svg{
+     padding: 4em 0;
+   }
+   &__title{
+     color: $white;
+     font-size: 3.2em;
+     line-height: 1.6em;
+     text-align: center;
+   }
+   &__home{
+     font: 2.4em/1.6em $opensans;
+     color: $texteColor;
+     padding: 0.5em 0;
+     background-color: $footerBckg;
+     border-radius: 8px;
+     transition: .5s ease;
+     &:hover{
+       background-color: $texteColor;
+       color: $footerBckg;
+     }
+   }
+ }

@@ -1336,6 +1336,16 @@ p {
 .search__span {
   display: block; }
 
+.notfound__svg {
+  display: block;
+  margin: auto; }
+
+.notfound__home {
+  display: block;
+  max-width: 12.5em;
+  margin: 1em auto;
+  text-align: center; }
+
 @media screen and (max-width: 668px) {
   .search__link, .search__subtitle, .search__title {
     width: 80%;
@@ -2755,3 +2765,24 @@ p {
     text-align: center;
     text-transform: uppercase;
     font-family: "open_sansbold"; }
+
+.notfound {
+  background-color: #51D2CC;
+  padding-bottom: 4em; }
+  .notfound__svg {
+    padding: 4em 0; }
+  .notfound__title {
+    color: white;
+    font-size: 3.2em;
+    line-height: 1.6em;
+    text-align: center; }
+  .notfound__home {
+    font: 2.4em/1.6em "open_sansregular", "Helvetica", Arial, sans-serif;
+    color: #436577;
+    padding: 0.5em 0;
+    background-color: #F6F9FC;
+    border-radius: 8px;
+    transition: .5s ease; }
+    .notfound__home:hover {
+      background-color: #436577;
+      color: #F6F9FC; }

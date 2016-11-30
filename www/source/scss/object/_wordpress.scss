@@ -24,6 +24,19 @@
   }
 }
 
+.notfound{
+  &__svg{
+    display: block;
+    margin: auto;
+  }
+  &__home{
+    display: block;
+    max-width:12.5em;
+    margin:1em auto;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width:668px) {
   .search{
     &__link,&__subtitle,&__title{
