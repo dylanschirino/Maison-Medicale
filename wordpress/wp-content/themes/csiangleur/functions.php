@@ -75,3 +75,16 @@ function gn_tinymce_filtre($arr){
     return $arr;
   }
 add_filter('tiny_mce_before_init', 'gn_tinymce_filtre');
+
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/svg/logo.svg);
+            background-size: cover;
+            height:auto;
+            padding:30px;
+            width: 90px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
