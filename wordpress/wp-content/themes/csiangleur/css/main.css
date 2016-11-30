@@ -2326,6 +2326,9 @@ input[type="search"] {
     background-color: #436577;
     color: white; }
 
+.information__choix:hover:after {
+  border-top-color: #436577; }
+
 @media screen and (max-width: 400px) {
   .information__link {
     font-size: 1.5em;

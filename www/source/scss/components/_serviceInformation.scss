@@ -109,6 +109,9 @@
    }
  }
 
+.information__choix:hover:after{
+    border-top-color:$texteColor;
+}
  @media screen and (max-width:400px) {
    .information{
      &__link{
