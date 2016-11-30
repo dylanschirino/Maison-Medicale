@@ -10,7 +10,8 @@
   sitecache = document.querySelector("#site-cache"),
   OpenInMenu = document.querySelectorAll(".menu__link--down"),
   subLink = document.querySelectorAll(".menu__sublist"),
-  question = document.querySelectorAll(".discover__question");
+  question = document.querySelectorAll(".discover__question"),
+  nofocus = document.querySelectorAll(".nofocus");
 
   // Quand le javascript est désactiver
   body.classList.remove("no-js");
@@ -30,6 +31,12 @@
       });
     });
 
+
+    nofocus.forEach(function(element){
+      element.addEventListener("focusout",function(e){
+        e.target.nextElementSibling.classList.remove('menu__sublist--open');
+      });
+    });
 
 
 
