@@ -60,7 +60,7 @@
   </section>
   <div class="footer__newsletter">
     <div class="newsletter__form">
-      <p class="newsletter__title newsletter__title--footer">Je m'inscris à la newsletter</p>
+      <p class="newsletter__title newsletter__title--footer" id="newsletter">Je m'inscris à la newsletter</p>
       <?php echo do_shortcode('[mc4wp_form id="22"]');?>
     </div>
   </div>
@@ -71,7 +71,6 @@
 <div class="site-cache" id="site-cache"></div>
 </div>
 </div>
-</body>
 <script src="<?php echo get_template_directory_uri().'/script/script.js';?>"></script>
 <?php if (is_page(5)):?>
 <script src="<?php echo get_template_directory_uri().'/script/script-tab.js';?>"></script>
@@ -82,4 +81,5 @@
 <?php if(is_page(61)):?>
 <script src="<?php echo get_template_directory_uri().'/script/script-tab-services.js';?>"></script>
 <?php endif;?>
+</body>
 </html>

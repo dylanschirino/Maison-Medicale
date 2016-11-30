@@ -121,7 +121,7 @@ get_header();
   <div class="centerContainer centerContainer--newsletter">
     <section class="newsletter">
       <div class="newsletter__container">
-        <h3 class="newsletter__title">Inscrivez vous à notre newsletter pour recevoir notre actualité</h3>
+        <h3 class="newsletter__title" id="newsletter-section">Inscrivez vous à notre newsletter pour recevoir notre actualité</h3>
         <div class="newsletter__container">
           <div class="newsletter__form">
             <?php echo do_shortcode('[mc4wp_form id="22"]');?>
@@ -150,7 +150,7 @@ get_header();
       <div class="discover__content activated" id="tab-one">
         <?php while( have_rows('question_reponse_generaliste') ): the_row(); ?>
         <a class="discover__question" href="#focus" title="Cliquez pour voir le contenu relatif"><?php echo get_sub_field('titre__question');?></a>
-        <div class="discover__answer" id="focus">
+        <div class="discover__answer">
           <div class="answer__text"><?php echo get_sub_field('texte_de_la_section');?></div>
         </div>
       <?php endwhile;?>
@@ -161,7 +161,7 @@ get_header();
       <div class="discover__content" id="tab-two">
         <?php while( have_rows('question_reponse_psy') ): the_row(); ?>
         <a class="discover__question" href="#focus" title="Cliquez pour voir le contenu relatif"><?php echo get_sub_field('titre__question');?></a>
-        <div class="discover__answer" id="focus">
+        <div class="discover__answer">
           <div class="answer__text"><?php echo get_sub_field('texte_de_la_section');?></div>
         </div>
       <?php endwhile;?>
@@ -172,7 +172,7 @@ get_header();
         <?php while( have_rows('question_reponse_kine') ): the_row(); ?>
         <a class="discover__question" href="#focus" title="Cliquez pour voir le contenu relatif"><?php echo get_sub_field('titre__question');?>
         </a>
-        <div class="discover__answer" id="focus">
+        <div class="discover__answer">
           <div class="answer__text"><?php echo get_sub_field('texte_de_la_section');?></div>
         </div>
       <?php endwhile;?>
@@ -182,7 +182,7 @@ get_header();
       <div class="discover__content" id="tab-four">
         <?php while( have_rows('question_reponse_cardio') ): the_row(); ?>
         <a class="discover__question" href="#focus" title="Cliquez pour voir le contenu relatif"><?php echo get_sub_field('titre__question');?></a>
-        <div class="discover__answer" id="focus">
+        <div class="discover__answer">
           <div class="answer__text"><?php echo get_sub_field('texte_de_la_section');?></div>
         </div>
       <?php endwhile;?>
@@ -192,7 +192,7 @@ get_header();
       <div class="discover__content" id="tab-five">
         <?php while( have_rows('question_reponse_infirmière') ): the_row(); ?>
         <a class="discover__question" href="#focus" title="Cliquez pour voir le contenu relatif"><?php echo get_sub_field('titre__question');?></a>
-        <div class="discover__answer" id="focus">
+        <div class="discover__answer">
           <div class="answer__text"><?php echo get_sub_field('texte_de_la_section');?></div>
         </div>
       <?php endwhile;?>
