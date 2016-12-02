@@ -939,6 +939,23 @@ p {
   display: block;
   padding-top: 0.5em; }
 
+div.wpcf7-response-output {
+  margin: -1em 0 0 0 !important;
+  padding: 0 0 2em 0 !important;
+  border: none !important; }
+
+.wpcf7-mail-sent-ok {
+  border: none;
+  font: 1.6em/1.4em "museo";
+  color: #046C66;
+  text-align: center; }
+
+.wpcf7-validation-errors {
+  border: none;
+  font: 1.6em/1.4em "museo";
+  color: #FFA33C;
+  text-align: center; }
+
 .form {
   display: block;
   width: 73%;
