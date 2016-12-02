@@ -111,7 +111,9 @@ h2, h3 {
   font-family: "museo"; }
 
 body {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  background: url("../images/grid.png") repeat-y center;
+  opacity: 0.7; }
 
 p {
   color: #436577;
@@ -132,8 +134,9 @@ p {
   .discover__content,
   .footer__container,
   .newsletter__form,
-  .center {
-    max-width: 103.5em;
+  .center,
+  .headContent__container {
+    max-width: 123.8em;
     margin: auto; } }
 
 /* CSI Angleur
@@ -1662,6 +1665,9 @@ input[type="search"] {
 @media screen and (min-width: 1300px) {
   .headContent__slogan {
     padding-left: 0; }
+  .headContent__cards {
+    margin-right: 0;
+    right: 0; }
   .center {
     position: relative; } }
 

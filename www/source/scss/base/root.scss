@@ -22,8 +22,8 @@ h2,h3{
 }
 body{
   font-size: 62.5%;
-  //background: url("../images/grid.png")repeat-y center;
-  //opacity: 0.7;
+  background: url("../images/grid.png")repeat-y center;
+  opacity: 0.7;
 }
 
 p{
@@ -47,8 +47,9 @@ p{
     .discover__content,
     .footer__container,
     .newsletter__form,
-    .center{
-      max-width: 103.5em;
+    .center,
+    .headContent__container{
+      max-width: 123.8em;
       margin: auto;
     }
   }
