@@ -13,12 +13,12 @@
      margin: 8em auto;
    }
    &__content{
-     width: 80%;
+     width: 60%;
      margin: auto;
    }
  }
 
- @media screen and(max-width:400px) {
+ @media screen and (max-width:400px) {
    .philosophie{
      width: 90%;
      &__content{

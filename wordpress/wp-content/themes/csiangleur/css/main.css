@@ -732,7 +732,7 @@ p {
   .philosophie__container {
     margin: 8em auto; }
   .philosophie__content {
-    width: 80%;
+    width: 60%;
     margin: auto; }
 
 @media screen and (max-width: 400px) {
@@ -2108,7 +2108,7 @@ input[type="search"] {
     background-color: white; }
 
 .philosophie__content {
-  font: 1.6em/1.75em "open_sansregular", "Helvetica", Arial, sans-serif; }
+  font: 1.8em/1.75em "open_sansregular", "Helvetica", Arial, sans-serif; }
 
 .philosophie__text p {
   padding-bottom: 1.5em; }
@@ -2125,6 +2125,11 @@ input[type="search"] {
   text-transform: uppercase; }
   .philosophie__text a:hover {
     text-decoration: none; }
+
+@media screen and (max-width: 850px) {
+  .philosophie__content {
+    font-size: 1.6em;
+    width: 80%; } }
 
 /* CSI Angleur
  *

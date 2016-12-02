@@ -28,7 +28,7 @@
      }
    }
    &__content{
-      font: 1.6em/1.75em $opensans;
+      font: 1.8em/1.75em $opensans;
    }
    &__text p{
      padding-bottom: 1.5em;
@@ -45,6 +45,15 @@
      text-transform: uppercase;
      &:hover{
        text-decoration: none;
+     }
+   }
+ }
+
+ @media screen and (max-width:850px) {
+   .philosophie{
+     &__content{
+       font-size: 1.6em;
+       width: 80%;
      }
    }
  }
