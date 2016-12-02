@@ -22,7 +22,7 @@
      font-size: 1.6em;
      line-height: 1.5625em;
      padding-bottom: 1em;
-     padding-right: 3.75em;
+     padding-right: 10em;
      & strong {
        font-family: $opensansBold;
        color: $BlueGreen;
@@ -94,7 +94,7 @@
  }
 
 
- @media screen and(max-width:777px) {
+ @media screen and (max-width:793px) {
    .forfait{
      &__explaination p{
        padding-right: 0;
