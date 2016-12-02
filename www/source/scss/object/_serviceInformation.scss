@@ -45,7 +45,13 @@
 .no-js .information__content{
   display: flex;
 }
-
+@media screen and (min-width:1300px) {
+  .information{
+    &__article{
+      width: 52em;
+    }
+  }
+}
 @media screen and (max-width:951px) {
   .information{
     &__content{
