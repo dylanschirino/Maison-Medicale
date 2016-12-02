@@ -38,7 +38,6 @@
     nofocus[3].addEventListener("focusout", function(e){
       document.querySelector('.menu__sublist2').classList.remove('menu__sublist--open');
     });
-    console.log(nofocus[3]);
 
 
 

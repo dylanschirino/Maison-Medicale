@@ -10,6 +10,11 @@ a{
   text-decoration: none;
   color: inherit;
   display: block;
+  outline-color: black;
+}
+
+input{
+  outline-color:black;
 }
 
 h2,h3{
@@ -26,7 +31,10 @@ p{
   font-family: $opensans;
 }
 
-
+.site-content{
+  max-width:150em;
+  margin: auto;
+}
 .centerContainer{
   width: 81%;
   margin: auto;

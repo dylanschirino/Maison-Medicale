@@ -101,7 +101,11 @@ table {
 a {
   text-decoration: none;
   color: inherit;
-  display: block; }
+  display: block;
+  outline-color: black; }
+
+input {
+  outline-color: black; }
 
 h2, h3 {
   font-family: "museo"; }
@@ -112,6 +116,10 @@ body {
 p {
   color: #436577;
   font-family: "open_sansregular", "Helvetica", Arial, sans-serif; }
+
+.site-content {
+  max-width: 150em;
+  margin: auto; }
 
 .centerContainer {
   width: 81%;
@@ -574,13 +582,18 @@ p {
   width: 80%;
   margin: auto;
   display: flex;
-  justify-content: space-between; }
+  justify-content: flex-start; }
+
+.footer__information {
+  width: 35%; }
 
 .table__element--footer {
   display: flex;
   justify-content: space-between; }
 
-@media screen and (max-width: 795px) {
+@media screen and (max-width: 930px) {
+  .footer__information {
+    margin-left: 0; }
   .footer__container {
     display: block;
     width: 70%;
