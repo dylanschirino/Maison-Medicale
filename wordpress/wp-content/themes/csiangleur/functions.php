@@ -19,6 +19,8 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
+show_admin_bar(false);
+
 //Remove Articles from dashboard
 function remove_menus(){
 

@@ -81,5 +81,6 @@
 <?php if(is_page(61)):?>
 <script src="<?php echo get_template_directory_uri().'/script/script-tab-services.js';?>"></script>
 <?php endif;?>
+ <?php wp_footer(); ?>
 </body>
 </html>
