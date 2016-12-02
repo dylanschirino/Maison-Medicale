@@ -141,7 +141,9 @@ p {
   .philosophie__container,
   .subscription__content,
   .information__content,
-  .archive__container {
+  .archive__container,
+  .team__container,
+  .horaire__table {
     max-width: 123.8em;
     margin: auto; } }
 
@@ -1006,6 +1008,12 @@ div.wpcf7-response-output {
   visibility: visible;
   height: auto; }
 
+@media screen and (min-width: 1300px) {
+  .headContent__cards--form {
+    top: 0; }
+  .contactHead__container {
+    margin-left: 0; } }
+
 @media screen and (max-width: 1111px) {
   .contactHead__container {
     margin-left: 2em; } }
@@ -1174,6 +1182,10 @@ div.wpcf7-response-output {
   .horaire__table {
     width: 81%;
     margin: auto; }
+
+@media screen and (min-width: 1300px) {
+  .horaire__table {
+    width: 100%; } }
 
 /* CSI Angleur
  *

@@ -43,6 +43,7 @@ get_header();
 <div class="site-content">
 <main>
   <section class="contactHead">
+    <div class="center">
     <div class="contactHead__container">
       <h2 class="contactHead__title">Contact</h2>
       <div class="contactHead__text"><?php echo the_field('explication_contact');?></div>
@@ -83,6 +84,7 @@ get_header();
         </div>
       </div>
     </div>
+  </div>
   </section>
   <section class="maps">
     <h2 class="hidden">Google maps</h2><a class="maps__link" href="https://www.google.be/maps/place/Rue+Vaudr%C3%A9e+48,+4031+Li%C3%A8ge/@50.6127477,5.5951963,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0f746b29cb281:0x69612a0f1477f0cc!8m2!3d50.6127443!4d5.597385?hl=fr" title="Google maps"><span class="maps__label">Google maps</span></a>
@@ -153,6 +155,7 @@ get_header();
         </g>
       </g>
     </svg>
+    <div class="center">
     <?php if( have_rows('horaire_par_services')):?>
     <table class="horaire__table">
       <caption class="hidden">Horaire de visites par section</caption>
@@ -224,5 +227,6 @@ get_header();
       </tbody>
     </table>
   <?php endif;?>
+</div>
   </section>
 <?php get_footer();?>

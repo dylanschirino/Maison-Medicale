@@ -95,9 +95,22 @@
   height: auto;
 }
 
+@media screen and (min-width:1300px) {
+  .headContent{
+    &__cards{
+      &--form{
+        top: 0;
+      }
+    }
+  }
+  .contactHead{
+    &__container{
+      margin-left: 0;
+    }
+  }
+}
 
-
- @media screen and(max-width:1111px) {
+ @media screen and (max-width:1111px) {
    .contactHead{
      &__container{
         margin-left: 2em;

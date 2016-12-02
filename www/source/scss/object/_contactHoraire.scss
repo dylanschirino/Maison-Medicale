@@ -17,3 +17,11 @@
      margin: auto;
    }
  }
+
+ @media screen and (min-width:1300px) {
+   .horaire{
+     &__table{
+       width: 100%;
+     }
+   }
+ }
