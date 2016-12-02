@@ -40,19 +40,21 @@ p{
   }
 }
 
-  @media screen and (min-width:1300px){
-    .centerContainer,
-    .newsletter,
-    .discover__container,
-    .discover__content,
-    .footer__container,
-    .newsletter__form,
-    .center,
-    .headContent__container,
-    .forfait__container,
-    .forfait__cardsContainer,
-    .philosophie__container{
-      max-width: 123.8em;
-      margin: auto;
-    }
+// Element qui doivent etre centrer pour les grand écran
+@media screen and (min-width:1300px){
+  .centerContainer,
+  .newsletter,
+  .discover__container,
+  .discover__content,
+  .footer__container,
+  .newsletter__form,
+  .center,
+  .headContent__container,
+  .forfait__container,
+  .forfait__cardsContainer,
+  .philosophie__container,
+  .subscription__content{
+    max-width: 123.8em;
+    margin: auto;
   }
+}

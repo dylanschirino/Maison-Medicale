@@ -138,7 +138,8 @@ p {
   .headContent__container,
   .forfait__container,
   .forfait__cardsContainer,
-  .philosophie__container {
+  .philosophie__container,
+  .subscription__content {
     max-width: 123.8em;
     margin: auto; } }
 
