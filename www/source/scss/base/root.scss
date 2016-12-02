@@ -41,7 +41,13 @@ p{
 }
 
   @media screen and (min-width:1300px){
-    .centerContainer, .newsletter{
+    .centerContainer,
+    .newsletter,
+    .discover__container,
+    .discover__content,
+    .footer__container,
+    .newsletter__form,
+    .center{
       max-width: 103.5em;
       margin: auto;
     }

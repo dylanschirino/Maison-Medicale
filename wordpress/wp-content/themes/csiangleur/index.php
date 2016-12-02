@@ -39,6 +39,7 @@ get_header();
 <main>
 
   <section class="headContent">
+    <div class="center">
     <h2 class="hidden">Information principale</h2>
     <p class="headContent__slogan"><?php echo bloginfo('description');?></p>
     <div class="headContent__cards">
@@ -65,6 +66,7 @@ get_header();
       <?php endif;?>
       </div>
     </div>
+  </div>
   </section>
 
   <section class="howitworks">
