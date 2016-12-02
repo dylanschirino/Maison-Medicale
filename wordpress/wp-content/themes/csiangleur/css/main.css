@@ -117,10 +117,6 @@ p {
   color: #436577;
   font-family: "open_sansregular", "Helvetica", Arial, sans-serif; }
 
-.site-content {
-  max-width: 150em;
-  margin: auto; }
-
 .centerContainer {
   width: 81%;
   margin: auto; }
@@ -128,6 +124,11 @@ p {
     content: "";
     display: block;
     clear: both; }
+
+@media screen and (min-width: 1300px) {
+  .centerContainer, .newsletter {
+    max-width: 103.5em;
+    margin: auto; } }
 
 /* CSI Angleur
 *
