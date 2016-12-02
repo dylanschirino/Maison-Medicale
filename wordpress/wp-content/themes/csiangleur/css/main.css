@@ -1893,9 +1893,9 @@ input[type="search"] {
       text-align: center; }
 
 .mc4wp-alert p {
-  font-size: 1.4em;
+  font-size: 1.6em;
   padding: 1em 0;
-  color: #22FFD0; }
+  color: white; }
 
 .cards__link--footer {
   color: #8898AA;
@@ -2197,7 +2197,7 @@ input[type="search"] {
   .article__text ul {
     padding-bottom: 1em; }
   .article__text li {
-    font-family: "museo";
+    font-family: "open_sansregular", "Helvetica", Arial, sans-serif;
     color: #436577;
     padding-top: 0.5em; }
     .article__text li::before {
@@ -2325,14 +2325,12 @@ input[type="search"] {
   background-color: #54EBCE;
   font-family: "museo";
   line-height: 1.5em;
-  padding: 1em 0;
-  border: 1px solid #436577; }
+  padding: 1em 0; }
 
 .information__tableData {
   text-align: center;
   font-family: "open_sansregular", "Helvetica", Arial, sans-serif;
-  color: #436577;
-  border: 1px solid #436577; }
+  color: #436577; }
 
 .information__tel {
   background-color: white;
