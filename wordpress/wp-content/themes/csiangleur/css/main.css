@@ -579,13 +579,12 @@ p {
  * started at 18/11/2016
  */
 .footer__container {
-  width: 80%;
-  margin: auto;
+  width: 100%;
   display: flex;
-  justify-content: flex-start; }
+  justify-content: space-between; }
 
-.footer__information {
-  width: 35%; }
+.footer__information, .footer__horaire, .footer__linkSection {
+  margin: auto; }
 
 .table__element--footer {
   display: flex;
