@@ -90,13 +90,11 @@
      font-family: $museo;
      line-height: 1.5em;
      padding: 1em 0;
-     border: 1px solid $texteColor;
    }
    &__tableData{
      text-align: center;
      font-family: $opensans;
      color: $texteColor;
-     border:1px solid $texteColor;
    }
    &__tel{
      background-color: $white;
