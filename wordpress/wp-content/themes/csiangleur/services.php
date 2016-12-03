@@ -96,7 +96,7 @@ get_header();
     </div>
     <div class="information__content information__content--active" id="move">
       <article class="information__article" id="déplacer">
-        <h3 class="information__title">Information</h3>
+        <h3 class="information__title">Information <span class="hidden"> sur le déplacement</span></h3>
         <?php echo the_field('information_déplacer');?>
       </article>
 
@@ -120,7 +120,7 @@ get_header();
     </div>
     <div class="information__content" id="notmove">
       <article class="information__article">
-        <h3 class="information__title">Information</h3>
+        <h3 class="information__title">Information <span class="hidden">sur les soins à domicile</span></h3>
         <?php echo the_field('information_pasdéplacer');?>
       </article>
       <?php if( have_rows('horaire_medecin')):?>
