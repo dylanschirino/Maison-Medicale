@@ -93,7 +93,7 @@ get_header();
     <div class="team__container">
       <div class="team__header">
         <h2 class="team__title">Notre équipe</h2>
-        <div class="controls__container"><a class="button controls__button--prev controls__button--prev1" href="#s2"><span class="hiddenNext"></span></a><a class="button controls__button--next controls__button--next2" href="#s1"><span class="hiddenPrev"></span></a></div>
+        <div class="controls__container"><a class="button controls__button--prev controls__button--prev1" href="#s2"><span class="hidden">Next</span></a><a class="button controls__button--next controls__button--next2" href="#s1"><span class="hidden">Prev</span></a></div>
       </div>
       <div class="team__slideshow">
         <div id="s1">
