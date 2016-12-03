@@ -3,29 +3,29 @@
     <h2 class="hidden">Information complémentaire</h2>
     <section class="footer__information">
       <h3 class="footer__title">Information</h3>
-      <ul class="cars__list--footer">
+      <ul class="cars__list--footer" itemscope itemtype="http://schema.org/Organization">
         <li class="cards__element--footer">
           <a class="cards__link--footer" href="https://www.google.be/maps/place/Rue+Vaudr%C3%A9e+48,+4031+Li%C3%A8ge/@50.6127477,5.5951963,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0f746b29cb281:0x69612a0f1477f0cc!8m2!3d50.6127443!4d5.597385?hl=fr" title="Voir l'adresse sur google maps">
           <span class="cards__label cards__label--adress">Adresse : </span>
-          <span class="cards__info"><?php the_field('adress', 'option'); ?></span>
+          <span class="cards__info" itemprop="address"><?php the_field('adress', 'option'); ?></span>
           </a>
         </li>
         <li class="cards__element--footer">
           <a class="cards__link--footer" href="tel:0494344737" title="Téléphoner à la maison médicale">
             <span class="cards__label cards__label--tel">Téléphone : </span>
-            <span class="cards__info cards__info--tel"><?php (the_field('telephone', 'option')); ?></span>
+            <span class="cards__info cards__info--tel" itemprop="telephone"><?php (the_field('telephone', 'option')); ?></span>
           </a>
         </li>
         <li class="cards__element--footer">
           <a class="cards__link--footer" href="fax:043434737" title="Nous envoyer un fax!">
             <span class="cards__label cards__label--fax">Fax : </span>
-            <span class="cards__info"><?php the_field('fax', 'option');?></span>
+            <span class="cards__info" itemprop="faxNumber"><?php the_field('fax', 'option');?></span>
           </a>
         </li>
         <li class="cards__element--footer">
           <a class="cards__link--footer" href="mailto:<?php the_field('email', 'option');?>" title="Nous envoyer un email">
           <span class="cards__label cards__label--email">Email : </span>
-          <span class="cards__info"><?php the_field('email', 'option');?></span>
+          <span class="cards__info" itemprop="email"><?php the_field('email', 'option');?></span>
           </a>
         </li>
       </ul>
