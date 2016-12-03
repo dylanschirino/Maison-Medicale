@@ -92,10 +92,10 @@ get_header();
     <h2 class="hidden">Information sur le services de gardes</h2>
     <div class="information__container">
       <div class="information__choix information__choix--active"><a class="information__link information__link--check" href="#" data-tab-target="move" title="Cliquez pour voir le contenu de la section">Je peux me déplacer</a></div>
-      <div class="information__choix" id="pasdéplacer"><a class="information__link information__link--uncheck" href="#" data-tab-target="notmove" title="Cliquez pour voir le contenu de la section">Je ne peux pas me déplacer</a></div>
+      <div class="information__choix" id="pasdeplacer"><a class="information__link information__link--uncheck" href="#" data-tab-target="notmove" title="Cliquez pour voir le contenu de la section">Je ne peux pas me déplacer</a></div>
     </div>
     <div class="information__content information__content--active" id="move">
-      <article class="information__article" id="déplacer">
+      <article class="information__article" id="deplacer">
         <h3 class="information__title">Information <span class="hidden"> sur le déplacement</span></h3>
         <?php echo the_field('information_déplacer');?>
       </article>
