@@ -57,13 +57,9 @@
     }
   }
   .linkSection{
-    &__link{
-      text-align: center;
-    &::before{
-      content: "";
-      width: 0;
-      background: none;
-    }
+    &__list{
+      width: 25em;
+      margin: auto;
     }
   }
 }

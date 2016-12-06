@@ -73,6 +73,7 @@
    }
  }
 
+
  // Newsletter
  .newsletter{
    &__title{
@@ -114,7 +115,16 @@
      }
    }
  }
-
+ @media screen and (max-width:930px) {
+    .linkSection{
+      &__link{
+        &::before{
+          background: none;
+        }
+      }
+    }
+ }
+ 
  @media screen and (max-width:987px) {
    .newsletter{
      &__title{
@@ -126,19 +136,6 @@
        &--footer{
          width: 80%;
        }
-     }
-   }
- }
-
- @media screen and(max-width:795px) {
-   .linkSection{
-     &__link{
-       text-align: center;
-     &::before{
-       content: "";
-       width: 0;
-       background: none;
-     }
      }
    }
  }

@@ -3,7 +3,7 @@
     <h2 class="hidden">Information complémentaire</h2>
     <section class="footer__information">
       <h3 class="footer__title">Information</h3>
-      <ul class="cars__list--footer" itemscope itemtype="http://schema.org/Organization">
+      <ul class="cards__list--footer" itemscope itemtype="http://schema.org/Organization">
         <li class="cards__element--footer">
           <a class="cards__link--footer" href="https://www.google.be/maps/place/Rue+Vaudr%C3%A9e+48,+4031+Li%C3%A8ge/@50.6127477,5.5951963,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0f746b29cb281:0x69612a0f1477f0cc!8m2!3d50.6127443!4d5.597385?hl=fr" title="Voir l'adresse sur google maps">
           <span class="cards__label cards__label--adress">Adresse : </span>
@@ -33,7 +33,7 @@
     <section class="footer__horaire">
       <h3 class="footer__title footer__title--center">Horaires</h3>
       <?php if( have_rows('horaire','option') ):?>
-      <ul class="cars__list--footer">
+      <ul class="cards__list--footer">
         <?php while( have_rows('horaire', 'option') ): the_row(); ?>
         <li class="table__element--footer">
           <?php $jours = get_sub_field('jours');?>
