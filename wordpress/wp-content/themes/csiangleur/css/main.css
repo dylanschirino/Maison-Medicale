@@ -453,6 +453,9 @@ p {
   float: right; }
 
 @media screen and (max-width: 796px) {
+  .howitworks__svg {
+    width: 100%;
+    margin: auto; }
   .howitworks__text {
     width: 100%;
     margin: auto; } }

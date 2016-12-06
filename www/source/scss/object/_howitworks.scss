@@ -20,6 +20,10 @@
 
  @media screen and (max-width:796px) {
    .howitworks{
+     &__svg{
+       width: 100%;
+       margin: auto;
+     }
      &__text{
        width: 100%;
        margin: auto;
