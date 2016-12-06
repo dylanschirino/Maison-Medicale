@@ -7,7 +7,7 @@
  */
  .forfait{
    &__container, &__obligation{
-     background-color: $cardsBckg;
+     background-color: $footerBckg;
      border-radius: 8px;
    }
    &__title{
@@ -36,8 +36,8 @@
  .obligation{
    &__title{
      font-size:1.8em;
-     line-height: 1.222em;
-     color: $greenBlue;
+     line-height: 2em;
+     color: $texteColor;
      text-align: center;
      &::before{
        display: block;

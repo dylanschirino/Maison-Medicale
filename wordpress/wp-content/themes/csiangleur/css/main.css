@@ -2056,7 +2056,7 @@ input[type="search"] {
  * started at 19/11/2016
  */
 .forfait__container, .forfait__obligation {
-  background-color: #ECF3F6;
+  background-color: #F6F9FC;
   border-radius: 8px; }
 
 .forfait__title {
@@ -2081,8 +2081,8 @@ input[type="search"] {
 
 .obligation__title {
   font-size: 1.8em;
-  line-height: 1.222em;
-  color: #54EBCE;
+  line-height: 2em;
+  color: #436577;
   text-align: center; }
   .obligation__title::before {
     display: block;
