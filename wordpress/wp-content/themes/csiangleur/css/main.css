@@ -2325,8 +2325,7 @@ input[type="search"] {
   font: 2.4em/1.5em "museo";
   text-align: center;
   color: #436577;
-  padding: 2.5em 0;
-  transition: .2s ease; }
+  padding: 2.5em 0; }
   .information__link:hover {
     color: white;
     background-color: #436577; }
