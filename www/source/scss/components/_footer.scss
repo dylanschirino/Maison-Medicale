@@ -19,8 +19,14 @@
  }
  .mc4wp-alert p{
    font-size: 1.6em;
-   padding: 1em 0;
-   color: $white;
+   line-height: 1.618em;
+   padding: 1em;
+   color: $texteColor;
+   background-color: #EFFFFB;
+   margin:1em auto 0 auto;
+   width: 50%;
+   text-align: center;
+   border-radius: 5px;
  }
  // Information
  .cards{
@@ -124,7 +130,7 @@
       }
     }
  }
- 
+
  @media screen and (max-width:987px) {
    .newsletter{
      &__title{

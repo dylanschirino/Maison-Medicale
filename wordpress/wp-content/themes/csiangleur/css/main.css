@@ -1842,7 +1842,7 @@ input[type="search"] {
   font: 3.2em/1.4em "museo";
   color: white;
   text-transform: uppercase;
-  padding: 4.625em 0 1.0625em 0; }
+  padding: 6.625em 0 1.0625em 0; }
 
 .discover__element {
   font: 2.4em/1.208em "museo";
@@ -1950,8 +1950,14 @@ input[type="search"] {
 
 .mc4wp-alert p {
   font-size: 1.6em;
-  padding: 1em 0;
-  color: white; }
+  line-height: 1.618em;
+  padding: 1em;
+  color: #436577;
+  background-color: #EFFFFB;
+  margin: 1em auto 0 auto;
+  width: 50%;
+  text-align: center;
+  border-radius: 5px; }
 
 .cards__link--footer {
   color: #8898AA;
