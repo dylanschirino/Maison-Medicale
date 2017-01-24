@@ -1789,11 +1789,11 @@ input[type="search"] {
 .newsletter {
   background-color: #45B2AE; }
   .newsletter__title {
-    font-size: 2.4em;
-    line-height: 1.2083333333em;
+    font: 2.4em/1.208em "museo";
     color: white;
     text-align: center;
-    padding: 1.1em 0; }
+    padding: 1.1em 0;
+    display: block; }
   .newsletter__form {
     padding-bottom: 3em; }
   .newsletter__input {

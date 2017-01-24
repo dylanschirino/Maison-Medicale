@@ -60,7 +60,7 @@
   </section>
   <div class="footer__newsletter">
     <div class="newsletter__form">
-      <p class="newsletter__title newsletter__title--footer">Je m'inscris à la newsletter</p>
+      <label class="newsletter__title newsletter__title--footer">Je m'inscris à la newsletter</label>
       <?php echo do_shortcode('[mc4wp_form id="22"]');?>
     </div>
   </div>

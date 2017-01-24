@@ -25,7 +25,7 @@ get_header();
       <li class="menu__element"><a class="menu__link nofocus" href="<?php echo the_permalink('65');?>" title="Découvrez les activités que nous proposons">Prévention</a></li>
       <li class="menu__element"><a class="menu__link nofocus" href="<?php echo the_permalink('63');?>" title="Contacter nous et visionner nos horaires">Contact</a></li>
 
-      <li class="menu__element menu__element--search"><a class="menu__link menu__link--search" href="#" title="Voir la barre de recherche"><span class="hidden">Search</span></a>
+      <li class="menu__element menu__element--search"><a class="menu__link menu__link--search" href="#" title="Voir la barre de recherche"><span class="hidden">Recherche</span></a>
         <div class="menu__search">
           <?php get_search_form(); ?>
         </div>
@@ -122,8 +122,9 @@ get_header();
   </section>
   <div class="centerContainer centerContainer--newsletter">
     <section class="newsletter">
+      <h2 class="hidden">Inscription à la newsletter</h2>
       <div class="newsletter__container">
-        <h2 class="newsletter__title">Inscrivez vous à notre newsletter pour recevoir notre actualité</h2>
+        <label for="newsletter" class="newsletter__title">Inscrivez vous à notre newsletter pour recevoir notre actualité</label>
         <div class="newsletter__container">
           <div class="newsletter__form">
             <?php echo do_shortcode('[mc4wp_form id="22"]');?>
