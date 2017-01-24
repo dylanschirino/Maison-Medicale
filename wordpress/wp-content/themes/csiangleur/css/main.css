@@ -1823,6 +1823,10 @@ input[type="search"] {
   .newsletter__title {
     font-size: 1.8em; } }
 
+@media screen and (max-width: 360px) {
+  .newsletter__title {
+    padding: 1em; } }
+
 /* CSI Angleur
  *
  * /sass/components/discover.scss - Discover components
