@@ -2137,7 +2137,7 @@ input[type="search"] {
     background-size: cover; }
   .express__text {
     font: 2.4em/1.666em "museo";
-    color: #34586B;
+    color: black;
     text-align: center; }
 
 @media screen and (max-width: 793px) {
