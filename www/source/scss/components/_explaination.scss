@@ -14,7 +14,7 @@
      padding-left: 4.1667em;
    }
  }
- @media screen and(max-width:974px) {
+ @media screen and (max-width:974px) {
    .subscription{
      &__title{
        text-align: center;
@@ -34,7 +34,6 @@
     background-color: $cardsBckg;
     border-radius: 8px;
     text-align: center;
-    transition: .2s ease-in;
     &:hover{
       background-color: $texteColor;
       color: $cardsBckg;

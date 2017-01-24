@@ -2221,8 +2221,7 @@ input[type="search"] {
   color: #436577;
   background-color: #ECF3F6;
   border-radius: 8px;
-  text-align: center;
-  transition: .2s ease-in; }
+  text-align: center; }
   .aside__button:hover {
     background-color: #436577;
     color: #ECF3F6; }
